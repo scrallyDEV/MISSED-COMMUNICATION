@@ -1,0 +1,55 @@
+/**
+	Generated using Godot Bindings Generator for Haxe.
+	https://github.com/SomeRanDev/Haxe-GodotBindingsGenerator
+**/
+package godot;
+@:cppEnum @:generated_godot_api @:bindings_api_type("global_enum") #if gdscript @:native("DisplayServer.AccessibilityRole") #end @:is_bitfield(false) extern enum DisplayServer_AccessibilityRole {
+	ROLE_UNKNOWN();
+	ROLE_DEFAULT_BUTTON();
+	ROLE_AUDIO();
+	ROLE_VIDEO();
+	ROLE_STATIC_TEXT();
+	ROLE_CONTAINER();
+	ROLE_PANEL();
+	ROLE_BUTTON();
+	ROLE_LINK();
+	ROLE_CHECK_BOX();
+	ROLE_RADIO_BUTTON();
+	ROLE_CHECK_BUTTON();
+	ROLE_SCROLL_BAR();
+	ROLE_SCROLL_VIEW();
+	ROLE_SPLITTER();
+	ROLE_SLIDER();
+	ROLE_SPIN_BUTTON();
+	ROLE_PROGRESS_INDICATOR();
+	ROLE_TEXT_FIELD();
+	ROLE_MULTILINE_TEXT_FIELD();
+	ROLE_COLOR_PICKER();
+	ROLE_TABLE();
+	ROLE_CELL();
+	ROLE_ROW();
+	ROLE_ROW_GROUP();
+	ROLE_ROW_HEADER();
+	ROLE_COLUMN_HEADER();
+	ROLE_TREE();
+	ROLE_TREE_ITEM();
+	ROLE_LIST();
+	ROLE_LIST_ITEM();
+	ROLE_LIST_BOX();
+	ROLE_LIST_BOX_OPTION();
+	ROLE_TAB_BAR();
+	ROLE_TAB();
+	ROLE_TAB_PANEL();
+	ROLE_MENU_BAR();
+	ROLE_MENU();
+	ROLE_MENU_ITEM();
+	ROLE_MENU_ITEM_CHECK_BOX();
+	ROLE_MENU_ITEM_RADIO();
+	ROLE_IMAGE();
+	ROLE_WINDOW();
+	ROLE_TITLE_BAR();
+	ROLE_DIALOG();
+	ROLE_TOOLTIP();
+	ROLE_REGION();
+	ROLE_TEXT_RUN();
+}

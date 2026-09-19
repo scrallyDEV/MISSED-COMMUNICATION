@@ -1,0 +1,745 @@
+/**
+	Generated using Godot Bindings Generator for Haxe.
+	https://github.com/SomeRanDev/Haxe-GodotBindingsGenerator
+**/
+package godot;
+@:generated_godot_api @:bindings_api_type("class") @:is_refcounted(false) @:is_instantiable(true) @:api_type("core") @:is_resource(false) @:is_node(true) extern class TileMap extends godot.Node2D {
+	public function new();
+#if use_properties
+	@:index(null)
+	@:getter("get_tileset")
+	@:setter("set_tileset")
+	public var tile_set(get, set) : godot.TileSet;
+#else
+
+	@:index(null)
+	@:getter("get_tileset")
+	@:setter("set_tileset")
+	public var tile_set : godot.TileSet;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_rendering_quadrant_size")
+	@:setter("set_rendering_quadrant_size")
+	public var rendering_quadrant_size(get, set) : Int;
+#else
+
+	@:index(null)
+	@:getter("get_rendering_quadrant_size")
+	@:setter("set_rendering_quadrant_size")
+	public var rendering_quadrant_size : Int;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("is_collision_animatable")
+	@:setter("set_collision_animatable")
+	public var collision_animatable(get, set) : Bool;
+#else
+
+	@:index(null)
+	@:getter("is_collision_animatable")
+	@:setter("set_collision_animatable")
+	public var collision_animatable : Bool;
+#end
+#if !use_properties
+	@:index(null)
+	@:getter("get_collision_visibility_mode")
+	@:setter("set_collision_visibility_mode")
+	public var collision_visibility_mode : Int;
+#end
+#if !use_properties
+	@:index(null)
+	@:getter("get_navigation_visibility_mode")
+	@:setter("set_navigation_visibility_mode")
+	public var navigation_visibility_mode : Int;
+#end
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(true)
+	@:hash(3957903770.)
+	@:hash_compatibility(null)
+	@:nativeName("_use_tile_data_runtime_update")
+	@:argMeta(0, ":meta"("int32"))
+	public function _use_tile_data_runtime_update(@:meta("int32") layer:Int, coords:godot.Vector2i):Bool;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(true)
+	@:hash(4223434291.)
+	@:hash_compatibility(null)
+	@:nativeName("_tile_data_runtime_update")
+	@:argMeta(0, ":meta"("int32"))
+	public function _tile_data_runtime_update(@:meta("int32") layer:Int, coords:godot.Vector2i, tile_data:godot.TileData):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(4040184819.)
+	@:hash_compatibility(null)
+	@:nativeName("set_navigation_map")
+	@:argMeta(0, ":meta"("int32"))
+	public function set_navigation_map(@:meta("int32") layer:Int, map:godot.RID):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(495598643)
+	@:hash_compatibility(null)
+	@:nativeName("get_navigation_map")
+	@:argMeta(0, ":meta"("int32"))
+	public function get_navigation_map(@:meta("int32") layer:Int):godot.RID;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1025054187)
+	@:hash_compatibility(null)
+	@:nativeName("force_update")
+	@:argMeta(0, ":meta"("int32"))
+	@:argMeta(0, ":default_value"("-1"))
+	#if gdscript @:argMeta(0, ":noNullPad"("-1")) #end
+	public function force_update(@:meta("int32") @:default_value("-1") #if gdscript @:noNullPad("-1") #end layer:Int = -1):Void;
+#if use_properties
+	public extern inline function set_tile_set(v: godot.TileSet): godot.TileSet {
+		set_tile_set_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(774531446)
+	@:hash_compatibility(null)
+	@:nativeName("set_tileset")
+	@:native("set_tile_set")
+	public function set_tile_set_impl(tileset:godot.TileSet):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(774531446)
+	@:hash_compatibility(null)
+	@:nativeName("set_tileset")
+	@:native("set_tileset")
+	public function set_tile_set(tileset:godot.TileSet):Void;
+
+#end
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2678226422.)
+	@:hash_compatibility(null)
+	@:nativeName("get_tileset")
+	@:native("get_tileset")
+	public function get_tile_set():godot.TileSet;
+#if use_properties
+	public extern inline function set_rendering_quadrant_size(v: Int): Int {
+		set_rendering_quadrant_size_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1286410249)
+	@:hash_compatibility(null)
+	@:nativeName("set_rendering_quadrant_size")
+	@:native("set_rendering_quadrant_size")
+	@:argMeta(0, ":meta"("int32"))
+	public function set_rendering_quadrant_size_impl(@:meta("int32") size:Int):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1286410249)
+	@:hash_compatibility(null)
+	@:nativeName("set_rendering_quadrant_size")
+	@:argMeta(0, ":meta"("int32"))
+	public function set_rendering_quadrant_size(@:meta("int32") size:Int):Void;
+
+#end
+	@:return_value_meta("int32")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3905245786.)
+	@:hash_compatibility(null)
+	@:nativeName("get_rendering_quadrant_size")
+	public function get_rendering_quadrant_size():Int;
+	@:return_value_meta("int32")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3905245786.)
+	@:hash_compatibility(null)
+	@:nativeName("get_layers_count")
+	public function get_layers_count():Int;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1286410249)
+	@:hash_compatibility(null)
+	@:nativeName("add_layer")
+	@:argMeta(0, ":meta"("int32"))
+	public function add_layer(@:meta("int32") to_position:Int):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3937882851.)
+	@:hash_compatibility(null)
+	@:nativeName("move_layer")
+	@:argMeta(0, ":meta"("int32"))
+	@:argMeta(1, ":meta"("int32"))
+	public function move_layer(@:meta("int32") layer:Int, @:meta("int32") to_position:Int):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1286410249)
+	@:hash_compatibility(null)
+	@:nativeName("remove_layer")
+	@:argMeta(0, ":meta"("int32"))
+	public function remove_layer(@:meta("int32") layer:Int):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(501894301)
+	@:hash_compatibility(null)
+	@:nativeName("set_layer_name")
+	@:argMeta(0, ":meta"("int32"))
+	public function set_layer_name(@:meta("int32") layer:Int, name:String):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(844755477)
+	@:hash_compatibility(null)
+	@:nativeName("get_layer_name")
+	@:argMeta(0, ":meta"("int32"))
+	public function get_layer_name(@:meta("int32") layer:Int):String;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(300928843)
+	@:hash_compatibility(null)
+	@:nativeName("set_layer_enabled")
+	@:argMeta(0, ":meta"("int32"))
+	public function set_layer_enabled(@:meta("int32") layer:Int, enabled:Bool):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1116898809)
+	@:hash_compatibility(null)
+	@:nativeName("is_layer_enabled")
+	@:argMeta(0, ":meta"("int32"))
+	public function is_layer_enabled(@:meta("int32") layer:Int):Bool;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2878471219.)
+	@:hash_compatibility(null)
+	@:nativeName("set_layer_modulate")
+	@:argMeta(0, ":meta"("int32"))
+	public function set_layer_modulate(@:meta("int32") layer:Int, modulate:godot.Color):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3457211756.)
+	@:hash_compatibility(null)
+	@:nativeName("get_layer_modulate")
+	@:argMeta(0, ":meta"("int32"))
+	public function get_layer_modulate(@:meta("int32") layer:Int):godot.Color;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(300928843)
+	@:hash_compatibility(null)
+	@:nativeName("set_layer_y_sort_enabled")
+	@:argMeta(0, ":meta"("int32"))
+	public function set_layer_y_sort_enabled(@:meta("int32") layer:Int, y_sort_enabled:Bool):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1116898809)
+	@:hash_compatibility(null)
+	@:nativeName("is_layer_y_sort_enabled")
+	@:argMeta(0, ":meta"("int32"))
+	public function is_layer_y_sort_enabled(@:meta("int32") layer:Int):Bool;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3937882851.)
+	@:hash_compatibility(null)
+	@:nativeName("set_layer_y_sort_origin")
+	@:argMeta(0, ":meta"("int32"))
+	@:argMeta(1, ":meta"("int32"))
+	public function set_layer_y_sort_origin(@:meta("int32") layer:Int, @:meta("int32") y_sort_origin:Int):Void;
+	@:return_value_meta("int32")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(923996154)
+	@:hash_compatibility(null)
+	@:nativeName("get_layer_y_sort_origin")
+	@:argMeta(0, ":meta"("int32"))
+	public function get_layer_y_sort_origin(@:meta("int32") layer:Int):Int;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3937882851.)
+	@:hash_compatibility(null)
+	@:nativeName("set_layer_z_index")
+	@:argMeta(0, ":meta"("int32"))
+	@:argMeta(1, ":meta"("int32"))
+	public function set_layer_z_index(@:meta("int32") layer:Int, @:meta("int32") z_index:Int):Void;
+	@:return_value_meta("int32")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(923996154)
+	@:hash_compatibility(null)
+	@:nativeName("get_layer_z_index")
+	@:argMeta(0, ":meta"("int32"))
+	public function get_layer_z_index(@:meta("int32") layer:Int):Int;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(300928843)
+	@:hash_compatibility(null)
+	@:nativeName("set_layer_navigation_enabled")
+	@:argMeta(0, ":meta"("int32"))
+	public function set_layer_navigation_enabled(@:meta("int32") layer:Int, enabled:Bool):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1116898809)
+	@:hash_compatibility(null)
+	@:nativeName("is_layer_navigation_enabled")
+	@:argMeta(0, ":meta"("int32"))
+	public function is_layer_navigation_enabled(@:meta("int32") layer:Int):Bool;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(4040184819.)
+	@:hash_compatibility(null)
+	@:nativeName("set_layer_navigation_map")
+	@:argMeta(0, ":meta"("int32"))
+	public function set_layer_navigation_map(@:meta("int32") layer:Int, map:godot.RID):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(495598643)
+	@:hash_compatibility(null)
+	@:nativeName("get_layer_navigation_map")
+	@:argMeta(0, ":meta"("int32"))
+	public function get_layer_navigation_map(@:meta("int32") layer:Int):godot.RID;
+#if use_properties
+	public extern inline function set_collision_animatable(v: Bool): Bool {
+		set_collision_animatable_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2586408642.)
+	@:hash_compatibility(null)
+	@:nativeName("set_collision_animatable")
+	@:native("set_collision_animatable")
+	public function set_collision_animatable_impl(enabled:Bool):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2586408642.)
+	@:hash_compatibility(null)
+	@:nativeName("set_collision_animatable")
+	public function set_collision_animatable(enabled:Bool):Void;
+
+#end
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(36873697)
+	@:hash_compatibility(null)
+	@:nativeName("is_collision_animatable")
+	@:native("is_collision_animatable")
+	public function get_collision_animatable():Bool;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3193440636.)
+	@:hash_compatibility(null)
+	@:nativeName("set_collision_visibility_mode")
+	public function set_collision_visibility_mode(collision_visibility_mode:godot.TileMap_VisibilityMode):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1697018252)
+	@:hash_compatibility([2026313073])
+	@:nativeName("get_collision_visibility_mode")
+	public function get_collision_visibility_mode():godot.TileMap_VisibilityMode;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3193440636.)
+	@:hash_compatibility(null)
+	@:nativeName("set_navigation_visibility_mode")
+	public function set_navigation_visibility_mode(navigation_visibility_mode:godot.TileMap_VisibilityMode):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1697018252)
+	@:hash_compatibility([2026313073])
+	@:nativeName("get_navigation_visibility_mode")
+	public function get_navigation_visibility_mode():godot.TileMap_VisibilityMode;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(966713560)
+	@:hash_compatibility([1732664643])
+	@:nativeName("set_cell")
+	@:argMeta(0, ":meta"("int32"))
+	@:argMeta(2, ":meta"("int32"))
+	@:argMeta(2, ":default_value"("-1"))
+	#if gdscript @:argMeta(2, ":noNullPad"("-1")) #end
+	@:argMeta(3, ":default_value"("Vector2i(-1, -1)"))
+	#if gdscript @:argMeta(3, ":noNullPad"("Vector2i(-1, -1)")) #end
+	@:argMeta(4, ":meta"("int32"))
+	@:argMeta(4, ":default_value"("0"))
+	#if gdscript @:argMeta(4, ":noNullPad"("0")) #end
+	public function set_cell(@:meta("int32") layer:Int, coords:godot.Vector2i, @:meta("int32") @:default_value("-1") #if gdscript @:noNullPad("-1") #end source_id:Int = -1, @:default_value("Vector2i(-1, -1)") #if gdscript @:noNullPad("Vector2i(-1, -1)") #end ?atlas_coords:godot.Vector2i, @:meta("int32") @:default_value("0") #if gdscript @:noNullPad("0") #end alternative_tile:Int = 0):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2311374912.)
+	@:hash_compatibility(null)
+	@:nativeName("erase_cell")
+	@:argMeta(0, ":meta"("int32"))
+	public function erase_cell(@:meta("int32") layer:Int, coords:godot.Vector2i):Void;
+	@:return_value_meta("int32")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(551761942)
+	@:hash_compatibility(null)
+	@:nativeName("get_cell_source_id")
+	@:argMeta(0, ":meta"("int32"))
+	@:argMeta(2, ":default_value"("false"))
+	#if gdscript @:argMeta(2, ":noNullPad"("false")) #end
+	public function get_cell_source_id(@:meta("int32") layer:Int, coords:godot.Vector2i, @:default_value("false") #if gdscript @:noNullPad("false") #end use_proxies:Bool = false):Int;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1869815066)
+	@:hash_compatibility(null)
+	@:nativeName("get_cell_atlas_coords")
+	@:argMeta(0, ":meta"("int32"))
+	@:argMeta(2, ":default_value"("false"))
+	#if gdscript @:argMeta(2, ":noNullPad"("false")) #end
+	public function get_cell_atlas_coords(@:meta("int32") layer:Int, coords:godot.Vector2i, @:default_value("false") #if gdscript @:noNullPad("false") #end use_proxies:Bool = false):godot.Vector2i;
+	@:return_value_meta("int32")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(551761942)
+	@:hash_compatibility(null)
+	@:nativeName("get_cell_alternative_tile")
+	@:argMeta(0, ":meta"("int32"))
+	@:argMeta(2, ":default_value"("false"))
+	#if gdscript @:argMeta(2, ":noNullPad"("false")) #end
+	public function get_cell_alternative_tile(@:meta("int32") layer:Int, coords:godot.Vector2i, @:default_value("false") #if gdscript @:noNullPad("false") #end use_proxies:Bool = false):Int;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2849631287.)
+	@:hash_compatibility(null)
+	@:nativeName("get_cell_tile_data")
+	@:argMeta(0, ":meta"("int32"))
+	@:argMeta(2, ":default_value"("false"))
+	#if gdscript @:argMeta(2, ":noNullPad"("false")) #end
+	public function get_cell_tile_data(@:meta("int32") layer:Int, coords:godot.Vector2i, @:default_value("false") #if gdscript @:noNullPad("false") #end use_proxies:Bool = false):godot.TileData;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2908343862.)
+	@:hash_compatibility(null)
+	@:nativeName("is_cell_flipped_h")
+	@:argMeta(0, ":meta"("int32"))
+	@:argMeta(2, ":default_value"("false"))
+	#if gdscript @:argMeta(2, ":noNullPad"("false")) #end
+	public function is_cell_flipped_h(@:meta("int32") layer:Int, coords:godot.Vector2i, @:default_value("false") #if gdscript @:noNullPad("false") #end use_proxies:Bool = false):Bool;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2908343862.)
+	@:hash_compatibility(null)
+	@:nativeName("is_cell_flipped_v")
+	@:argMeta(0, ":meta"("int32"))
+	@:argMeta(2, ":default_value"("false"))
+	#if gdscript @:argMeta(2, ":noNullPad"("false")) #end
+	public function is_cell_flipped_v(@:meta("int32") layer:Int, coords:godot.Vector2i, @:default_value("false") #if gdscript @:noNullPad("false") #end use_proxies:Bool = false):Bool;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2908343862.)
+	@:hash_compatibility(null)
+	@:nativeName("is_cell_transposed")
+	@:argMeta(0, ":meta"("int32"))
+	@:argMeta(2, ":default_value"("false"))
+	#if gdscript @:argMeta(2, ":noNullPad"("false")) #end
+	public function is_cell_transposed(@:meta("int32") layer:Int, coords:godot.Vector2i, @:default_value("false") #if gdscript @:noNullPad("false") #end use_proxies:Bool = false):Bool;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(291584212)
+	@:hash_compatibility(null)
+	@:nativeName("get_coords_for_body_rid")
+	public function get_coords_for_body_rid(body:godot.RID):godot.Vector2i;
+	@:return_value_meta("int32")
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3917799429.)
+	@:hash_compatibility(null)
+	@:nativeName("get_layer_for_body_rid")
+	public function get_layer_for_body_rid(body:godot.RID):Int;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2833570986.)
+	@:hash_compatibility(null)
+	@:nativeName("get_pattern")
+	@:argMeta(0, ":meta"("int32"))
+	public function get_pattern(@:meta("int32") layer:Int, coords_array:Array<godot.Vector2i>):godot.TileMapPattern;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1864516957)
+	@:hash_compatibility(null)
+	@:nativeName("map_pattern")
+	public function map_pattern(position_in_tilemap:godot.Vector2i, coords_in_pattern:godot.Vector2i, pattern:godot.TileMapPattern):godot.Vector2i;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1195853946)
+	@:hash_compatibility(null)
+	@:nativeName("set_pattern")
+	@:argMeta(0, ":meta"("int32"))
+	public function set_pattern(@:meta("int32") layer:Int, position:godot.Vector2i, pattern:godot.TileMapPattern):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3578627656.)
+	@:hash_compatibility([3072115677.])
+	@:nativeName("set_cells_terrain_connect")
+	@:argMeta(0, ":meta"("int32"))
+	@:argMeta(2, ":meta"("int32"))
+	@:argMeta(3, ":meta"("int32"))
+	@:argMeta(4, ":default_value"("true"))
+	#if gdscript @:argMeta(4, ":noNullPad"("true")) #end
+	public function set_cells_terrain_connect(@:meta("int32") layer:Int, cells:Array<godot.Vector2i>, @:meta("int32") terrain_set:Int, @:meta("int32") terrain:Int, @:default_value("true") #if gdscript @:noNullPad("true") #end ignore_empty_terrains:Bool = true):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3578627656.)
+	@:hash_compatibility([3072115677.])
+	@:nativeName("set_cells_terrain_path")
+	@:argMeta(0, ":meta"("int32"))
+	@:argMeta(2, ":meta"("int32"))
+	@:argMeta(3, ":meta"("int32"))
+	@:argMeta(4, ":default_value"("true"))
+	#if gdscript @:argMeta(4, ":noNullPad"("true")) #end
+	public function set_cells_terrain_path(@:meta("int32") layer:Int, path:Array<godot.Vector2i>, @:meta("int32") terrain_set:Int, @:meta("int32") terrain:Int, @:default_value("true") #if gdscript @:noNullPad("true") #end ignore_empty_terrains:Bool = true):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3218959716.)
+	@:hash_compatibility(null)
+	@:nativeName("fix_invalid_tiles")
+	public function fix_invalid_tiles():Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1286410249)
+	@:hash_compatibility(null)
+	@:nativeName("clear_layer")
+	@:argMeta(0, ":meta"("int32"))
+	public function clear_layer(@:meta("int32") layer:Int):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3218959716.)
+	@:hash_compatibility(null)
+	@:nativeName("clear")
+	public function clear():Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3218959716.)
+	@:hash_compatibility(null)
+	@:nativeName("update_internals")
+	public function update_internals():Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1025054187)
+	@:hash_compatibility(null)
+	@:nativeName("notify_runtime_tile_data_update")
+	@:argMeta(0, ":meta"("int32"))
+	@:argMeta(0, ":default_value"("-1"))
+	#if gdscript @:argMeta(0, ":noNullPad"("-1")) #end
+	public function notify_runtime_tile_data_update(@:meta("int32") @:default_value("-1") #if gdscript @:noNullPad("-1") #end layer:Int = -1):Void;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2673526557.)
+	@:hash_compatibility(null)
+	@:nativeName("get_surrounding_cells")
+	public function get_surrounding_cells(coords:godot.Vector2i):Array<godot.Vector2i>;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(663333327)
+	@:hash_compatibility(null)
+	@:nativeName("get_used_cells")
+	@:argMeta(0, ":meta"("int32"))
+	public function get_used_cells(@:meta("int32") layer:Int):Array<godot.Vector2i>;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2931012785.)
+	@:hash_compatibility([4152068407.])
+	@:nativeName("get_used_cells_by_id")
+	@:argMeta(0, ":meta"("int32"))
+	@:argMeta(1, ":meta"("int32"))
+	@:argMeta(1, ":default_value"("-1"))
+	#if gdscript @:argMeta(1, ":noNullPad"("-1")) #end
+	@:argMeta(2, ":default_value"("Vector2i(-1, -1)"))
+	#if gdscript @:argMeta(2, ":noNullPad"("Vector2i(-1, -1)")) #end
+	@:argMeta(3, ":meta"("int32"))
+	@:argMeta(3, ":default_value"("-1"))
+	#if gdscript @:argMeta(3, ":noNullPad"("-1")) #end
+	public function get_used_cells_by_id(@:meta("int32") layer:Int, @:meta("int32") @:default_value("-1") #if gdscript @:noNullPad("-1") #end source_id:Int = -1, @:default_value("Vector2i(-1, -1)") #if gdscript @:noNullPad("Vector2i(-1, -1)") #end ?atlas_coords:godot.Vector2i, @:meta("int32") @:default_value("-1") #if gdscript @:noNullPad("-1") #end alternative_tile:Int = -1):Array<godot.Vector2i>;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(410525958)
+	@:hash_compatibility([2024035737])
+	@:nativeName("get_used_rect")
+	public function get_used_rect():godot.Rect2i;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(108438297)
+	@:hash_compatibility(null)
+	@:nativeName("map_to_local")
+	public function map_to_local(map_position:godot.Vector2i):godot.Vector2;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(837806996)
+	@:hash_compatibility(null)
+	@:nativeName("local_to_map")
+	public function local_to_map(local_position:godot.Vector2):godot.Vector2i;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(986575103)
+	@:hash_compatibility(null)
+	@:nativeName("get_neighbor_cell")
+	public function get_neighbor_cell(coords:godot.Vector2i, neighbor:godot.TileSet_CellNeighbor):godot.Vector2i;
+}

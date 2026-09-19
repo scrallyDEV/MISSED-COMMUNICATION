@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bl1b2u8ga14ts"]
+
+[ext_resource type="Script" uid="uid://bdvcldsdxondb" path="res://addons/haxe_output/Door.gd" id="1_q1m2b"]
+[ext_resource type="Texture2D" uid="uid://c4qyobjumxvn0" path="res://textures/proto/door.png" id="2_xmq70"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1sv41"]
+albedo_texture = ExtResource("2_xmq70")
+
+[sub_resource type="BoxMesh" id="BoxMesh_mstrr"]
+size = Vector3(1.6, 2.755139, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mstrr"]
+size = Vector3(1.5879211, 2.7557251, 0.123168945)
+
+[node name="Door" type="StaticBody3D" unique_id=1218471137]
+script = ExtResource("1_q1m2b")
+swingDirection = "right"
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1401471973]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.80828565, -0.02243042, -0.00080895424)
+material_override = SubResource("StandardMaterial3D_1sv41")
+mesh = SubResource("BoxMesh_mstrr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1035373702]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.80377823, -0.026178002, -0.0011345223)
+shape = SubResource("BoxShape3D_mstrr")

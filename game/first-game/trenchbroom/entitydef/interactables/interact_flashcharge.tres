@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDModelPointClass" format=3 uid="uid://dhgvlrljfscxg"]
+
+[ext_resource type="Script" uid="uid://d1nwwgcrner8b" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class_display_descriptor.gd" id="1_1h35r"]
+[ext_resource type="PackedScene" uid="uid://bf301msjxscxr" path="res://gameplay/interactables/flashlight_charger.tscn" id="2_8bypk"]
+[ext_resource type="Script" uid="uid://ldfqjtq0br35" path="res://addons/func_godot/src/fgd/func_godot_fgd_model_point_class.gd" id="3_t0l1s"]
+
+[resource]
+script = ExtResource("3_t0l1s")
+target_map_editor = 1
+models_sub_folder = "interact"
+generate_size_property = true
+scene_file = ExtResource("2_8bypk")
+classname = "interact_flashcharge"
+description = "Flashlight Charging Station
+
+Charges 1% per interval with a chance at failing."
+class_properties = Dictionary[String, Variant]({
+"chargeInterval": 1.0,
+"failureChance": 0.1
+})
+class_property_descriptions = Dictionary[String, Variant]({
+"chargeInterval": "The interval in seconds at which the charger will do a charging tick",
+"failureChance": "Float between 0 and 1, the chance at which a charger tick will fail to charge a battery percentage"
+})
+auto_apply_to_matching_node_properties = true
+meta_properties = Dictionary[String, Variant]({
+"color": Color(0.8, 0.8, 0.8, 1),
+"model": "{\"path\": \"interact/interact_flashcharge.glb\", \"scale\": 32.0 }",
+"size": AABB(-16, -16, -32, 16, 16, 32),
+"studio": "\"flashlight_charger.glb\""
+})
+metadata/_custom_type_script = "uid://ldfqjtq0br35"

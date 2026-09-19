@@ -1,0 +1,23 @@
+/**
+	Generated using Godot Bindings Generator for Haxe.
+	https://github.com/SomeRanDev/Haxe-GodotBindingsGenerator
+**/
+package godot;
+@:cppEnum @:generated_godot_api @:bindings_api_type("global_enum") #if gdscript @:native("Control.LayoutPreset") #end @:is_bitfield(false) extern enum Control_LayoutPreset {
+	PRESET_TOP_LEFT();
+	PRESET_TOP_RIGHT();
+	PRESET_BOTTOM_LEFT();
+	PRESET_BOTTOM_RIGHT();
+	PRESET_CENTER_LEFT();
+	PRESET_CENTER_TOP();
+	PRESET_CENTER_RIGHT();
+	PRESET_CENTER_BOTTOM();
+	PRESET_CENTER();
+	PRESET_LEFT_WIDE();
+	PRESET_TOP_WIDE();
+	PRESET_RIGHT_WIDE();
+	PRESET_BOTTOM_WIDE();
+	PRESET_VCENTER_WIDE();
+	PRESET_HCENTER_WIDE();
+	PRESET_FULL_RECT();
+}

@@ -1,0 +1,29 @@
+/**
+	Generated using Godot Bindings Generator for Haxe.
+	https://github.com/SomeRanDev/Haxe-GodotBindingsGenerator
+**/
+package godot;
+@:cppEnum @:generated_godot_api @:bindings_api_type("global_enum") #if gdscript @:native("RenderingServer.LightParam") #end @:is_bitfield(false) extern enum RenderingServer_LightParam {
+	LIGHT_PARAM_ENERGY();
+	LIGHT_PARAM_INDIRECT_ENERGY();
+	LIGHT_PARAM_VOLUMETRIC_FOG_ENERGY();
+	LIGHT_PARAM_SPECULAR();
+	LIGHT_PARAM_RANGE();
+	LIGHT_PARAM_SIZE();
+	LIGHT_PARAM_ATTENUATION();
+	LIGHT_PARAM_SPOT_ANGLE();
+	LIGHT_PARAM_SPOT_ATTENUATION();
+	LIGHT_PARAM_SHADOW_MAX_DISTANCE();
+	LIGHT_PARAM_SHADOW_SPLIT_1_OFFSET();
+	LIGHT_PARAM_SHADOW_SPLIT_2_OFFSET();
+	LIGHT_PARAM_SHADOW_SPLIT_3_OFFSET();
+	LIGHT_PARAM_SHADOW_FADE_START();
+	LIGHT_PARAM_SHADOW_NORMAL_BIAS();
+	LIGHT_PARAM_SHADOW_BIAS();
+	LIGHT_PARAM_SHADOW_PANCAKE_SIZE();
+	LIGHT_PARAM_SHADOW_OPACITY();
+	LIGHT_PARAM_SHADOW_BLUR();
+	LIGHT_PARAM_TRANSMITTANCE_BIAS();
+	LIGHT_PARAM_INTENSITY();
+	LIGHT_PARAM_MAX();
+}

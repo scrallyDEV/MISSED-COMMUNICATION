@@ -1,0 +1,39 @@
+/**
+	Generated using Godot Bindings Generator for Haxe.
+	https://github.com/SomeRanDev/Haxe-GodotBindingsGenerator
+**/
+package godot;
+@:cppEnum @:generated_godot_api @:bindings_api_type("global_enum") #if gdscript @:native("LineEdit.MenuItems") #end @:is_bitfield(false) extern enum LineEdit_MenuItems {
+	MENU_CUT();
+	MENU_COPY();
+	MENU_PASTE();
+	MENU_CLEAR();
+	MENU_SELECT_ALL();
+	MENU_UNDO();
+	MENU_REDO();
+	MENU_SUBMENU_TEXT_DIR();
+	MENU_DIR_INHERITED();
+	MENU_DIR_AUTO();
+	MENU_DIR_LTR();
+	MENU_DIR_RTL();
+	MENU_DISPLAY_UCC();
+	MENU_SUBMENU_INSERT_UCC();
+	MENU_INSERT_LRM();
+	MENU_INSERT_RLM();
+	MENU_INSERT_LRE();
+	MENU_INSERT_RLE();
+	MENU_INSERT_LRO();
+	MENU_INSERT_RLO();
+	MENU_INSERT_PDF();
+	MENU_INSERT_ALM();
+	MENU_INSERT_LRI();
+	MENU_INSERT_RLI();
+	MENU_INSERT_FSI();
+	MENU_INSERT_PDI();
+	MENU_INSERT_ZWJ();
+	MENU_INSERT_ZWNJ();
+	MENU_INSERT_WJ();
+	MENU_INSERT_SHY();
+	MENU_EMOJI_AND_SYMBOL();
+	MENU_MAX();
+}

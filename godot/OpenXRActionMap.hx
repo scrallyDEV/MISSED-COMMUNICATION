@@ -1,0 +1,150 @@
+/**
+	Generated using Godot Bindings Generator for Haxe.
+	https://github.com/SomeRanDev/Haxe-GodotBindingsGenerator
+**/
+package godot;
+@:generated_godot_api @:bindings_api_type("class") @:is_refcounted(true) @:is_instantiable(true) @:api_type("core") @:is_resource(true) @:is_node(false) extern class OpenXRActionMap extends godot.Resource {
+	public function new();
+#if !use_properties
+	@:index(null)
+	@:getter("get_action_sets")
+	@:setter("set_action_sets")
+	public var action_sets : godot.OpenXRActionSet;
+#end
+#if !use_properties
+	@:index(null)
+	@:getter("get_interaction_profiles")
+	@:setter("set_interaction_profiles")
+	public var interaction_profiles : godot.OpenXRInteractionProfile;
+#end
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(381264803)
+	@:hash_compatibility(null)
+	@:nativeName("set_action_sets")
+	public function set_action_sets(action_sets:GodotArray):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3995934104.)
+	@:hash_compatibility(null)
+	@:nativeName("get_action_sets")
+	public function get_action_sets():GodotArray;
+	@:return_value_meta("int32")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3905245786.)
+	@:hash_compatibility(null)
+	@:nativeName("get_action_set_count")
+	public function get_action_set_count():Int;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1888809267)
+	@:hash_compatibility(null)
+	@:nativeName("find_action_set")
+	public function find_action_set(name:String):godot.OpenXRActionSet;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1789580336)
+	@:hash_compatibility(null)
+	@:nativeName("get_action_set")
+	@:argMeta(0, ":meta"("int32"))
+	public function get_action_set(@:meta("int32") idx:Int):godot.OpenXRActionSet;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2093310581)
+	@:hash_compatibility(null)
+	@:nativeName("add_action_set")
+	public function add_action_set(action_set:godot.OpenXRActionSet):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2093310581)
+	@:hash_compatibility(null)
+	@:nativeName("remove_action_set")
+	public function remove_action_set(action_set:godot.OpenXRActionSet):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(381264803)
+	@:hash_compatibility(null)
+	@:nativeName("set_interaction_profiles")
+	public function set_interaction_profiles(interaction_profiles:GodotArray):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3995934104.)
+	@:hash_compatibility(null)
+	@:nativeName("get_interaction_profiles")
+	public function get_interaction_profiles():GodotArray;
+	@:return_value_meta("int32")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3905245786.)
+	@:hash_compatibility(null)
+	@:nativeName("get_interaction_profile_count")
+	public function get_interaction_profile_count():Int;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3095875538.)
+	@:hash_compatibility(null)
+	@:nativeName("find_interaction_profile")
+	public function find_interaction_profile(name:String):godot.OpenXRInteractionProfile;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2546151210.)
+	@:hash_compatibility(null)
+	@:nativeName("get_interaction_profile")
+	@:argMeta(0, ":meta"("int32"))
+	public function get_interaction_profile(@:meta("int32") idx:Int):godot.OpenXRInteractionProfile;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2697953512.)
+	@:hash_compatibility(null)
+	@:nativeName("add_interaction_profile")
+	public function add_interaction_profile(interaction_profile:godot.OpenXRInteractionProfile):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2697953512.)
+	@:hash_compatibility(null)
+	@:nativeName("remove_interaction_profile")
+	public function remove_interaction_profile(interaction_profile:godot.OpenXRInteractionProfile):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3218959716.)
+	@:hash_compatibility(null)
+	@:nativeName("create_default_action_sets")
+	public function create_default_action_sets():Void;
+}

@@ -1,0 +1,135 @@
+/**
+	Generated using Godot Bindings Generator for Haxe.
+	https://github.com/SomeRanDev/Haxe-GodotBindingsGenerator
+**/
+package godot;
+@:generated_godot_api @:bindings_api_type("class") @:is_refcounted(true) @:is_instantiable(true) @:api_type("core") @:is_resource(true) @:is_node(false) extern class BitMap extends godot.Resource {
+	public function new();
+#if !use_properties
+	@:index(null)
+	@:getter("_get_data")
+	@:setter("_set_data")
+	public var data : godot.Dictionary;
+#end
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1130785943)
+	@:hash_compatibility(null)
+	@:nativeName("create")
+	public function create(size:godot.Vector2i):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(106271684)
+	@:hash_compatibility([505265891])
+	@:nativeName("create_from_image_alpha")
+	@:argMeta(1, ":meta"("float"))
+	@:argMeta(1, ":default_value"("0.1"))
+	#if gdscript @:argMeta(1, ":noNullPad"("0.1")) #end
+	public function create_from_image_alpha(image:godot.Image, @:meta("float") @:default_value("0.1") #if gdscript @:noNullPad("0.1") #end threshold:Float = 0.1):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(4153096796.)
+	@:hash_compatibility(null)
+	@:nativeName("set_bitv")
+	public function set_bitv(position:godot.Vector2i, bit:Bool):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1383440665)
+	@:hash_compatibility(null)
+	@:nativeName("set_bit")
+	@:argMeta(0, ":meta"("int32"))
+	@:argMeta(1, ":meta"("int32"))
+	public function set_bit(@:meta("int32") x:Int, @:meta("int32") y:Int, bit:Bool):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3900751641.)
+	@:hash_compatibility(null)
+	@:nativeName("get_bitv")
+	public function get_bitv(position:godot.Vector2i):Bool;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2522259332.)
+	@:hash_compatibility(null)
+	@:nativeName("get_bit")
+	@:argMeta(0, ":meta"("int32"))
+	@:argMeta(1, ":meta"("int32"))
+	public function get_bit(@:meta("int32") x:Int, @:meta("int32") y:Int):Bool;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(472162941)
+	@:hash_compatibility(null)
+	@:nativeName("set_bit_rect")
+	public function set_bit_rect(rect:godot.Rect2i, bit:Bool):Void;
+	@:return_value_meta("int32")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3905245786.)
+	@:hash_compatibility(null)
+	@:nativeName("get_true_bit_count")
+	public function get_true_bit_count():Int;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3690982128.)
+	@:hash_compatibility(null)
+	@:nativeName("get_size")
+	public function get_size():godot.Vector2i;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1130785943)
+	@:hash_compatibility(null)
+	@:nativeName("resize")
+	public function resize(new_size:godot.Vector2i):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3317281434.)
+	@:hash_compatibility(null)
+	@:nativeName("grow_mask")
+	@:argMeta(0, ":meta"("int32"))
+	public function grow_mask(@:meta("int32") pixels:Int, rect:godot.Rect2i):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(4190603485.)
+	@:hash_compatibility(null)
+	@:nativeName("convert_to_image")
+	public function convert_to_image():godot.Image;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(48478126)
+	@:hash_compatibility([876132484])
+	@:nativeName("opaque_to_polygons")
+	@:argMeta(1, ":meta"("float"))
+	@:argMeta(1, ":default_value"("2.0"))
+	#if gdscript @:argMeta(1, ":noNullPad"("2.0")) #end
+	public function opaque_to_polygons(rect:godot.Rect2i, @:meta("float") @:default_value("2.0") #if gdscript @:noNullPad("2.0") #end epsilon:Float = 2.):Array<godot.PackedVector2Array>;
+}

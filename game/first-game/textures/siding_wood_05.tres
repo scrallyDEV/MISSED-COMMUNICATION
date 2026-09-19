@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://enqaliwadib"]
+
+[ext_resource type="Texture2D" uid="uid://lmav6vkutqti" path="res://textures/siding_wood_05.jpg" id="1_gxeut"]
+
+[resource]
+albedo_texture = ExtResource("1_gxeut")
+metallic_specular = 0.0
+texture_filter = 2

@@ -1,0 +1,33 @@
+/**
+	Generated using Godot Bindings Generator for Haxe.
+	https://github.com/SomeRanDev/Haxe-GodotBindingsGenerator
+**/
+package godot;
+@:cppEnum @:generated_godot_api @:bindings_api_type("global_enum") #if gdscript @:native("BaseMaterial3D.Flags") #end @:is_bitfield(false) extern enum BaseMaterial3D_Flags {
+	FLAG_DISABLE_DEPTH_TEST();
+	FLAG_ALBEDO_FROM_VERTEX_COLOR();
+	FLAG_SRGB_VERTEX_COLOR();
+	FLAG_USE_POINT_SIZE();
+	FLAG_FIXED_SIZE();
+	FLAG_BILLBOARD_KEEP_SCALE();
+	FLAG_UV1_USE_TRIPLANAR();
+	FLAG_UV2_USE_TRIPLANAR();
+	FLAG_UV1_USE_WORLD_TRIPLANAR();
+	FLAG_UV2_USE_WORLD_TRIPLANAR();
+	FLAG_AO_ON_UV2();
+	FLAG_EMISSION_ON_UV2();
+	FLAG_ALBEDO_TEXTURE_FORCE_SRGB();
+	FLAG_DONT_RECEIVE_SHADOWS();
+	FLAG_DISABLE_AMBIENT_LIGHT();
+	FLAG_USE_SHADOW_TO_OPACITY();
+	FLAG_USE_TEXTURE_REPEAT();
+	FLAG_INVERT_HEIGHTMAP();
+	FLAG_SUBSURFACE_MODE_SKIN();
+	FLAG_PARTICLE_TRAILS_MODE();
+	FLAG_ALBEDO_TEXTURE_MSDF();
+	FLAG_DISABLE_FOG();
+	FLAG_DISABLE_SPECULAR_OCCLUSION();
+	FLAG_USE_Z_CLIP_SCALE();
+	FLAG_USE_FOV_OVERRIDE();
+	FLAG_MAX();
+}

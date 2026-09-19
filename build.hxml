@@ -1,0 +1,15 @@
+-cp source
+-cp .
+
+-lib gdscript
+
+--main ClassAutoLoader
+
+## --macro include('api')
+## --macro include('entities')
+## --macro include('interactables')
+
+--macro haxe.macro.Compiler.addGlobalMetadata("", "@:build(haxegd.GodotCallbacks.build())")
+
+-D gdscript-output=game/first-game/addons/haxe_output
+-D generate_godot_plugin

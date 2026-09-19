@@ -1,0 +1,1434 @@
+/**
+	Generated using Godot Bindings Generator for Haxe.
+	https://github.com/SomeRanDev/Haxe-GodotBindingsGenerator
+**/
+package godot;
+@:generated_godot_api @:bindings_api_type("class") @:is_refcounted(false) @:is_instantiable(true) @:api_type("core") @:is_resource(false) @:is_node(true) extern class GPUParticles3D extends godot.GeometryInstance3D {
+	public function new();
+	public static var MAX_DRAW_PASSES : Int;
+#if use_properties
+	@:index(null)
+	@:getter("is_emitting")
+	@:setter("set_emitting")
+	public var emitting(get, set) : Bool;
+#else
+
+	@:index(null)
+	@:getter("is_emitting")
+	@:setter("set_emitting")
+	public var emitting : Bool;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_amount")
+	@:setter("set_amount")
+	public var amount(get, set) : Int;
+#else
+
+	@:index(null)
+	@:getter("get_amount")
+	@:setter("set_amount")
+	public var amount : Int;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_amount_ratio")
+	@:setter("set_amount_ratio")
+	public var amount_ratio(get, set) : Float;
+#else
+
+	@:index(null)
+	@:getter("get_amount_ratio")
+	@:setter("set_amount_ratio")
+	public var amount_ratio : Float;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_sub_emitter")
+	@:setter("set_sub_emitter")
+	@:reassignOnSubfieldEdit(set_sub_emitter_impl)
+	public var sub_emitter(get, set) : godot.NodePath;
+#else
+
+	@:index(null)
+	@:getter("get_sub_emitter")
+	@:setter("set_sub_emitter")
+	public var sub_emitter : godot.NodePath;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_lifetime")
+	@:setter("set_lifetime")
+	public var lifetime(get, set) : Float;
+#else
+
+	@:index(null)
+	@:getter("get_lifetime")
+	@:setter("set_lifetime")
+	public var lifetime : Float;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_interp_to_end")
+	@:setter("set_interp_to_end")
+	public var interp_to_end(get, set) : Float;
+#else
+
+	@:index(null)
+	@:getter("get_interp_to_end")
+	@:setter("set_interp_to_end")
+	public var interp_to_end : Float;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_one_shot")
+	@:setter("set_one_shot")
+	public var one_shot(get, set) : Bool;
+#else
+
+	@:index(null)
+	@:getter("get_one_shot")
+	@:setter("set_one_shot")
+	public var one_shot : Bool;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_pre_process_time")
+	@:setter("set_pre_process_time")
+	public var preprocess(get, set) : Float;
+#else
+
+	@:index(null)
+	@:getter("get_pre_process_time")
+	@:setter("set_pre_process_time")
+	public var preprocess : Float;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_speed_scale")
+	@:setter("set_speed_scale")
+	public var speed_scale(get, set) : Float;
+#else
+
+	@:index(null)
+	@:getter("get_speed_scale")
+	@:setter("set_speed_scale")
+	public var speed_scale : Float;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_explosiveness_ratio")
+	@:setter("set_explosiveness_ratio")
+	public var explosiveness(get, set) : Float;
+#else
+
+	@:index(null)
+	@:getter("get_explosiveness_ratio")
+	@:setter("set_explosiveness_ratio")
+	public var explosiveness : Float;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_randomness_ratio")
+	@:setter("set_randomness_ratio")
+	public var randomness(get, set) : Float;
+#else
+
+	@:index(null)
+	@:getter("get_randomness_ratio")
+	@:setter("set_randomness_ratio")
+	public var randomness : Float;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_use_fixed_seed")
+	@:setter("set_use_fixed_seed")
+	public var use_fixed_seed(get, set) : Bool;
+#else
+
+	@:index(null)
+	@:getter("get_use_fixed_seed")
+	@:setter("set_use_fixed_seed")
+	public var use_fixed_seed : Bool;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_seed")
+	@:setter("set_seed")
+	public var seed(get, set) : Int;
+#else
+
+	@:index(null)
+	@:getter("get_seed")
+	@:setter("set_seed")
+	public var seed : Int;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_fixed_fps")
+	@:setter("set_fixed_fps")
+	public var fixed_fps(get, set) : Int;
+#else
+
+	@:index(null)
+	@:getter("get_fixed_fps")
+	@:setter("set_fixed_fps")
+	public var fixed_fps : Int;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_interpolate")
+	@:setter("set_interpolate")
+	public var interpolate(get, set) : Bool;
+#else
+
+	@:index(null)
+	@:getter("get_interpolate")
+	@:setter("set_interpolate")
+	public var interpolate : Bool;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_fractional_delta")
+	@:setter("set_fractional_delta")
+	public var fract_delta(get, set) : Bool;
+#else
+
+	@:index(null)
+	@:getter("get_fractional_delta")
+	@:setter("set_fractional_delta")
+	public var fract_delta : Bool;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_collision_base_size")
+	@:setter("set_collision_base_size")
+	public var collision_base_size(get, set) : Float;
+#else
+
+	@:index(null)
+	@:getter("get_collision_base_size")
+	@:setter("set_collision_base_size")
+	public var collision_base_size : Float;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_visibility_aabb")
+	@:setter("set_visibility_aabb")
+	@:reassignOnSubfieldEdit(set_visibility_aabb_impl)
+	public var visibility_aabb(get, set) : godot.AABB;
+#else
+
+	@:index(null)
+	@:getter("get_visibility_aabb")
+	@:setter("set_visibility_aabb")
+	public var visibility_aabb : godot.AABB;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_use_local_coordinates")
+	@:setter("set_use_local_coordinates")
+	public var local_coords(get, set) : Bool;
+#else
+
+	@:index(null)
+	@:getter("get_use_local_coordinates")
+	@:setter("set_use_local_coordinates")
+	public var local_coords : Bool;
+#end
+#if !use_properties
+	@:index(null)
+	@:getter("get_draw_order")
+	@:setter("set_draw_order")
+	public var draw_order : Int;
+#end
+#if !use_properties
+	@:index(null)
+	@:getter("get_transform_align")
+	@:setter("set_transform_align")
+	public var transform_align : Int;
+#end
+#if !use_properties
+	@:index(null)
+	@:getter("get_transform_align_axis")
+	@:setter("set_transform_align_axis")
+	public var transform_align_axis : Int;
+#end
+#if !use_properties
+	@:index(null)
+	@:getter("get_transform_align_channel_filter")
+	@:setter("set_transform_align_channel_filter")
+	public var transform_align_channel_filter : Int;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("is_trail_enabled")
+	@:setter("set_trail_enabled")
+	public var trail_enabled(get, set) : Bool;
+#else
+
+	@:index(null)
+	@:getter("is_trail_enabled")
+	@:setter("set_trail_enabled")
+	public var trail_enabled : Bool;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_trail_lifetime")
+	@:setter("set_trail_lifetime")
+	public var trail_lifetime(get, set) : Float;
+#else
+
+	@:index(null)
+	@:getter("get_trail_lifetime")
+	@:setter("set_trail_lifetime")
+	public var trail_lifetime : Float;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_draw_passes")
+	@:setter("set_draw_passes")
+	public var draw_passes(get, set) : Int;
+#else
+
+	@:index(null)
+	@:getter("get_draw_passes")
+	@:setter("set_draw_passes")
+	public var draw_passes : Int;
+#end
+#if use_properties
+	public extern inline function get_draw_pass_1(): godot.Mesh {
+		return cast get_draw_pass_mesh(0);
+	}
+	public extern inline function set_draw_pass_1(v: godot.Mesh): godot.Mesh {
+		set_draw_pass_mesh(0, cast v);
+		return v;
+	}
+
+	@:index(0)
+	@:getter("get_draw_pass_mesh")
+	@:setter("set_draw_pass_mesh")
+	public var draw_pass_1(get, set) : godot.Mesh;
+#else
+
+	@:index(0)
+	@:getter("get_draw_pass_mesh")
+	@:setter("set_draw_pass_mesh")
+	public var draw_pass_1 : godot.Mesh;
+#end
+#if use_properties
+	public extern inline function get_draw_pass_2(): godot.Mesh {
+		return cast get_draw_pass_mesh(1);
+	}
+	public extern inline function set_draw_pass_2(v: godot.Mesh): godot.Mesh {
+		set_draw_pass_mesh(1, cast v);
+		return v;
+	}
+
+	@:index(1)
+	@:getter("get_draw_pass_mesh")
+	@:setter("set_draw_pass_mesh")
+	public var draw_pass_2(get, set) : godot.Mesh;
+#else
+
+	@:index(1)
+	@:getter("get_draw_pass_mesh")
+	@:setter("set_draw_pass_mesh")
+	public var draw_pass_2 : godot.Mesh;
+#end
+#if use_properties
+	public extern inline function get_draw_pass_3(): godot.Mesh {
+		return cast get_draw_pass_mesh(2);
+	}
+	public extern inline function set_draw_pass_3(v: godot.Mesh): godot.Mesh {
+		set_draw_pass_mesh(2, cast v);
+		return v;
+	}
+
+	@:index(2)
+	@:getter("get_draw_pass_mesh")
+	@:setter("set_draw_pass_mesh")
+	public var draw_pass_3(get, set) : godot.Mesh;
+#else
+
+	@:index(2)
+	@:getter("get_draw_pass_mesh")
+	@:setter("set_draw_pass_mesh")
+	public var draw_pass_3 : godot.Mesh;
+#end
+#if use_properties
+	public extern inline function get_draw_pass_4(): godot.Mesh {
+		return cast get_draw_pass_mesh(3);
+	}
+	public extern inline function set_draw_pass_4(v: godot.Mesh): godot.Mesh {
+		set_draw_pass_mesh(3, cast v);
+		return v;
+	}
+
+	@:index(3)
+	@:getter("get_draw_pass_mesh")
+	@:setter("set_draw_pass_mesh")
+	public var draw_pass_4(get, set) : godot.Mesh;
+#else
+
+	@:index(3)
+	@:getter("get_draw_pass_mesh")
+	@:setter("set_draw_pass_mesh")
+	public var draw_pass_4 : godot.Mesh;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_skin")
+	@:setter("set_skin")
+	public var draw_skin(get, set) : godot.Skin;
+#else
+
+	@:index(null)
+	@:getter("get_skin")
+	@:setter("set_skin")
+	public var draw_skin : godot.Skin;
+#end
+#if use_properties
+	public extern inline function set_emitting(v: Bool): Bool {
+		set_emitting_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2586408642.)
+	@:hash_compatibility(null)
+	@:nativeName("set_emitting")
+	@:native("set_emitting")
+	public function set_emitting_impl(emitting:Bool):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2586408642.)
+	@:hash_compatibility(null)
+	@:nativeName("set_emitting")
+	public function set_emitting(emitting:Bool):Void;
+
+#end
+#if use_properties
+	public extern inline function set_amount(v: Int): Int {
+		set_amount_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1286410249)
+	@:hash_compatibility(null)
+	@:nativeName("set_amount")
+	@:native("set_amount")
+	@:argMeta(0, ":meta"("int32"))
+	public function set_amount_impl(@:meta("int32") amount:Int):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1286410249)
+	@:hash_compatibility(null)
+	@:nativeName("set_amount")
+	@:argMeta(0, ":meta"("int32"))
+	public function set_amount(@:meta("int32") amount:Int):Void;
+
+#end
+#if use_properties
+	public extern inline function set_lifetime(v: Float): Float {
+		set_lifetime_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(373806689)
+	@:hash_compatibility(null)
+	@:nativeName("set_lifetime")
+	@:native("set_lifetime")
+	@:argMeta(0, ":meta"("double"))
+	public function set_lifetime_impl(@:meta("double") secs:Float):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(373806689)
+	@:hash_compatibility(null)
+	@:nativeName("set_lifetime")
+	@:argMeta(0, ":meta"("double"))
+	public function set_lifetime(@:meta("double") secs:Float):Void;
+
+#end
+#if use_properties
+	public extern inline function set_one_shot(v: Bool): Bool {
+		set_one_shot_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2586408642.)
+	@:hash_compatibility(null)
+	@:nativeName("set_one_shot")
+	@:native("set_one_shot")
+	public function set_one_shot_impl(enable:Bool):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2586408642.)
+	@:hash_compatibility(null)
+	@:nativeName("set_one_shot")
+	public function set_one_shot(enable:Bool):Void;
+
+#end
+#if use_properties
+	public extern inline function set_preprocess(v: Float): Float {
+		set_preprocess_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(373806689)
+	@:hash_compatibility(null)
+	@:nativeName("set_pre_process_time")
+	@:native("set_preprocess")
+	@:argMeta(0, ":meta"("double"))
+	public function set_preprocess_impl(@:meta("double") secs:Float):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(373806689)
+	@:hash_compatibility(null)
+	@:nativeName("set_pre_process_time")
+	@:native("set_pre_process_time")
+	@:argMeta(0, ":meta"("double"))
+	public function set_preprocess(@:meta("double") secs:Float):Void;
+
+#end
+#if use_properties
+	public extern inline function set_explosiveness(v: Float): Float {
+		set_explosiveness_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(373806689)
+	@:hash_compatibility(null)
+	@:nativeName("set_explosiveness_ratio")
+	@:native("set_explosiveness")
+	@:argMeta(0, ":meta"("float"))
+	public function set_explosiveness_impl(@:meta("float") ratio:Float):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(373806689)
+	@:hash_compatibility(null)
+	@:nativeName("set_explosiveness_ratio")
+	@:native("set_explosiveness_ratio")
+	@:argMeta(0, ":meta"("float"))
+	public function set_explosiveness(@:meta("float") ratio:Float):Void;
+
+#end
+#if use_properties
+	public extern inline function set_randomness(v: Float): Float {
+		set_randomness_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(373806689)
+	@:hash_compatibility(null)
+	@:nativeName("set_randomness_ratio")
+	@:native("set_randomness")
+	@:argMeta(0, ":meta"("float"))
+	public function set_randomness_impl(@:meta("float") ratio:Float):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(373806689)
+	@:hash_compatibility(null)
+	@:nativeName("set_randomness_ratio")
+	@:native("set_randomness_ratio")
+	@:argMeta(0, ":meta"("float"))
+	public function set_randomness(@:meta("float") ratio:Float):Void;
+
+#end
+#if use_properties
+	public extern inline function set_visibility_aabb(v: godot.AABB): godot.AABB {
+		set_visibility_aabb_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(259215842)
+	@:hash_compatibility(null)
+	@:nativeName("set_visibility_aabb")
+	@:native("set_visibility_aabb")
+	public function set_visibility_aabb_impl(aabb:godot.AABB):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(259215842)
+	@:hash_compatibility(null)
+	@:nativeName("set_visibility_aabb")
+	public function set_visibility_aabb(aabb:godot.AABB):Void;
+
+#end
+#if use_properties
+	public extern inline function set_local_coords(v: Bool): Bool {
+		set_local_coords_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2586408642.)
+	@:hash_compatibility(null)
+	@:nativeName("set_use_local_coordinates")
+	@:native("set_local_coords")
+	public function set_local_coords_impl(enable:Bool):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2586408642.)
+	@:hash_compatibility(null)
+	@:nativeName("set_use_local_coordinates")
+	@:native("set_use_local_coordinates")
+	public function set_local_coords(enable:Bool):Void;
+
+#end
+#if use_properties
+	public extern inline function set_fixed_fps(v: Int): Int {
+		set_fixed_fps_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1286410249)
+	@:hash_compatibility(null)
+	@:nativeName("set_fixed_fps")
+	@:native("set_fixed_fps")
+	@:argMeta(0, ":meta"("int32"))
+	public function set_fixed_fps_impl(@:meta("int32") fps:Int):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1286410249)
+	@:hash_compatibility(null)
+	@:nativeName("set_fixed_fps")
+	@:argMeta(0, ":meta"("int32"))
+	public function set_fixed_fps(@:meta("int32") fps:Int):Void;
+
+#end
+#if use_properties
+	public extern inline function set_fract_delta(v: Bool): Bool {
+		set_fract_delta_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2586408642.)
+	@:hash_compatibility(null)
+	@:nativeName("set_fractional_delta")
+	@:native("set_fract_delta")
+	public function set_fract_delta_impl(enable:Bool):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2586408642.)
+	@:hash_compatibility(null)
+	@:nativeName("set_fractional_delta")
+	@:native("set_fractional_delta")
+	public function set_fract_delta(enable:Bool):Void;
+
+#end
+#if use_properties
+	public extern inline function set_interpolate(v: Bool): Bool {
+		set_interpolate_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2586408642.)
+	@:hash_compatibility(null)
+	@:nativeName("set_interpolate")
+	@:native("set_interpolate")
+	public function set_interpolate_impl(enable:Bool):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2586408642.)
+	@:hash_compatibility(null)
+	@:nativeName("set_interpolate")
+	public function set_interpolate(enable:Bool):Void;
+
+#end
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2757459619.)
+	@:hash_compatibility(null)
+	@:nativeName("set_process_material")
+	public function set_process_material(material:godot.Material):Void;
+#if use_properties
+	public extern inline function set_speed_scale(v: Float): Float {
+		set_speed_scale_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(373806689)
+	@:hash_compatibility(null)
+	@:nativeName("set_speed_scale")
+	@:native("set_speed_scale")
+	@:argMeta(0, ":meta"("double"))
+	public function set_speed_scale_impl(@:meta("double") scale:Float):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(373806689)
+	@:hash_compatibility(null)
+	@:nativeName("set_speed_scale")
+	@:argMeta(0, ":meta"("double"))
+	public function set_speed_scale(@:meta("double") scale:Float):Void;
+
+#end
+#if use_properties
+	public extern inline function set_collision_base_size(v: Float): Float {
+		set_collision_base_size_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(373806689)
+	@:hash_compatibility(null)
+	@:nativeName("set_collision_base_size")
+	@:native("set_collision_base_size")
+	@:argMeta(0, ":meta"("float"))
+	public function set_collision_base_size_impl(@:meta("float") size:Float):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(373806689)
+	@:hash_compatibility(null)
+	@:nativeName("set_collision_base_size")
+	@:argMeta(0, ":meta"("float"))
+	public function set_collision_base_size(@:meta("float") size:Float):Void;
+
+#end
+#if use_properties
+	public extern inline function set_interp_to_end(v: Float): Float {
+		set_interp_to_end_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(373806689)
+	@:hash_compatibility(null)
+	@:nativeName("set_interp_to_end")
+	@:native("set_interp_to_end")
+	@:argMeta(0, ":meta"("float"))
+	public function set_interp_to_end_impl(@:meta("float") interp:Float):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(373806689)
+	@:hash_compatibility(null)
+	@:nativeName("set_interp_to_end")
+	@:argMeta(0, ":meta"("float"))
+	public function set_interp_to_end(@:meta("float") interp:Float):Void;
+
+#end
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(36873697)
+	@:hash_compatibility(null)
+	@:nativeName("is_emitting")
+	@:native("is_emitting")
+	public function get_emitting():Bool;
+	@:return_value_meta("int32")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3905245786.)
+	@:hash_compatibility(null)
+	@:nativeName("get_amount")
+	public function get_amount():Int;
+	@:return_value_meta("double")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1740695150)
+	@:hash_compatibility(null)
+	@:nativeName("get_lifetime")
+	public function get_lifetime():Float;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(36873697)
+	@:hash_compatibility(null)
+	@:nativeName("get_one_shot")
+	public function get_one_shot():Bool;
+	@:return_value_meta("double")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1740695150)
+	@:hash_compatibility(null)
+	@:nativeName("get_pre_process_time")
+	@:native("get_pre_process_time")
+	public function get_preprocess():Float;
+	@:return_value_meta("float")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1740695150)
+	@:hash_compatibility(null)
+	@:nativeName("get_explosiveness_ratio")
+	@:native("get_explosiveness_ratio")
+	public function get_explosiveness():Float;
+	@:return_value_meta("float")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1740695150)
+	@:hash_compatibility(null)
+	@:nativeName("get_randomness_ratio")
+	@:native("get_randomness_ratio")
+	public function get_randomness():Float;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1068685055)
+	@:hash_compatibility(null)
+	@:nativeName("get_visibility_aabb")
+	public function get_visibility_aabb():godot.AABB;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(36873697)
+	@:hash_compatibility(null)
+	@:nativeName("get_use_local_coordinates")
+	@:native("get_use_local_coordinates")
+	public function get_local_coords():Bool;
+	@:return_value_meta("int32")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3905245786.)
+	@:hash_compatibility(null)
+	@:nativeName("get_fixed_fps")
+	public function get_fixed_fps():Int;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(36873697)
+	@:hash_compatibility(null)
+	@:nativeName("get_fractional_delta")
+	@:native("get_fractional_delta")
+	public function get_fract_delta():Bool;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(36873697)
+	@:hash_compatibility(null)
+	@:nativeName("get_interpolate")
+	public function get_interpolate():Bool;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(5934680)
+	@:hash_compatibility(null)
+	@:nativeName("get_process_material")
+	public function get_process_material():godot.Material;
+	@:return_value_meta("double")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1740695150)
+	@:hash_compatibility(null)
+	@:nativeName("get_speed_scale")
+	public function get_speed_scale():Float;
+	@:return_value_meta("float")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1740695150)
+	@:hash_compatibility(null)
+	@:nativeName("get_collision_base_size")
+	public function get_collision_base_size():Float;
+	@:return_value_meta("float")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1740695150)
+	@:hash_compatibility(null)
+	@:nativeName("get_interp_to_end")
+	public function get_interp_to_end():Float;
+#if use_properties
+	public extern inline function set_use_fixed_seed(v: Bool): Bool {
+		set_use_fixed_seed_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2586408642.)
+	@:hash_compatibility(null)
+	@:nativeName("set_use_fixed_seed")
+	@:native("set_use_fixed_seed")
+	public function set_use_fixed_seed_impl(use_fixed_seed:Bool):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2586408642.)
+	@:hash_compatibility(null)
+	@:nativeName("set_use_fixed_seed")
+	public function set_use_fixed_seed(use_fixed_seed:Bool):Void;
+
+#end
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(36873697)
+	@:hash_compatibility(null)
+	@:nativeName("get_use_fixed_seed")
+	public function get_use_fixed_seed():Bool;
+#if use_properties
+	public extern inline function set_seed(v: Int): Int {
+		set_seed_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1286410249)
+	@:hash_compatibility(null)
+	@:nativeName("set_seed")
+	@:native("set_seed")
+	@:argMeta(0, ":meta"("uint32"))
+	public function set_seed_impl(@:meta("uint32") seed:Int):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1286410249)
+	@:hash_compatibility(null)
+	@:nativeName("set_seed")
+	@:argMeta(0, ":meta"("uint32"))
+	public function set_seed(@:meta("uint32") seed:Int):Void;
+
+#end
+	@:return_value_meta("uint32")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3905245786.)
+	@:hash_compatibility(null)
+	@:nativeName("get_seed")
+	public function get_seed():Int;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1208074815)
+	@:hash_compatibility(null)
+	@:nativeName("set_draw_order")
+	public function set_draw_order(order:godot.GPUParticles3D_DrawOrder):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3770381780.)
+	@:hash_compatibility(null)
+	@:nativeName("get_draw_order")
+	public function get_draw_order():godot.GPUParticles3D_DrawOrder;
+#if use_properties
+	public extern inline function set_draw_passes(v: Int): Int {
+		set_draw_passes_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1286410249)
+	@:hash_compatibility(null)
+	@:nativeName("set_draw_passes")
+	@:native("set_draw_passes")
+	@:argMeta(0, ":meta"("int32"))
+	public function set_draw_passes_impl(@:meta("int32") passes:Int):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1286410249)
+	@:hash_compatibility(null)
+	@:nativeName("set_draw_passes")
+	@:argMeta(0, ":meta"("int32"))
+	public function set_draw_passes(@:meta("int32") passes:Int):Void;
+
+#end
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(969122797)
+	@:hash_compatibility(null)
+	@:nativeName("set_draw_pass_mesh")
+	@:argMeta(0, ":meta"("int32"))
+	public function set_draw_pass_mesh(@:meta("int32") pass:Int, mesh:godot.Mesh):Void;
+	@:return_value_meta("int32")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3905245786.)
+	@:hash_compatibility(null)
+	@:nativeName("get_draw_passes")
+	public function get_draw_passes():Int;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1576363275)
+	@:hash_compatibility(null)
+	@:nativeName("get_draw_pass_mesh")
+	@:argMeta(0, ":meta"("int32"))
+	public function get_draw_pass_mesh(@:meta("int32") pass:Int):godot.Mesh;
+#if use_properties
+	public extern inline function set_draw_skin(v: godot.Skin): godot.Skin {
+		set_draw_skin_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3971435618.)
+	@:hash_compatibility(null)
+	@:nativeName("set_skin")
+	@:native("set_draw_skin")
+	public function set_draw_skin_impl(skin:godot.Skin):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3971435618.)
+	@:hash_compatibility(null)
+	@:nativeName("set_skin")
+	@:native("set_skin")
+	public function set_draw_skin(skin:godot.Skin):Void;
+
+#end
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2074563878)
+	@:hash_compatibility(null)
+	@:nativeName("get_skin")
+	@:native("get_skin")
+	public function get_draw_skin():godot.Skin;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(107499316)
+	@:hash_compatibility([3218959716.])
+	@:nativeName("restart")
+	@:argMeta(0, ":default_value"("false"))
+	#if gdscript @:argMeta(0, ":noNullPad"("false")) #end
+	public function restart(@:default_value("false") #if gdscript @:noNullPad("false") #end keep_seed:Bool = false):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1068685055)
+	@:hash_compatibility(null)
+	@:nativeName("capture_aabb")
+	public function capture_aabb():godot.AABB;
+#if use_properties
+	public extern inline function set_sub_emitter(v: godot.NodePath): godot.NodePath {
+		set_sub_emitter_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1348162250)
+	@:hash_compatibility(null)
+	@:nativeName("set_sub_emitter")
+	@:native("set_sub_emitter")
+	public function set_sub_emitter_impl(path:godot.NodePath):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1348162250)
+	@:hash_compatibility(null)
+	@:nativeName("set_sub_emitter")
+	public function set_sub_emitter(path:godot.NodePath):Void;
+
+#end
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(4075236667.)
+	@:hash_compatibility(null)
+	@:nativeName("get_sub_emitter")
+	public function get_sub_emitter():godot.NodePath;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(992173727)
+	@:hash_compatibility(null)
+	@:nativeName("emit_particle")
+	@:argMeta(4, ":meta"("uint32"))
+	public function emit_particle(xform:godot.Transform3D, velocity:godot.Vector3, color:godot.Color, custom:godot.Color, @:meta("uint32") flags:Int):Void;
+#if use_properties
+	public extern inline function set_trail_enabled(v: Bool): Bool {
+		set_trail_enabled_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2586408642.)
+	@:hash_compatibility(null)
+	@:nativeName("set_trail_enabled")
+	@:native("set_trail_enabled")
+	public function set_trail_enabled_impl(enabled:Bool):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2586408642.)
+	@:hash_compatibility(null)
+	@:nativeName("set_trail_enabled")
+	public function set_trail_enabled(enabled:Bool):Void;
+
+#end
+#if use_properties
+	public extern inline function set_trail_lifetime(v: Float): Float {
+		set_trail_lifetime_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(373806689)
+	@:hash_compatibility(null)
+	@:nativeName("set_trail_lifetime")
+	@:native("set_trail_lifetime")
+	@:argMeta(0, ":meta"("double"))
+	public function set_trail_lifetime_impl(@:meta("double") secs:Float):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(373806689)
+	@:hash_compatibility(null)
+	@:nativeName("set_trail_lifetime")
+	@:argMeta(0, ":meta"("double"))
+	public function set_trail_lifetime(@:meta("double") secs:Float):Void;
+
+#end
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(36873697)
+	@:hash_compatibility(null)
+	@:nativeName("is_trail_enabled")
+	@:native("is_trail_enabled")
+	public function get_trail_enabled():Bool;
+	@:return_value_meta("double")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1740695150)
+	@:hash_compatibility(null)
+	@:nativeName("get_trail_lifetime")
+	public function get_trail_lifetime():Float;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3892425954.)
+	@:hash_compatibility(null)
+	@:nativeName("set_transform_align")
+	public function set_transform_align(align:godot.GPUParticles3D_TransformAlign):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2100992166)
+	@:hash_compatibility(null)
+	@:nativeName("get_transform_align")
+	public function get_transform_align():godot.GPUParticles3D_TransformAlign;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(540833286)
+	@:hash_compatibility(null)
+	@:nativeName("set_transform_align_channel_filter")
+	public function set_transform_align_channel_filter(channel_filter:godot.RenderingServer_ParticlesTransformAlignCustomSrc):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1664431231)
+	@:hash_compatibility(null)
+	@:nativeName("get_transform_align_channel_filter")
+	public function get_transform_align_channel_filter():godot.RenderingServer_ParticlesTransformAlignCustomSrc;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3781785913.)
+	@:hash_compatibility(null)
+	@:nativeName("set_transform_align_axis")
+	public function set_transform_align_axis(align:godot.RenderingServer_ParticlesTransformAlignAxis):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2427180841.)
+	@:hash_compatibility(null)
+	@:nativeName("get_transform_align_axis")
+	public function get_transform_align_axis():godot.RenderingServer_ParticlesTransformAlignAxis;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1078189570)
+	@:hash_compatibility(null)
+	@:nativeName("convert_from_particles")
+	public function convert_from_particles(particles:godot.Node):Void;
+#if use_properties
+	public extern inline function set_amount_ratio(v: Float): Float {
+		set_amount_ratio_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(373806689)
+	@:hash_compatibility(null)
+	@:nativeName("set_amount_ratio")
+	@:native("set_amount_ratio")
+	@:argMeta(0, ":meta"("float"))
+	public function set_amount_ratio_impl(@:meta("float") ratio:Float):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(373806689)
+	@:hash_compatibility(null)
+	@:nativeName("set_amount_ratio")
+	@:argMeta(0, ":meta"("float"))
+	public function set_amount_ratio(@:meta("float") ratio:Float):Void;
+
+#end
+	@:return_value_meta("float")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1740695150)
+	@:hash_compatibility(null)
+	@:nativeName("get_amount_ratio")
+	public function get_amount_ratio():Float;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(66938510)
+	@:hash_compatibility([373806689])
+	@:nativeName("request_particles_process")
+	@:argMeta(0, ":meta"("float"))
+	@:argMeta(1, ":meta"("float"))
+	@:argMeta(1, ":default_value"("0.0"))
+	#if gdscript @:argMeta(1, ":noNullPad"("0.0")) #end
+	public function request_particles_process(@:meta("float") process_time:Float, @:meta("float") @:default_value("0.0") #if gdscript @:noNullPad("0.0") #end process_time_residual:Float = 0.):Void;
+}

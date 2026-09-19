@@ -1,0 +1,41 @@
+/**
+	Generated using Godot Bindings Generator for Haxe.
+	https://github.com/SomeRanDev/Haxe-GodotBindingsGenerator
+**/
+package godot;
+@:cppEnum @:generated_godot_api @:bindings_api_type("global_enum") #if gdscript @:native("VisualShaderNodeVectorFunc.Function") #end @:is_bitfield(false) extern enum VisualShaderNodeVectorFunc_Function {
+	FUNC_NORMALIZE();
+	FUNC_SATURATE();
+	FUNC_NEGATE();
+	FUNC_RECIPROCAL();
+	FUNC_ABS();
+	FUNC_ACOS();
+	FUNC_ACOSH();
+	FUNC_ASIN();
+	FUNC_ASINH();
+	FUNC_ATAN();
+	FUNC_ATANH();
+	FUNC_CEIL();
+	FUNC_COS();
+	FUNC_COSH();
+	FUNC_DEGREES();
+	FUNC_EXP();
+	FUNC_EXP2();
+	FUNC_FLOOR();
+	FUNC_FRACT();
+	FUNC_INVERSE_SQRT();
+	FUNC_LOG();
+	FUNC_LOG2();
+	FUNC_RADIANS();
+	FUNC_ROUND();
+	FUNC_ROUNDEVEN();
+	FUNC_SIGN();
+	FUNC_SIN();
+	FUNC_SINH();
+	FUNC_SQRT();
+	FUNC_TAN();
+	FUNC_TANH();
+	FUNC_TRUNC();
+	FUNC_ONEMINUS();
+	FUNC_MAX();
+}

@@ -1,0 +1,26 @@
+/**
+	Generated using Godot Bindings Generator for Haxe.
+	https://github.com/SomeRanDev/Haxe-GodotBindingsGenerator
+**/
+package godot;
+@:cppEnum @:generated_godot_api @:bindings_api_type("global_enum") #if gdscript @:native("MIDIMessage") #end @:is_bitfield(false) extern enum MIDIMessage {
+	MIDI_MESSAGE_NONE();
+	MIDI_MESSAGE_NOTE_OFF();
+	MIDI_MESSAGE_NOTE_ON();
+	MIDI_MESSAGE_AFTERTOUCH();
+	MIDI_MESSAGE_CONTROL_CHANGE();
+	MIDI_MESSAGE_PROGRAM_CHANGE();
+	MIDI_MESSAGE_CHANNEL_PRESSURE();
+	MIDI_MESSAGE_PITCH_BEND();
+	MIDI_MESSAGE_SYSTEM_EXCLUSIVE();
+	MIDI_MESSAGE_QUARTER_FRAME();
+	MIDI_MESSAGE_SONG_POSITION_POINTER();
+	MIDI_MESSAGE_SONG_SELECT();
+	MIDI_MESSAGE_TUNE_REQUEST();
+	MIDI_MESSAGE_TIMING_CLOCK();
+	MIDI_MESSAGE_START();
+	MIDI_MESSAGE_CONTINUE();
+	MIDI_MESSAGE_STOP();
+	MIDI_MESSAGE_ACTIVE_SENSING();
+	MIDI_MESSAGE_SYSTEM_RESET();
+}

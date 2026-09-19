@@ -1,0 +1,103 @@
+/**
+	Generated using Godot Bindings Generator for Haxe.
+	https://github.com/SomeRanDev/Haxe-GodotBindingsGenerator
+**/
+package godot;
+@:generated_godot_api @:bindings_api_type("class") @:is_refcounted(true) @:is_instantiable(true) @:api_type("editor") @:is_resource(true) @:is_node(false) extern class EditorFeatureProfile extends godot.RefCounted {
+	public function new();
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2524380260.)
+	@:hash_compatibility(null)
+	@:nativeName("set_disable_class")
+	public function set_disable_class(class_name:godot.StringName, disable:Bool):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2619796661.)
+	@:hash_compatibility(null)
+	@:nativeName("is_class_disabled")
+	public function is_class_disabled(class_name:godot.StringName):Bool;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2524380260.)
+	@:hash_compatibility(null)
+	@:nativeName("set_disable_class_editor")
+	public function set_disable_class_editor(class_name:godot.StringName, disable:Bool):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2619796661.)
+	@:hash_compatibility(null)
+	@:nativeName("is_class_editor_disabled")
+	public function is_class_editor_disabled(class_name:godot.StringName):Bool;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(865197084)
+	@:hash_compatibility(null)
+	@:nativeName("set_disable_class_property")
+	public function set_disable_class_property(class_name:godot.StringName, property:godot.StringName, disable:Bool):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(471820014)
+	@:hash_compatibility(null)
+	@:nativeName("is_class_property_disabled")
+	public function is_class_property_disabled(class_name:godot.StringName, property:godot.StringName):Bool;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1884871044)
+	@:hash_compatibility(null)
+	@:nativeName("set_disable_feature")
+	public function set_disable_feature(feature:godot.EditorFeatureProfile_Feature, disable:Bool):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2974403161.)
+	@:hash_compatibility(null)
+	@:nativeName("is_feature_disabled")
+	public function is_feature_disabled(feature:godot.EditorFeatureProfile_Feature):Bool;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3401335809.)
+	@:hash_compatibility(null)
+	@:nativeName("get_feature_name")
+	public function get_feature_name(feature:godot.EditorFeatureProfile_Feature):String;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(166001499)
+	@:hash_compatibility(null)
+	@:nativeName("save_to_file")
+	public function save_to_file(path:String):godot.Error;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(166001499)
+	@:hash_compatibility(null)
+	@:nativeName("load_from_file")
+	public function load_from_file(path:String):godot.Error;
+}

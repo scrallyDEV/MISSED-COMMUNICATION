@@ -1,0 +1,50 @@
+﻿# ==================================================
+# GODOT LOCAL / GENERATED DATA
+# ==================================================
+
+# Godot's local import/editor/cache directory.
+# The actual Godot project is still committed.
+game/first-game/.godot/
+
+
+# ==================================================
+# REFLAXE GENERATED GDSCRIPT OUTPUT
+# ==================================================
+
+# Generated output from our Haxe source.
+# The Haxe source itself lives in source/ and HaxeGD/.
+game/first-game/addons/haxe_output/
+
+
+# ==================================================
+# HAXEGD
+# ==================================================
+
+# HaxeGD lives physically inside this workspace,
+# but is maintained as its own Git repository.
+HaxeGD/
+
+
+# ==================================================
+# TRENCHBROOM
+# ==================================================
+
+# Portable TrenchBroom installation.
+mapping/
+
+
+# ==================================================
+# OLD SOURCE-SHARING FILES
+# ==================================================
+
+source.zip
+godot.zip
+zip.bat
+zipall.bat
+
+
+# ==================================================
+# WINDOWS SHORTCUTS
+# ==================================================
+
+*.lnk

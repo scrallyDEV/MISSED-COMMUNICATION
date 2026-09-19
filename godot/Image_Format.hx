@@ -1,0 +1,55 @@
+/**
+	Generated using Godot Bindings Generator for Haxe.
+	https://github.com/SomeRanDev/Haxe-GodotBindingsGenerator
+**/
+package godot;
+@:cppEnum @:generated_godot_api @:bindings_api_type("global_enum") #if gdscript @:native("Image.Format") #end @:is_bitfield(false) extern enum Image_Format {
+	FORMAT_L8();
+	FORMAT_LA8();
+	FORMAT_R8();
+	FORMAT_RG8();
+	FORMAT_RGB8();
+	FORMAT_RGBA8();
+	FORMAT_RGBA4444();
+	FORMAT_RGB565();
+	FORMAT_RF();
+	FORMAT_RGF();
+	FORMAT_RGBF();
+	FORMAT_RGBAF();
+	FORMAT_RH();
+	FORMAT_RGH();
+	FORMAT_RGBH();
+	FORMAT_RGBAH();
+	FORMAT_RGBE9995();
+	FORMAT_DXT1();
+	FORMAT_DXT3();
+	FORMAT_DXT5();
+	FORMAT_RGTC_R();
+	FORMAT_RGTC_RG();
+	FORMAT_BPTC_RGBA();
+	FORMAT_BPTC_RGBF();
+	FORMAT_BPTC_RGBFU();
+	FORMAT_ETC();
+	FORMAT_ETC2_R11();
+	FORMAT_ETC2_R11S();
+	FORMAT_ETC2_RG11();
+	FORMAT_ETC2_RG11S();
+	FORMAT_ETC2_RGB8();
+	FORMAT_ETC2_RGBA8();
+	FORMAT_ETC2_RGB8A1();
+	FORMAT_ETC2_RA_AS_RG();
+	FORMAT_DXT5_RA_AS_RG();
+	FORMAT_ASTC_4x4();
+	FORMAT_ASTC_4x4_HDR();
+	FORMAT_ASTC_8x8();
+	FORMAT_ASTC_8x8_HDR();
+	FORMAT_R16();
+	FORMAT_RG16();
+	FORMAT_RGB16();
+	FORMAT_RGBA16();
+	FORMAT_R16I();
+	FORMAT_RG16I();
+	FORMAT_RGB16I();
+	FORMAT_RGBA16I();
+	FORMAT_MAX();
+}

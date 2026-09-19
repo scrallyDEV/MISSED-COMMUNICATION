@@ -1,0 +1,258 @@
+/**
+	Generated using Godot Bindings Generator for Haxe.
+	https://github.com/SomeRanDev/Haxe-GodotBindingsGenerator
+**/
+package godot;
+@:generated_godot_api @:bindings_api_type("class") @:is_refcounted(true) @:is_instantiable(true) @:api_type("core") @:is_resource(true) @:is_node(false) extern class VisualShader extends godot.Shader {
+	public function new();
+	public static var NODE_ID_INVALID : Int;
+	public static var NODE_ID_OUTPUT : Int;
+#if use_properties
+	@:index(null)
+	@:getter("get_graph_offset")
+	@:setter("set_graph_offset")
+	@:reassignOnSubfieldEdit(set_graph_offset_impl, x, y)
+	public var graph_offset(get, set) : godot.Vector2;
+#else
+
+	@:index(null)
+	@:getter("get_graph_offset")
+	@:setter("set_graph_offset")
+	public var graph_offset : godot.Vector2;
+#end
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3978014962.)
+	@:hash_compatibility(null)
+	@:nativeName("set_mode")
+	public function set_mode(mode:godot.Shader_Mode):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1560769431)
+	@:hash_compatibility(null)
+	@:nativeName("add_node")
+	@:argMeta(3, ":meta"("int32"))
+	public function add_node(type:godot.VisualShader_Type, node:godot.VisualShaderNode, position:godot.Vector2, @:meta("int32") id:Int):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3784670312.)
+	@:hash_compatibility(null)
+	@:nativeName("get_node")
+	@:argMeta(1, ":meta"("int32"))
+	public function get_node(type:godot.VisualShader_Type, @:meta("int32") id:Int):godot.VisualShaderNode;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2726660721.)
+	@:hash_compatibility(null)
+	@:nativeName("set_node_position")
+	@:argMeta(1, ":meta"("int32"))
+	public function set_node_position(type:godot.VisualShader_Type, @:meta("int32") id:Int, position:godot.Vector2):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2175036082.)
+	@:hash_compatibility(null)
+	@:nativeName("get_node_position")
+	@:argMeta(1, ":meta"("int32"))
+	public function get_node_position(type:godot.VisualShader_Type, @:meta("int32") id:Int):godot.Vector2;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2370592410.)
+	@:hash_compatibility(null)
+	@:nativeName("get_node_list")
+	public function get_node_list(type:godot.VisualShader_Type):godot.PackedInt32Array;
+	@:return_value_meta("int32")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(629467342)
+	@:hash_compatibility(null)
+	@:nativeName("get_valid_node_id")
+	public function get_valid_node_id(type:godot.VisualShader_Type):Int;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(844050912)
+	@:hash_compatibility(null)
+	@:nativeName("remove_node")
+	@:argMeta(1, ":meta"("int32"))
+	public function remove_node(type:godot.VisualShader_Type, @:meta("int32") id:Int):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3144735253.)
+	@:hash_compatibility(null)
+	@:nativeName("replace_node")
+	@:argMeta(1, ":meta"("int32"))
+	public function replace_node(type:godot.VisualShader_Type, @:meta("int32") id:Int, new_class:godot.StringName):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3922381898.)
+	@:hash_compatibility(null)
+	@:nativeName("is_node_connection")
+	@:argMeta(1, ":meta"("int32"))
+	@:argMeta(2, ":meta"("int32"))
+	@:argMeta(3, ":meta"("int32"))
+	@:argMeta(4, ":meta"("int32"))
+	public function is_node_connection(type:godot.VisualShader_Type, @:meta("int32") from_node:Int, @:meta("int32") from_port:Int, @:meta("int32") to_node:Int, @:meta("int32") to_port:Int):Bool;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3922381898.)
+	@:hash_compatibility(null)
+	@:nativeName("can_connect_nodes")
+	@:argMeta(1, ":meta"("int32"))
+	@:argMeta(2, ":meta"("int32"))
+	@:argMeta(3, ":meta"("int32"))
+	@:argMeta(4, ":meta"("int32"))
+	public function can_connect_nodes(type:godot.VisualShader_Type, @:meta("int32") from_node:Int, @:meta("int32") from_port:Int, @:meta("int32") to_node:Int, @:meta("int32") to_port:Int):Bool;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3081049573.)
+	@:hash_compatibility(null)
+	@:nativeName("connect_nodes")
+	@:argMeta(1, ":meta"("int32"))
+	@:argMeta(2, ":meta"("int32"))
+	@:argMeta(3, ":meta"("int32"))
+	@:argMeta(4, ":meta"("int32"))
+	public function connect_nodes(type:godot.VisualShader_Type, @:meta("int32") from_node:Int, @:meta("int32") from_port:Int, @:meta("int32") to_node:Int, @:meta("int32") to_port:Int):godot.Error;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2268060358.)
+	@:hash_compatibility(null)
+	@:nativeName("disconnect_nodes")
+	@:argMeta(1, ":meta"("int32"))
+	@:argMeta(2, ":meta"("int32"))
+	@:argMeta(3, ":meta"("int32"))
+	@:argMeta(4, ":meta"("int32"))
+	public function disconnect_nodes(type:godot.VisualShader_Type, @:meta("int32") from_node:Int, @:meta("int32") from_port:Int, @:meta("int32") to_node:Int, @:meta("int32") to_port:Int):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2268060358.)
+	@:hash_compatibility(null)
+	@:nativeName("connect_nodes_forced")
+	@:argMeta(1, ":meta"("int32"))
+	@:argMeta(2, ":meta"("int32"))
+	@:argMeta(3, ":meta"("int32"))
+	@:argMeta(4, ":meta"("int32"))
+	public function connect_nodes_forced(type:godot.VisualShader_Type, @:meta("int32") from_node:Int, @:meta("int32") from_port:Int, @:meta("int32") to_node:Int, @:meta("int32") to_port:Int):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1441964831)
+	@:hash_compatibility(null)
+	@:nativeName("get_node_connections")
+	public function get_node_connections(type:godot.VisualShader_Type):Array<godot.Dictionary>;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2479945279.)
+	@:hash_compatibility(null)
+	@:nativeName("attach_node_to_frame")
+	@:argMeta(1, ":meta"("int32"))
+	@:argMeta(2, ":meta"("int32"))
+	public function attach_node_to_frame(type:godot.VisualShader_Type, @:meta("int32") id:Int, @:meta("int32") frame:Int):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(844050912)
+	@:hash_compatibility(null)
+	@:nativeName("detach_node_from_frame")
+	@:argMeta(1, ":meta"("int32"))
+	public function detach_node_from_frame(type:godot.VisualShader_Type, @:meta("int32") id:Int):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2084110726)
+	@:hash_compatibility(null)
+	@:nativeName("add_varying")
+	public function add_varying(name:String, mode:godot.VisualShader_VaryingMode, type:godot.VisualShader_VaryingType):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(83702148)
+	@:hash_compatibility(null)
+	@:nativeName("remove_varying")
+	public function remove_varying(name:String):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3927539163.)
+	@:hash_compatibility(null)
+	@:nativeName("has_varying")
+	public function has_varying(name:String):Bool;
+#if use_properties
+	public extern inline function set_graph_offset(v: godot.Vector2): godot.Vector2 {
+		set_graph_offset_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(743155724)
+	@:hash_compatibility(null)
+	@:nativeName("set_graph_offset")
+	@:native("set_graph_offset")
+	public function set_graph_offset_impl(offset:godot.Vector2):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(743155724)
+	@:hash_compatibility(null)
+	@:nativeName("set_graph_offset")
+	public function set_graph_offset(offset:godot.Vector2):Void;
+
+#end
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3341600327.)
+	@:hash_compatibility(null)
+	@:nativeName("get_graph_offset")
+	public function get_graph_offset():godot.Vector2;
+}

@@ -1,0 +1,461 @@
+/**
+	Generated using Godot Bindings Generator for Haxe.
+	https://github.com/SomeRanDev/Haxe-GodotBindingsGenerator
+**/
+package godot;
+@:generated_godot_api @:bindings_api_type("class") @:is_refcounted(true) @:is_instantiable(false) @:api_type("core") @:is_resource(true) @:is_node(false) extern class DirAccess extends godot.RefCounted {
+	public function new();
+#if use_properties
+	@:index(null)
+	@:getter("get_include_navigational")
+	@:setter("set_include_navigational")
+	public var include_navigational(get, set) : Bool;
+#else
+
+	@:index(null)
+	@:getter("get_include_navigational")
+	@:setter("set_include_navigational")
+	public var include_navigational : Bool;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_include_hidden")
+	@:setter("set_include_hidden")
+	public var include_hidden(get, set) : Bool;
+#else
+
+	@:index(null)
+	@:getter("get_include_hidden")
+	@:setter("set_include_hidden")
+	public var include_hidden : Bool;
+#end
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(true)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1923528528)
+	@:hash_compatibility(null)
+	@:nativeName("open")
+	public static function open(path:String):godot.DirAccess;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(true)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(166280745)
+	@:hash_compatibility(null)
+	@:nativeName("get_open_error")
+	public static function get_open_error():godot.Error;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(true)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(812913566)
+	@:hash_compatibility(null)
+	@:nativeName("create_temp")
+	@:argMeta(0, ":default_value"("\"\""))
+	#if gdscript @:argMeta(0, ":noNullPad"("\"\"")) #end
+	@:argMeta(1, ":default_value"("false"))
+	#if gdscript @:argMeta(1, ":noNullPad"("false")) #end
+	public static function create_temp(@:default_value("\"\"") #if gdscript @:noNullPad("\"\"") #end prefix:String = "\"\"", @:default_value("false") #if gdscript @:noNullPad("false") #end keep:Bool = false):godot.DirAccess;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(166280745)
+	@:hash_compatibility([2018049411, 2610976713.])
+	@:nativeName("list_dir_begin")
+	public function list_dir_begin():godot.Error;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2841200299.)
+	@:hash_compatibility(null)
+	@:nativeName("get_next")
+	public function get_next():String;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(36873697)
+	@:hash_compatibility(null)
+	@:nativeName("current_is_dir")
+	public function current_is_dir():Bool;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3218959716.)
+	@:hash_compatibility(null)
+	@:nativeName("list_dir_end")
+	public function list_dir_end():Void;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2981934095.)
+	@:hash_compatibility(null)
+	@:nativeName("get_files")
+	public function get_files():godot.PackedStringArray;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(true)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3538744774.)
+	@:hash_compatibility(null)
+	@:nativeName("get_files_at")
+	public static function get_files_at(path:String):godot.PackedStringArray;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2981934095.)
+	@:hash_compatibility(null)
+	@:nativeName("get_directories")
+	public function get_directories():godot.PackedStringArray;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(true)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3538744774.)
+	@:hash_compatibility(null)
+	@:nativeName("get_directories_at")
+	public static function get_directories_at(path:String):godot.PackedStringArray;
+	@:return_value_meta("int32")
+	@:is_const(false)
+	@:is_static(true)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2455072627.)
+	@:hash_compatibility(null)
+	@:nativeName("get_drive_count")
+	public static function get_drive_count():Int;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(true)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(990163283)
+	@:hash_compatibility(null)
+	@:nativeName("get_drive_name")
+	@:argMeta(0, ":meta"("int32"))
+	public static function get_drive_name(@:meta("int32") idx:Int):String;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(true)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(990163283)
+	@:hash_compatibility(null)
+	@:nativeName("get_drive_label")
+	@:argMeta(0, ":meta"("int32"))
+	public static function get_drive_label(@:meta("int32") idx:Int):String;
+	@:return_value_meta("int32")
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2455072627.)
+	@:hash_compatibility(null)
+	@:nativeName("get_current_drive")
+	public function get_current_drive():Int;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(166001499)
+	@:hash_compatibility(null)
+	@:nativeName("change_dir")
+	public function change_dir(to_dir:String):godot.Error;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1287308131)
+	@:hash_compatibility(null)
+	@:nativeName("get_current_dir")
+	@:argMeta(0, ":default_value"("true"))
+	#if gdscript @:argMeta(0, ":noNullPad"("true")) #end
+	public function get_current_dir(@:default_value("true") #if gdscript @:noNullPad("true") #end include_drive:Bool = true):String;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(166001499)
+	@:hash_compatibility(null)
+	@:nativeName("make_dir")
+	public function make_dir(path:String):godot.Error;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(true)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(166001499)
+	@:hash_compatibility(null)
+	@:nativeName("make_dir_absolute")
+	public static function make_dir_absolute(path:String):godot.Error;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(166001499)
+	@:hash_compatibility(null)
+	@:nativeName("make_dir_recursive")
+	public function make_dir_recursive(path:String):godot.Error;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(true)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(166001499)
+	@:hash_compatibility(null)
+	@:nativeName("make_dir_recursive_absolute")
+	public static function make_dir_recursive_absolute(path:String):godot.Error;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2323990056.)
+	@:hash_compatibility(null)
+	@:nativeName("file_exists")
+	public function file_exists(path:String):Bool;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2323990056.)
+	@:hash_compatibility(null)
+	@:nativeName("dir_exists")
+	public function dir_exists(path:String):Bool;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(true)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2323990056.)
+	@:hash_compatibility(null)
+	@:nativeName("dir_exists_absolute")
+	public static function dir_exists_absolute(path:String):Bool;
+	@:return_value_meta("uint64")
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2455072627.)
+	@:hash_compatibility(null)
+	@:nativeName("get_space_left")
+	public function get_space_left():Int;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1063198817)
+	@:hash_compatibility([198434953])
+	@:nativeName("copy")
+	@:argMeta(2, ":meta"("int32"))
+	@:argMeta(2, ":default_value"("-1"))
+	#if gdscript @:argMeta(2, ":noNullPad"("-1")) #end
+	public function copy(from:String, to:String, @:meta("int32") @:default_value("-1") #if gdscript @:noNullPad("-1") #end chmod_flags:Int = -1):godot.Error;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(true)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1063198817)
+	@:hash_compatibility([198434953])
+	@:nativeName("copy_absolute")
+	@:argMeta(2, ":meta"("int32"))
+	@:argMeta(2, ":default_value"("-1"))
+	#if gdscript @:argMeta(2, ":noNullPad"("-1")) #end
+	public static function copy_absolute(from:String, to:String, @:meta("int32") @:default_value("-1") #if gdscript @:noNullPad("-1") #end chmod_flags:Int = -1):godot.Error;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(852856452)
+	@:hash_compatibility(null)
+	@:nativeName("rename")
+	public function rename(from:String, to:String):godot.Error;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(true)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(852856452)
+	@:hash_compatibility(null)
+	@:nativeName("rename_absolute")
+	public static function rename_absolute(from:String, to:String):godot.Error;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(166001499)
+	@:hash_compatibility(null)
+	@:nativeName("remove")
+	public function remove(path:String):godot.Error;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(true)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(166001499)
+	@:hash_compatibility(null)
+	@:nativeName("remove_absolute")
+	public static function remove_absolute(path:String):godot.Error;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2323990056.)
+	@:hash_compatibility(null)
+	@:nativeName("is_link")
+	public function is_link(path:String):Bool;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1703090593)
+	@:hash_compatibility(null)
+	@:nativeName("read_link")
+	public function read_link(path:String):String;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(852856452)
+	@:hash_compatibility(null)
+	@:nativeName("create_link")
+	public function create_link(source:String, target:String):godot.Error;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3927539163.)
+	@:hash_compatibility(null)
+	@:nativeName("is_bundle")
+	public function is_bundle(path:String):Bool;
+#if use_properties
+	public extern inline function set_include_navigational(v: Bool): Bool {
+		set_include_navigational_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2586408642.)
+	@:hash_compatibility(null)
+	@:nativeName("set_include_navigational")
+	@:native("set_include_navigational")
+	public function set_include_navigational_impl(enable:Bool):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2586408642.)
+	@:hash_compatibility(null)
+	@:nativeName("set_include_navigational")
+	public function set_include_navigational(enable:Bool):Void;
+
+#end
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(36873697)
+	@:hash_compatibility(null)
+	@:nativeName("get_include_navigational")
+	public function get_include_navigational():Bool;
+#if use_properties
+	public extern inline function set_include_hidden(v: Bool): Bool {
+		set_include_hidden_impl(cast v);
+		return v;
+	}
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2586408642.)
+	@:hash_compatibility(null)
+	@:nativeName("set_include_hidden")
+	@:native("set_include_hidden")
+	public function set_include_hidden_impl(enable:Bool):Void;
+
+#else
+
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2586408642.)
+	@:hash_compatibility(null)
+	@:nativeName("set_include_hidden")
+	public function set_include_hidden(enable:Bool):Void;
+
+#end
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(36873697)
+	@:hash_compatibility(null)
+	@:nativeName("get_include_hidden")
+	public function get_include_hidden():Bool;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(201670096)
+	@:hash_compatibility(null)
+	@:nativeName("get_filesystem_type")
+	public function get_filesystem_type():String;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3927539163.)
+	@:hash_compatibility(null)
+	@:nativeName("is_case_sensitive")
+	public function is_case_sensitive(path:String):Bool;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(820780508)
+	@:hash_compatibility(null)
+	@:nativeName("is_equivalent")
+	public function is_equivalent(path_a:String, path_b:String):Bool;
+}

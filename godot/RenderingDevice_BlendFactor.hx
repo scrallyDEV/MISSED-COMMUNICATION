@@ -1,0 +1,27 @@
+/**
+	Generated using Godot Bindings Generator for Haxe.
+	https://github.com/SomeRanDev/Haxe-GodotBindingsGenerator
+**/
+package godot;
+@:cppEnum @:generated_godot_api @:bindings_api_type("global_enum") #if gdscript @:native("RenderingDevice.BlendFactor") #end @:is_bitfield(false) extern enum RenderingDevice_BlendFactor {
+	BLEND_FACTOR_ZERO();
+	BLEND_FACTOR_ONE();
+	BLEND_FACTOR_SRC_COLOR();
+	BLEND_FACTOR_ONE_MINUS_SRC_COLOR();
+	BLEND_FACTOR_DST_COLOR();
+	BLEND_FACTOR_ONE_MINUS_DST_COLOR();
+	BLEND_FACTOR_SRC_ALPHA();
+	BLEND_FACTOR_ONE_MINUS_SRC_ALPHA();
+	BLEND_FACTOR_DST_ALPHA();
+	BLEND_FACTOR_ONE_MINUS_DST_ALPHA();
+	BLEND_FACTOR_CONSTANT_COLOR();
+	BLEND_FACTOR_ONE_MINUS_CONSTANT_COLOR();
+	BLEND_FACTOR_CONSTANT_ALPHA();
+	BLEND_FACTOR_ONE_MINUS_CONSTANT_ALPHA();
+	BLEND_FACTOR_SRC_ALPHA_SATURATE();
+	BLEND_FACTOR_SRC1_COLOR();
+	BLEND_FACTOR_ONE_MINUS_SRC1_COLOR();
+	BLEND_FACTOR_SRC1_ALPHA();
+	BLEND_FACTOR_ONE_MINUS_SRC1_ALPHA();
+	BLEND_FACTOR_MAX();
+}

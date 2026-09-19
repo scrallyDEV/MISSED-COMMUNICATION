@@ -1,0 +1,167 @@
+/**
+	Generated using Godot Bindings Generator for Haxe.
+	https://github.com/SomeRanDev/Haxe-GodotBindingsGenerator
+**/
+package godot;
+@:generated_godot_api @:bindings_api_type("class") @:is_refcounted(true) @:is_instantiable(false) @:api_type("core") @:is_resource(true) @:is_node(false) extern class ENetPacketPeer extends godot.PacketPeer {
+	public function new();
+	public static var PACKET_LOSS_SCALE : Int;
+	public static var PACKET_THROTTLE_SCALE : Int;
+	public static var FLAG_RELIABLE : Int;
+	public static var FLAG_UNSEQUENCED : Int;
+	public static var FLAG_UNRELIABLE_FRAGMENT : Int;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1995695955)
+	@:hash_compatibility(null)
+	@:nativeName("peer_disconnect")
+	@:argMeta(0, ":meta"("int32"))
+	@:argMeta(0, ":default_value"("0"))
+	#if gdscript @:argMeta(0, ":noNullPad"("0")) #end
+	public function peer_disconnect(@:meta("int32") @:default_value("0") #if gdscript @:noNullPad("0") #end data:Int = 0):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1995695955)
+	@:hash_compatibility(null)
+	@:nativeName("peer_disconnect_later")
+	@:argMeta(0, ":meta"("int32"))
+	@:argMeta(0, ":default_value"("0"))
+	#if gdscript @:argMeta(0, ":noNullPad"("0")) #end
+	public function peer_disconnect_later(@:meta("int32") @:default_value("0") #if gdscript @:noNullPad("0") #end data:Int = 0):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1995695955)
+	@:hash_compatibility(null)
+	@:nativeName("peer_disconnect_now")
+	@:argMeta(0, ":meta"("int32"))
+	@:argMeta(0, ":default_value"("0"))
+	#if gdscript @:argMeta(0, ":noNullPad"("0")) #end
+	public function peer_disconnect_now(@:meta("int32") @:default_value("0") #if gdscript @:noNullPad("0") #end data:Int = 0):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3218959716.)
+	@:hash_compatibility(null)
+	@:nativeName("ping")
+	public function ping():Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1286410249)
+	@:hash_compatibility(null)
+	@:nativeName("ping_interval")
+	@:argMeta(0, ":meta"("int32"))
+	public function ping_interval(@:meta("int32") ping_interval:Int):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3218959716.)
+	@:hash_compatibility(null)
+	@:nativeName("reset")
+	public function reset():Void;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(120522849)
+	@:hash_compatibility(null)
+	@:nativeName("send")
+	@:argMeta(0, ":meta"("int32"))
+	@:argMeta(2, ":meta"("int32"))
+	public function send(@:meta("int32") channel:Int, packet:godot.PackedByteArray, @:meta("int32") flags:Int):godot.Error;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1649997291)
+	@:hash_compatibility(null)
+	@:nativeName("throttle_configure")
+	@:argMeta(0, ":meta"("int32"))
+	@:argMeta(1, ":meta"("int32"))
+	@:argMeta(2, ":meta"("int32"))
+	public function throttle_configure(@:meta("int32") interval:Int, @:meta("int32") acceleration:Int, @:meta("int32") deceleration:Int):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1649997291)
+	@:hash_compatibility(null)
+	@:nativeName("set_timeout")
+	@:argMeta(0, ":meta"("int32"))
+	@:argMeta(1, ":meta"("int32"))
+	@:argMeta(2, ":meta"("int32"))
+	public function set_timeout(@:meta("int32") timeout:Int, @:meta("int32") timeout_min:Int, @:meta("int32") timeout_max:Int):Void;
+	@:return_value_meta("int32")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3905245786.)
+	@:hash_compatibility(null)
+	@:nativeName("get_packet_flags")
+	public function get_packet_flags():Int;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(201670096)
+	@:hash_compatibility(null)
+	@:nativeName("get_remote_address")
+	public function get_remote_address():String;
+	@:return_value_meta("int32")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3905245786.)
+	@:hash_compatibility(null)
+	@:nativeName("get_remote_port")
+	public function get_remote_port():Int;
+	@:return_value_meta("double")
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1642578323)
+	@:hash_compatibility(null)
+	@:nativeName("get_statistic")
+	public function get_statistic(statistic:godot.ENetPacketPeer_PeerStatistic):Float;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(711068532)
+	@:hash_compatibility(null)
+	@:nativeName("get_state")
+	public function get_state():godot.ENetPacketPeer_PeerState;
+	@:return_value_meta("int32")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3905245786.)
+	@:hash_compatibility(null)
+	@:nativeName("get_channels")
+	public function get_channels():Int;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(36873697)
+	@:hash_compatibility(null)
+	@:nativeName("is_active")
+	public function is_active():Bool;
+}

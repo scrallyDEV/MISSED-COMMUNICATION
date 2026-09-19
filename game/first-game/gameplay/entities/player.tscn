@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cv1ybv8v3gvby"]
+
+[ext_resource type="Script" uid="uid://b07hcfeuf1eg4" path="res://addons/haxe_output/entities_Player.gd" id="1_cxg74"]
+[ext_resource type="Script" uid="uid://3vewl5s15186" path="res://addons/haxe_output/entities_Flashlight.gd" id="2_nkwgv"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mstrr"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_mstrr"]
+
+[node name="Player" type="CharacterBody3D" unique_id=1666042754]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+script = ExtResource("1_cxg74")
+metadata/_edit_group_ = true
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=658333295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.79999995, -0.2)
+near = 0.001
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=947640242]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, -1.4901161e-08)
+target_position = Vector3(0, -1.1, 0)
+
+[node name="Flashlight" type="SpotLight3D" parent="Camera3D" unique_id=694114628]
+shadow_enabled = true
+spot_range = 15.0
+spot_angle = 36.0
+script = ExtResource("2_nkwgv")
+drainRate = 10.0
+metadata/_custom_type_script = "uid://3vewl5s15186"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=231495878]
+shape = SubResource("CapsuleShape3D_mstrr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1566464109]
+layers = 2
+mesh = SubResource("CapsuleMesh_mstrr")

@@ -1,0 +1,462 @@
+/**
+	Generated using Godot Bindings Generator for Haxe.
+	https://github.com/SomeRanDev/Haxe-GodotBindingsGenerator
+**/
+package godot;
+@:generated_godot_api @:bindings_api_type("class") @:is_refcounted(false) @:is_instantiable(true) @:api_type("core") @:is_resource(false) @:is_node(false) extern class Engine extends godot.Object {
+#if use_properties
+	@:index(null)
+	@:getter("is_printing_error_messages")
+	@:setter("set_print_error_messages")
+	public static var print_error_messages(get, set) : Bool;
+#else
+
+	@:index(null)
+	@:getter("is_printing_error_messages")
+	@:setter("set_print_error_messages")
+	public static var print_error_messages : Bool;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("is_printing_to_stdout")
+	@:setter("set_print_to_stdout")
+	public static var print_to_stdout(get, set) : Bool;
+#else
+
+	@:index(null)
+	@:getter("is_printing_to_stdout")
+	@:setter("set_print_to_stdout")
+	public static var print_to_stdout : Bool;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_physics_ticks_per_second")
+	@:setter("set_physics_ticks_per_second")
+	public static var physics_ticks_per_second(get, set) : Int;
+#else
+
+	@:index(null)
+	@:getter("get_physics_ticks_per_second")
+	@:setter("set_physics_ticks_per_second")
+	public static var physics_ticks_per_second : Int;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_max_physics_steps_per_frame")
+	@:setter("set_max_physics_steps_per_frame")
+	public static var max_physics_steps_per_frame(get, set) : Int;
+#else
+
+	@:index(null)
+	@:getter("get_max_physics_steps_per_frame")
+	@:setter("set_max_physics_steps_per_frame")
+	public static var max_physics_steps_per_frame : Int;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_max_fps")
+	@:setter("set_max_fps")
+	public static var max_fps(get, set) : Int;
+#else
+
+	@:index(null)
+	@:getter("get_max_fps")
+	@:setter("set_max_fps")
+	public static var max_fps : Int;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_time_scale")
+	@:setter("set_time_scale")
+	public static var time_scale(get, set) : Float;
+#else
+
+	@:index(null)
+	@:getter("get_time_scale")
+	@:setter("set_time_scale")
+	public static var time_scale : Float;
+#end
+#if use_properties
+	@:index(null)
+	@:getter("get_physics_jitter_fix")
+	@:setter("set_physics_jitter_fix")
+	public static var physics_jitter_fix(get, set) : Float;
+#else
+
+	@:index(null)
+	@:getter("get_physics_jitter_fix")
+	@:setter("set_physics_jitter_fix")
+	public static var physics_jitter_fix : Float;
+#end
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1286410249)
+	@:hash_compatibility(null)
+	@:nativeName("set_physics_ticks_per_second")
+	@:argMeta(0, ":meta"("int32"))
+	public static function set_physics_ticks_per_second(@:meta("int32") physics_ticks_per_second:Int):Void;
+	@:return_value_meta("int32")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3905245786.)
+	@:hash_compatibility(null)
+	@:nativeName("get_physics_ticks_per_second")
+	public static function get_physics_ticks_per_second():Int;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1286410249)
+	@:hash_compatibility(null)
+	@:nativeName("set_max_physics_steps_per_frame")
+	@:argMeta(0, ":meta"("int32"))
+	public static function set_max_physics_steps_per_frame(@:meta("int32") max_physics_steps:Int):Void;
+	@:return_value_meta("int32")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3905245786.)
+	@:hash_compatibility(null)
+	@:nativeName("get_max_physics_steps_per_frame")
+	public static function get_max_physics_steps_per_frame():Int;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(373806689)
+	@:hash_compatibility(null)
+	@:nativeName("set_physics_jitter_fix")
+	@:argMeta(0, ":meta"("double"))
+	public static function set_physics_jitter_fix(@:meta("double") physics_jitter_fix:Float):Void;
+	@:return_value_meta("double")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1740695150)
+	@:hash_compatibility(null)
+	@:nativeName("get_physics_jitter_fix")
+	public static function get_physics_jitter_fix():Float;
+	@:return_value_meta("double")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1740695150)
+	@:hash_compatibility(null)
+	@:nativeName("get_physics_interpolation_fraction")
+	public static function get_physics_interpolation_fraction():Float;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1286410249)
+	@:hash_compatibility(null)
+	@:nativeName("set_max_fps")
+	@:argMeta(0, ":meta"("int32"))
+	public static function set_max_fps(@:meta("int32") max_fps:Int):Void;
+	@:return_value_meta("int32")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3905245786.)
+	@:hash_compatibility(null)
+	@:nativeName("get_max_fps")
+	public static function get_max_fps():Int;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(373806689)
+	@:hash_compatibility(null)
+	@:nativeName("set_time_scale")
+	@:argMeta(0, ":meta"("double"))
+	public static function set_time_scale(@:meta("double") time_scale:Float):Void;
+	@:return_value_meta("double")
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(191475506)
+	@:hash_compatibility(null)
+	@:nativeName("get_time_scale")
+	public static function get_time_scale():Float;
+	@:return_value_meta("int32")
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2455072627.)
+	@:hash_compatibility(null)
+	@:nativeName("get_frames_drawn")
+	public static function get_frames_drawn():Int;
+	@:return_value_meta("double")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1740695150)
+	@:hash_compatibility(null)
+	@:nativeName("get_frames_per_second")
+	public static function get_frames_per_second():Float;
+	@:return_value_meta("uint64")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3905245786.)
+	@:hash_compatibility(null)
+	@:nativeName("get_physics_frames")
+	public static function get_physics_frames():Int;
+	@:return_value_meta("uint64")
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3905245786.)
+	@:hash_compatibility(null)
+	@:nativeName("get_process_frames")
+	public static function get_process_frames():Int;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1016888095)
+	@:hash_compatibility(null)
+	@:nativeName("get_main_loop")
+	public static function get_main_loop():godot.MainLoop;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3102165223.)
+	@:hash_compatibility(null)
+	@:nativeName("get_version_info")
+	public static function get_version_info():godot.Dictionary;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3102165223.)
+	@:hash_compatibility(null)
+	@:nativeName("get_author_info")
+	public static function get_author_info():godot.Dictionary;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3995934104.)
+	@:hash_compatibility(null)
+	@:nativeName("get_copyright_info")
+	public static function get_copyright_info():Array<godot.Dictionary>;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3102165223.)
+	@:hash_compatibility(null)
+	@:nativeName("get_donor_info")
+	public static function get_donor_info():godot.Dictionary;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3102165223.)
+	@:hash_compatibility(null)
+	@:nativeName("get_license_info")
+	public static function get_license_info():godot.Dictionary;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(201670096)
+	@:hash_compatibility(null)
+	@:nativeName("get_license_text")
+	public static function get_license_text():String;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(201670096)
+	@:hash_compatibility(null)
+	@:nativeName("get_architecture_name")
+	public static function get_architecture_name():String;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(36873697)
+	@:hash_compatibility(null)
+	@:nativeName("is_in_physics_frame")
+	public static function is_in_physics_frame():Bool;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2619796661.)
+	@:hash_compatibility(null)
+	@:nativeName("has_singleton")
+	public static function has_singleton(name:godot.StringName):Bool;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1371597918)
+	@:hash_compatibility(null)
+	@:nativeName("get_singleton")
+	public static function get_singleton(name:godot.StringName):godot.Object;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(965313290)
+	@:hash_compatibility(null)
+	@:nativeName("register_singleton")
+	@:argMeta(1, ":meta"("required"))
+	public static function register_singleton(name:godot.StringName, @:meta("required") instance:godot.Object):Void;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(3304788590.)
+	@:hash_compatibility(null)
+	@:nativeName("unregister_singleton")
+	public static function unregister_singleton(name:godot.StringName):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1139954409)
+	@:hash_compatibility(null)
+	@:nativeName("get_singleton_list")
+	public static function get_singleton_list():godot.PackedStringArray;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1850254898)
+	@:hash_compatibility(null)
+	@:nativeName("register_script_language")
+	@:argMeta(0, ":meta"("required"))
+	public static function register_script_language(@:meta("required") language:godot.ScriptLanguage):godot.Error;
+	@:return_value_meta(null)
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(1850254898)
+	@:hash_compatibility(null)
+	@:nativeName("unregister_script_language")
+	@:argMeta(0, ":meta"("required"))
+	public static function unregister_script_language(@:meta("required") language:godot.ScriptLanguage):godot.Error;
+	@:return_value_meta("int32")
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2455072627.)
+	@:hash_compatibility(null)
+	@:nativeName("get_script_language_count")
+	public static function get_script_language_count():Int;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2151255799.)
+	@:hash_compatibility(null)
+	@:nativeName("get_script_language")
+	@:argMeta(0, ":meta"("int32"))
+	public static function get_script_language(@:meta("int32") index:Int):godot.ScriptLanguage;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(873284517)
+	@:hash_compatibility(null)
+	@:nativeName("capture_script_backtraces")
+	@:argMeta(0, ":default_value"("false"))
+	#if gdscript @:argMeta(0, ":noNullPad"("false")) #end
+	public static function capture_script_backtraces(@:default_value("false") #if gdscript @:noNullPad("false") #end include_variables:Bool = false):Array<godot.ScriptBacktrace>;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(36873697)
+	@:hash_compatibility(null)
+	@:nativeName("is_editor_hint")
+	public static function is_editor_hint():Bool;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(36873697)
+	@:hash_compatibility(null)
+	@:nativeName("is_embedded_in_editor")
+	public static function is_embedded_in_editor():Bool;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(201670096)
+	@:hash_compatibility(null)
+	@:nativeName("get_write_movie_path")
+	public static function get_write_movie_path():String;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2586408642.)
+	@:hash_compatibility(null)
+	@:nativeName("set_print_to_stdout")
+	public static function set_print_to_stdout(enabled:Bool):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(36873697)
+	@:hash_compatibility(null)
+	@:nativeName("is_printing_to_stdout")
+	public static function get_print_to_stdout():Bool;
+	@:is_const(false)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(2586408642.)
+	@:hash_compatibility(null)
+	@:nativeName("set_print_error_messages")
+	public static function set_print_error_messages(enabled:Bool):Void;
+	@:return_value_meta(null)
+	@:is_const(true)
+	@:is_static(false)
+	@:is_vararg(false)
+	@:is_virtual(false)
+	@:hash(36873697)
+	@:hash_compatibility(null)
+	@:nativeName("is_printing_error_messages")
+	public static function get_print_error_messages():Bool;
+}

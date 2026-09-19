@@ -1,0 +1,28 @@
+/**
+	Generated using Godot Bindings Generator for Haxe.
+	https://github.com/SomeRanDev/Haxe-GodotBindingsGenerator
+**/
+package godot;
+@:cppEnum @:generated_godot_api @:bindings_api_type("global_enum") #if gdscript @:native("RenderingDevice.ShaderStage") #end @:is_bitfield(false) extern enum RenderingDevice_ShaderStage {
+	SHADER_STAGE_VERTEX();
+	SHADER_STAGE_FRAGMENT();
+	SHADER_STAGE_TESSELATION_CONTROL();
+	SHADER_STAGE_TESSELATION_EVALUATION();
+	SHADER_STAGE_COMPUTE();
+	SHADER_STAGE_RAYGEN();
+	SHADER_STAGE_ANY_HIT();
+	SHADER_STAGE_CLOSEST_HIT();
+	SHADER_STAGE_MISS();
+	SHADER_STAGE_INTERSECTION();
+	SHADER_STAGE_MAX();
+	SHADER_STAGE_VERTEX_BIT();
+	SHADER_STAGE_FRAGMENT_BIT();
+	SHADER_STAGE_TESSELATION_CONTROL_BIT();
+	SHADER_STAGE_TESSELATION_EVALUATION_BIT();
+	SHADER_STAGE_COMPUTE_BIT();
+	SHADER_STAGE_RAYGEN_BIT();
+	SHADER_STAGE_ANY_HIT_BIT();
+	SHADER_STAGE_CLOSEST_HIT_BIT();
+	SHADER_STAGE_MISS_BIT();
+	SHADER_STAGE_INTERSECTION_BIT();
+}

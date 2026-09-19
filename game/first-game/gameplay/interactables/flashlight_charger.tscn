@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bf301msjxscxr"]
+
+[ext_resource type="Script" uid="uid://cfv2uqn5bcp87" path="res://addons/haxe_output/FlashlightCharger.gd" id="1_6xq37"]
+[ext_resource type="Texture2D" uid="uid://mko3dnc26ctt" path="res://textures/proto/floor.png" id="2_1jvmf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rwogx"]
+albedo_texture = ExtResource("2_1jvmf")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_mstrr"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_mstrr"]
+
+[node name="FlashlightCharger" type="StaticBody3D" unique_id=488175195]
+script = ExtResource("1_6xq37")
+metadata/_custom_type_script = "uid://cfv2uqn5bcp87"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2099315841]
+material_override = SubResource("StandardMaterial3D_rwogx")
+mesh = SubResource("CylinderMesh_mstrr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1866616722]
+shape = SubResource("CylinderShape3D_mstrr")

@@ -1,0 +1,47 @@
+/**
+	Generated using Godot Bindings Generator for Haxe.
+	https://github.com/SomeRanDev/Haxe-GodotBindingsGenerator
+**/
+package godot;
+@:cppEnum @:generated_godot_api @:bindings_api_type("global_enum") #if gdscript @:native("Variant.Type") #end @:is_bitfield(false) extern enum Variant_Type {
+	TYPE_NIL();
+	TYPE_BOOL();
+	TYPE_INT();
+	TYPE_FLOAT();
+	TYPE_STRING();
+	TYPE_VECTOR2();
+	TYPE_VECTOR2I();
+	TYPE_RECT2();
+	TYPE_RECT2I();
+	TYPE_VECTOR3();
+	TYPE_VECTOR3I();
+	TYPE_TRANSFORM2D();
+	TYPE_VECTOR4();
+	TYPE_VECTOR4I();
+	TYPE_PLANE();
+	TYPE_QUATERNION();
+	TYPE_AABB();
+	TYPE_BASIS();
+	TYPE_TRANSFORM3D();
+	TYPE_PROJECTION();
+	TYPE_COLOR();
+	TYPE_STRING_NAME();
+	TYPE_NODE_PATH();
+	TYPE_RID();
+	TYPE_OBJECT();
+	TYPE_CALLABLE();
+	TYPE_SIGNAL();
+	TYPE_DICTIONARY();
+	TYPE_ARRAY();
+	TYPE_PACKED_BYTE_ARRAY();
+	TYPE_PACKED_INT32_ARRAY();
+	TYPE_PACKED_INT64_ARRAY();
+	TYPE_PACKED_FLOAT32_ARRAY();
+	TYPE_PACKED_FLOAT64_ARRAY();
+	TYPE_PACKED_STRING_ARRAY();
+	TYPE_PACKED_VECTOR2_ARRAY();
+	TYPE_PACKED_VECTOR3_ARRAY();
+	TYPE_PACKED_COLOR_ARRAY();
+	TYPE_PACKED_VECTOR4_ARRAY();
+	TYPE_MAX();
+}
