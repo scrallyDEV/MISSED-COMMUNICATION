@@ -88,7 +88,6 @@ shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1666042754 instance=ExtResource("3_l0u3u")]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -1.1, 1.1, -11.5)
-footstepIntervals = 0.5
 flashlightOn = ExtResource("3_11r47")
 flashlightOff = ExtResource("4_raeqq")
 jumpSound = ExtResource("5_6hafk")

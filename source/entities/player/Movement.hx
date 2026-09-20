@@ -176,9 +176,13 @@ class Movement
         if (player.isMoving() && isChar3DGrounded(player)) {
             footstepElapsed += delta;
 
-            if (footstepElapsed >= player.footstepIntervals) {
+            if (!player.isSprinting && footstepElapsed >= player.walkStepInterval) {
                 Audio.doOneShot(player.footstepAudio, pickNextFootstep(player.footstepArray));
-                footstepElapsed -= player.footstepIntervals;
+                footstepElapsed -= player.walkStepInterval;
+            }
+            else if (player.isSprinting && footstepElapsed >= player.runStepInterval) {
+                Audio.doOneShot(player.footstepAudio, pickNextFootstep(player.footstepArray));
+                footstepElapsed -= player.runStepInterval;
             }
         }
         else if (!player.isMoving() || !isChar3DGrounded(player)) {

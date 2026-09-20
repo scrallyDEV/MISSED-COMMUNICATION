@@ -23,7 +23,7 @@ class Player extends CharacterBody3D
     public var generalAudio:AudioStreamPlayer = new AudioStreamPlayer();
 
     @:meta(export)
-    public var footstepIntervals:Float = 4;
+    public var footstepIntervals:Float = 0.5;
     @:meta(export)
     public var speed:Float = 5;
     @:meta(export)
@@ -49,6 +49,10 @@ class Player extends CharacterBody3D
         each of the audio variables will be populated with standard audio once that audio set
         has been finalized to prevent the need to constantly attach audio every time the player is moved
         into a new scene
+
+
+        new self note
+        remove "bullshit" from the states when general player framework is finished :>
     */
 
     // RUNTIME
@@ -63,6 +67,10 @@ class Player extends CharacterBody3D
     public var staminaDrain:Float = 14;
     public var staminaGain:Float = 13;
 
+    // Footstep bullshit
+    public var walkStepInterval:Float;
+    public var runStepInterval:Float;
+
     // Debug bullshit
     public var isDebugging:Bool = false;
 
@@ -75,6 +83,9 @@ class Player extends CharacterBody3D
         createChild(this, flashlightAudio);
         createChild(this, footstepAudio);
         createChild(this, generalAudio);
+
+        walkStepInterval = footstepIntervals;
+        runStepInterval = footstepIntervals - footstepIntervals * 0.4;
         
         camera.fov = Variables.fov;
         raycast.target_position.y = -2; // force raycast a specific target position in case a player instance does not match
