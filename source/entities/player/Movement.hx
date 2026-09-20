@@ -17,6 +17,7 @@ class Movement
     private static var staminaElapsed:Float = 0;
     private static var footstepElapsed:Float = 0;
     private static var lastFootstep:Int = -1;
+    private static var isAirborne:Bool = false; // outside scripts are gonna LOVE this one :)
 
     public static var movementArray:Array<String> = [
         "MoveForward", // 0
@@ -33,8 +34,16 @@ class Movement
         if (isChar3DGrounded(player)) {
             gravityVector.y = 0; 
 
+
+            if (isAirborne && isChar3DGrounded(player)) {
+                Audio.doOneShot(player.generalAudio, player.landSound);
+                isAirborne = false;
+            }
+
             if (inputJustPressed(movementArray[4])) {
                 gravityVector.y = player.jumpHeight;
+                Audio.doOneShot(player.generalAudio, player.jumpSound);
+                isAirborne = true;
             }
         }
         else {

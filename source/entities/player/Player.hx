@@ -20,9 +20,10 @@ class Player extends CharacterBody3D
     public var flashlight:Flashlight;
     public var flashlightAudio:AudioStreamPlayer = new AudioStreamPlayer();
     public var footstepAudio:AudioStreamPlayer = new AudioStreamPlayer();
+    public var generalAudio:AudioStreamPlayer = new AudioStreamPlayer();
 
     @:meta(export)
-    public var footstepIntervals:Float = 1;
+    public var footstepIntervals:Float = 4;
     @:meta(export)
     public var speed:Float = 5;
     @:meta(export)
@@ -38,8 +39,17 @@ class Player extends CharacterBody3D
     @:meta(export)
     public var flashlightOff:AudioStream;
     @:meta(export)
+    public var jumpSound:AudioStream;
+    @:meta(export)
+    public var landSound:AudioStream;
+    @:meta(export)
     public var footstepArray:Array<AudioStream> = [];
-
+    /* 
+        self note
+        each of the audio variables will be populated with standard audio once that audio set
+        has been finalized to prevent the need to constantly attach audio every time the player is moved
+        into a new scene
+    */
 
     // RUNTIME
     // States
@@ -64,6 +74,7 @@ class Player extends CharacterBody3D
         flashlight = cast getChildNode(camera, "Flashlight");
         createChild(this, flashlightAudio);
         createChild(this, footstepAudio);
+        createChild(this, generalAudio);
         
         camera.fov = Variables.fov;
         raycast.target_position.y = -2; // force raycast a specific target position in case a player instance does not match

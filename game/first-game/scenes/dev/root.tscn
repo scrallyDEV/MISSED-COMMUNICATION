@@ -4,7 +4,14 @@
 [ext_resource type="AudioStream" uid="uid://wkajvqp3uaxu" path="res://assets/audio/flashon.mp3" id="3_11r47"]
 [ext_resource type="PackedScene" uid="uid://cv1ybv8v3gvby" path="res://gameplay/entities/player.tscn" id="3_l0u3u"]
 [ext_resource type="AudioStream" uid="uid://bn5ufeyaxhhkf" path="res://assets/audio/flash off.mp3" id="4_raeqq"]
+[ext_resource type="AudioStream" uid="uid://brn21sr3sdfe4" path="res://assets/audio/footsteps/Footstep Dirt 1.ogg" id="5_6hafk"]
 [ext_resource type="Script" uid="uid://cfv2uqn5bcp87" path="res://addons/haxe_output/FlashlightCharger.gd" id="5_11r47"]
+[ext_resource type="AudioStream" uid="uid://dulhibp38fuko" path="res://assets/audio/footsteps/Footstep Dirt 2.ogg" id="6_hq3kr"]
+[ext_resource type="AudioStream" uid="uid://dsj2xghx6m3tr" path="res://assets/audio/footsteps/Footstep Concrete 1.ogg" id="7_dni66"]
+[ext_resource type="AudioStream" uid="uid://cc406cmp3yl1r" path="res://assets/audio/footsteps/Footstep Concrete 2.ogg" id="8_o4mjh"]
+[ext_resource type="AudioStream" uid="uid://l5pkvmuc38ac" path="res://assets/audio/footsteps/Footstep Concrete 3.ogg" id="9_kd1dr"]
+[ext_resource type="AudioStream" uid="uid://frt2q13su411" path="res://assets/audio/footsteps/Footstep Concrete 4.ogg" id="10_5ajou"]
+[ext_resource type="AudioStream" uid="uid://biqoml2poittw" path="res://assets/audio/footsteps/Footstep Concrete 5.ogg" id="11_bhqoe"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_intbt"]
 
@@ -81,8 +88,12 @@ shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1666042754 instance=ExtResource("3_l0u3u")]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -1.1, 1.1, -11.5)
+footstepIntervals = 0.5
 flashlightOn = ExtResource("3_11r47")
 flashlightOff = ExtResource("4_raeqq")
+jumpSound = ExtResource("5_6hafk")
+landSound = ExtResource("6_hq3kr")
+footstepArray = Array[AudioStream]([ExtResource("7_dni66"), ExtResource("8_o4mjh"), ExtResource("9_kd1dr"), ExtResource("10_5ajou"), ExtResource("11_bhqoe")])
 
 [node name="FlashlightCharger" type="StaticBody3D" parent="." unique_id=2026753587]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, -8.8)
