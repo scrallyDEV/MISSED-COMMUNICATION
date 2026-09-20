@@ -2,17 +2,21 @@ package entities.player;
 
 import godot.Vector3;
 import godot.InputEvent;
+import godot.AudioStream;
 
 import haxegd.Char3DHelpers.*;
 import haxegd.Controls.*;
 import haxegd.MathExtension;
+import haxegd.Audio;
 
 class Movement
 {
     public static var gravityVector:Vector3 = Vector3.ZERO; 
     private static var direction:Vector3 = Vector3.ZERO;
     private static var mousePitch:Float = 0;
-    private static var elapsed:Float = 0;
+    private static var staminaElapsed:Float = 0;
+    private static var footstepElapsed:Float = 0;
+    private static var lastFootstep:Int = -1;
 
     public static var movementArray:Array<String> = [
         "MoveForward", // 0
@@ -74,7 +78,8 @@ class Movement
         player.velocity.y = gravityVector.y; 
         player.velocity.x = applyVelocity(player, direction.x);
         player.velocity.z = applyVelocity(player, direction.z);
-        moveChar3D(player); //Godot's native movement signal
+        moveChar3D(player);
+        footstep(delta, player);
     }
 
     public static function stamina(delta:Float, player:Player):Void
@@ -89,19 +94,19 @@ class Movement
         }
 
         if (player.isSprinting) {
-            elapsed = 0;
+            staminaElapsed = 0;
             player.stamina -= player.staminaDrain * delta;
             player.stamina = MathExtension.clamp(player.stamina, 0, player.maxStamina);
             player.isRegenStamina = false;
         }
         else if (!player.isSprinting && player.stamina < player.maxStamina) {
-            elapsed += delta;
-            if (player.stamina > 0 && elapsed >= player.staminaRegenDelay) {
-                elapsed = 0;
+            staminaElapsed += delta;
+            if (player.stamina > 0 && staminaElapsed >= player.staminaRegenDelay) {
+                staminaElapsed = 0;
                 player.isRegenStamina = true;
             }
-            else if (player.stamina == 0 && elapsed >= player.staminaExhaustionDelay) {
-                elapsed = 0;
+            else if (player.stamina == 0 && staminaElapsed >= player.staminaExhaustionDelay) {
+                staminaElapsed = 0;
                 player.isRegenStamina = true;
             }
         }
@@ -143,5 +148,32 @@ class Movement
         else {
             trace("invalid resetVelocity, velocity was " + Vector + "" + "Expected 'x' or 'z'");
         }
+    }
+
+    private static function footstep(delta:Float, player:Player)
+    {
+        if (player.isMoving() && isChar3DGrounded(player)) {
+            footstepElapsed += delta;
+
+            if (footstepElapsed >= player.footstepIntervals) {
+                Audio.doOneShot(player.footstepAudio, pickNextFootstep(player.footstepArray));
+                footstepElapsed -= player.footstepIntervals;
+            }
+        }
+        else if (!player.isMoving() || !isChar3DGrounded(player)) {
+            footstepElapsed = 0;
+        }
+    }
+
+    private static function pickNextFootstep(list:Array<AudioStream>):AudioStream // looks like nested function pasta which it is but its a separation of tasks in case something misbehaves
+    {
+        var index = Std.random(list.length);
+
+        while (index == lastFootstep && list.length > 1) {
+            index = Std.random(list.length);
+        }
+
+        lastFootstep = index;
+        return list[index];
     }
 }

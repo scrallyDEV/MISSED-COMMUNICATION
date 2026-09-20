@@ -12,7 +12,6 @@ import interactables.Interactable;
 import haxegd.Nodes.*;
 import haxegd.Char3DHelpers.*;
 import haxegd.Controls.*;
-import haxegd.Audio; 
 
 class Player extends CharacterBody3D
 {
@@ -20,7 +19,10 @@ class Player extends CharacterBody3D
     public var raycast:RayCast3D;
     public var flashlight:Flashlight;
     public var flashlightAudio:AudioStreamPlayer = new AudioStreamPlayer();
+    public var footstepAudio:AudioStreamPlayer = new AudioStreamPlayer();
 
+    @:meta(export)
+    public var footstepIntervals:Float = 1;
     @:meta(export)
     public var speed:Float = 5;
     @:meta(export)
@@ -35,6 +37,8 @@ class Player extends CharacterBody3D
     public var flashlightOn:AudioStream;
     @:meta(export)
     public var flashlightOff:AudioStream;
+    @:meta(export)
+    public var footstepArray:Array<AudioStream> = [];
 
 
     // RUNTIME
@@ -59,6 +63,7 @@ class Player extends CharacterBody3D
         raycast = cast getChildNode(camera, "RayCast3D");
         flashlight = cast getChildNode(camera, "Flashlight");
         createChild(this, flashlightAudio);
+        createChild(this, footstepAudio);
         
         camera.fov = Variables.fov;
         raycast.target_position.y = -2; // force raycast a specific target position in case a player instance does not match
