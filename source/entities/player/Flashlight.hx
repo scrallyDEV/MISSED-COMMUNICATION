@@ -3,6 +3,7 @@ package entities.player;
 import godot.SpotLight3D;
 
 import haxegd.MathExtension;
+import haxegd.Audio;
 
 class Flashlight extends SpotLight3D
 {
@@ -17,10 +18,17 @@ class Flashlight extends SpotLight3D
     }
 
 
-    public function toggleFlashlight()
+    public function toggleFlashlight(player:Player)
     {
-        if (battery >= 0) {
+        if (battery > 0) {
             visible = !visible;
+
+            if (visible) {
+                Audio.doOneShot(player.flashlightAudio, player.flashlightOff);
+            }
+            else {
+                Audio.doOneShot(player.flashlightAudio, player.flashlightOn);
+            }
         }
     }
 

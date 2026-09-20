@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqgtc5i3tq44e"
-path.s3tc="res://.godot/imported/wall.png-37f7c24e38741aa6ca35a97f37b4d91f.s3tc.ctex"
+uid="uid://bfci8qprhmxf1"
+path.s3tc="res://.godot/imported/siding_gray_01.jpg-ef97655fe5edde3828cc815019503187.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/proto/wall.png"
-dest_files=["res://.godot/imported/wall.png-37f7c24e38741aa6ca35a97f37b4d91f.s3tc.ctex"]
+source_file="res://assets/textures/siding_gray_01.jpg"
+dest_files=["res://.godot/imported/siding_gray_01.jpg-ef97655fe5edde3828cc815019503187.s3tc.ctex"]
 
 [params]
 

@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://cigpf0mlvtoo1"]
 
 [ext_resource type="PackedScene" uid="uid://bl1b2u8ga14ts" path="res://gameplay/interactables/door.tscn" id="1_apfvm"]
+[ext_resource type="AudioStream" uid="uid://wkajvqp3uaxu" path="res://assets/audio/flashon.mp3" id="3_11r47"]
 [ext_resource type="PackedScene" uid="uid://cv1ybv8v3gvby" path="res://gameplay/entities/player.tscn" id="3_l0u3u"]
+[ext_resource type="AudioStream" uid="uid://bn5ufeyaxhhkf" path="res://assets/audio/flash off.mp3" id="4_raeqq"]
 [ext_resource type="Script" uid="uid://cfv2uqn5bcp87" path="res://addons/haxe_output/FlashlightCharger.gd" id="5_11r47"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_intbt"]
@@ -79,6 +81,8 @@ shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1666042754 instance=ExtResource("3_l0u3u")]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -1.1, 1.1, -11.5)
+flashlightOn = ExtResource("3_11r47")
+flashlightOff = ExtResource("4_raeqq")
 
 [node name="FlashlightCharger" type="StaticBody3D" parent="." unique_id=2026753587]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, -8.8)

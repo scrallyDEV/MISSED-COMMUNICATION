@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bn5ufeyaxhhkf"
+path="res://.godot/imported/flash off.mp3-c4e3a7bad2a19b46ea0987aa52c5b41d.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/flash off.mp3"
+dest_files=["res://.godot/imported/flash off.mp3-c4e3a7bad2a19b46ea0987aa52c5b41d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

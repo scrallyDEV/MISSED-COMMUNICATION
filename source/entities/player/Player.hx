@@ -1,23 +1,25 @@
 package entities.player;
 
-import haxegd.MathExtension;
-import godot.SpotLight3D;
+import godot.AudioStream;
 import godot.CharacterBody3D;
 import godot.Camera3D;
 import godot.RayCast3D;
 import godot.InputEvent;
+import godot.AudioStreamPlayer;
 
 import interactables.Interactable;
 
 import haxegd.Nodes.*;
 import haxegd.Char3DHelpers.*;
 import haxegd.Controls.*;
+import haxegd.Audio; 
 
 class Player extends CharacterBody3D
 {
     public var camera:Camera3D;
     public var raycast:RayCast3D;
     public var flashlight:Flashlight;
+    public var flashlightAudio:AudioStreamPlayer = new AudioStreamPlayer();
 
     @:meta(export)
     public var speed:Float = 5;
@@ -29,6 +31,10 @@ class Player extends CharacterBody3D
     public var jumpHeight:Float = 3;
     @:meta(export)
     public var hasFlashlight:Bool = true;
+    @:meta(export)
+    public var flashlightOn:AudioStream;
+    @:meta(export)
+    public var flashlightOff:AudioStream;
 
 
     // RUNTIME
@@ -52,6 +58,7 @@ class Player extends CharacterBody3D
         camera = cast getChildNode(this, "Camera3D");
         raycast = cast getChildNode(camera, "RayCast3D");
         flashlight = cast getChildNode(camera, "Flashlight");
+        createChild(this, flashlightAudio);
         
         camera.fov = Variables.fov;
         raycast.target_position.y = -2; // force raycast a specific target position in case a player instance does not match
@@ -69,7 +76,7 @@ class Player extends CharacterBody3D
         }
 
         if (inputJustPressed("Flashlight") && hasFlashlight) {
-            flashlight.toggleFlashlight();
+            flashlight.toggleFlashlight(this);
         }
 
         if (event.is_action_pressed("DebugShowMouse") && !event.is_echo()) // its raw because its gonna vanish when i add a pause menu
