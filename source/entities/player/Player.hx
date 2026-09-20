@@ -80,6 +80,7 @@ class Player extends CharacterBody3D
         raycast.target_position.y = -2; // force raycast a specific target position in case a player instance does not match
         maxStamina = stamina; // yoink 
         
+
         mouseCapture(true);
     }
 

@@ -11,13 +11,17 @@ import haxegd.Audio;
 
 class Movement
 {
-    public static var gravityVector:Vector3 = Vector3.ZERO; 
+    private static var gravityVector:Vector3 = Vector3.ZERO; 
     private static var direction:Vector3 = Vector3.ZERO;
     private static var mousePitch:Float = 0;
     private static var staminaElapsed:Float = 0;
     private static var footstepElapsed:Float = 0;
     private static var lastFootstep:Int = -1;
-    private static var isAirborne:Bool = false; // outside scripts are gonna LOVE this one :)
+
+    private static var storedHeight:Float = 0;
+    private static var heightStored:Bool = false;
+    private static var isFalling:Bool = false;
+    private static var realJumpHeight:Float;
 
     public static var movementArray:Array<String> = [
         "MoveForward", // 0
@@ -30,24 +34,31 @@ class Movement
 
     public static function movement(delta:Float, player:Player):Void
     {
+        realJumpHeight = (player.jumpHeight * player.jumpHeight) / (2 * Math.abs(Variables.gravity)); // in the event gravity changes, yoink it again
         resetVelocity("xz");
+
         if (isChar3DGrounded(player)) {
             gravityVector.y = 0; 
+            storedHeight = 0;
+            heightStored = false;
 
-
-            if (isAirborne && isChar3DGrounded(player)) {
+            if (isFalling) {
                 Audio.doOneShot(player.generalAudio, player.landSound);
-                isAirborne = false;
+                isFalling = false;
             }
 
             if (inputJustPressed(movementArray[4])) {
                 gravityVector.y = player.jumpHeight;
                 Audio.doOneShot(player.generalAudio, player.jumpSound);
-                isAirborne = true;
             }
         }
         else {
             gravityVector.y = gravityVector.y + Variables.gravity * delta;
+
+            if (Math.abs(storedHeight - player.global_position.y) >= realJumpHeight - 0.05) {
+                isFalling = true;
+            }
+
         }
 
         if (inputPressed(movementArray[3]) && inputPressed(movementArray[2])) { //stop player when pressing 2 keys simultaneously
@@ -89,6 +100,7 @@ class Movement
         player.velocity.z = applyVelocity(player, direction.z);
         moveChar3D(player);
         footstep(delta, player);
+        fallHeightGrabber(player);
     }
 
     public static function stamina(delta:Float, player:Player):Void
@@ -121,7 +133,7 @@ class Movement
         }
     }
 
-    public static function mouse(event:InputEvent, player:Player)
+    public static function mouse(event:InputEvent, player:Player):Void
     {
         var mouseInput = getMouseMovement(event);
 
@@ -142,7 +154,7 @@ class Movement
         }
     }
 
-    private static function resetVelocity(Vector:String) 
+    private static function resetVelocity(Vector:String):Void
     {
         if (Vector == "x") {
             direction.x = 0;
@@ -159,7 +171,7 @@ class Movement
         }
     }
 
-    private static function footstep(delta:Float, player:Player)
+    private static function footstep(delta:Float, player:Player):Void
     {
         if (player.isMoving() && isChar3DGrounded(player)) {
             footstepElapsed += delta;
@@ -184,5 +196,16 @@ class Movement
 
         lastFootstep = index;
         return list[index];
+    }
+
+    private static function fallHeightGrabber(player:Player):Void
+    {
+        if (!isChar3DGrounded(player)) {
+            if (!heightStored) {
+                storedHeight = player.global_position.y;
+                heightStored = true;
+                trace(storedHeight);
+            }
+        }
     }
 }
