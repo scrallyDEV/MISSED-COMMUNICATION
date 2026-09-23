@@ -12,6 +12,7 @@ import interactables.Interactable;
 import haxegd.Nodes.*;
 import haxegd.Char3DHelpers.*;
 import haxegd.Controls.*;
+import haxegd.Resources.*;
 
 class Player extends CharacterBody3D
 {
@@ -23,11 +24,11 @@ class Player extends CharacterBody3D
     public var generalAudio:AudioStreamPlayer = new AudioStreamPlayer();
 
     @:meta(export)
-    public var footstepIntervals:Float = 0.5;
+    public var footstepIntervals:Float = 0.8;
     @:meta(export)
-    public var speed:Float = 5;
+    public var speed:Float = 3;
     @:meta(export)
-    public var sprintSpeed:Float = 8;
+    public var sprintSpeed:Float = 6;
     @:meta(export)
     public var stamina:Float = 100;
     @:meta(export)
@@ -35,15 +36,21 @@ class Player extends CharacterBody3D
     @:meta(export)
     public var hasFlashlight:Bool = true;
     @:meta(export)
-    public var flashlightOn:AudioStream;
+    public var flashlightOn:AudioStream = preload("res://assets/audio/flashon.mp3");
     @:meta(export)
-    public var flashlightOff:AudioStream;
+    public var flashlightOff:AudioStream = preload("res://assets/audio/flash off.mp3");
     @:meta(export)
-    public var jumpSound:AudioStream;
+    public var jumpSound:AudioStream = preload("res://assets/audio/footsteps/Footstep Concrete 1.ogg");
     @:meta(export)
-    public var landSound:AudioStream;
+    public var landSound:AudioStream = preload("res://assets/audio/footsteps/Footstep Concrete 2.ogg");
     @:meta(export)
-    public var footstepArray:Array<AudioStream> = [];
+    public var footstepArray:Array<AudioStream> = [
+        preload("res://assets/audio/footsteps/Footstep Concrete 1.ogg"),
+        preload("res://assets/audio/footsteps/Footstep Concrete 2.ogg"),
+        preload("res://assets/audio/footsteps/Footstep Concrete 3.ogg"),
+        preload("res://assets/audio/footsteps/Footstep Concrete 4.ogg"),
+        preload("res://assets/audio/footsteps/Footstep Concrete 5.ogg")
+    ];
     /* 
         self note
         each of the audio variables will be populated with standard audio once that audio set
@@ -59,6 +66,8 @@ class Player extends CharacterBody3D
     // States
     public var isSprinting:Bool = false;
     public var isRegenStamina:Bool = false;
+    public var inputEnabled:Bool = true;
+    public var canInteract:Bool = true;
 
     // Stamina bullshit
     public var maxStamina:Float;
@@ -97,7 +106,9 @@ class Player extends CharacterBody3D
 
     public function onInput(event:InputEvent):Void
     {
-        Movement.mouse(event, this);
+        if (inputEnabled) {
+            Movement.mouse(event, this);
+        }
 
         if (inputJustPressed("Interact")) {
             interact();
@@ -115,7 +126,7 @@ class Player extends CharacterBody3D
 
         if (event.is_action_pressed("DebugTrace") && !event.is_echo()) // its raw because its gonna vanish when i add a pause menu
         {
-            isDebugging = !isDebugging;
+            trace(footstepArray);
         }
     }
 
@@ -126,28 +137,27 @@ class Player extends CharacterBody3D
         }
 
         Movement.stamina(delta, this);
-
-        if (isDebugging) {
-            trace(stamina);
-        }
     }
 
     public function onPhysicsUpdate(delta:Float):Void
     {
-        Movement.movement(delta, this);
+        if (inputEnabled) {
+            Movement.movement(delta, this);
+        }
     }
 
     private function interact()
     {
         var object = getRaycastCollider(raycast);
-
-        if (object.node != null && Std.isOfType(object.node, Interactable)) { // less simple :/
-            var target:Interactable;
-            target = cast object.node;
-            target.activate(this);
-        }
-        else {
-            trace("no usable object in raycast");
+        if (canInteract) {
+            if (object.node != null && Std.isOfType(object.node, Interactable)) { // less simple :/
+                var target:Interactable;
+                target = cast object.node;
+                target.activate(this);
+            }
+            else {
+                trace("no usable object in raycast");
+            }
         }
     } 
 

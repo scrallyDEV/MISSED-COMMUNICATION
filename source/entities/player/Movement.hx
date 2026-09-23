@@ -89,7 +89,7 @@ class Movement
         if (inputPressed(movementArray[5]) && player.stamina > 0 && player.isMoving()) {
             player.isSprinting = true;
         }
-        else {
+        else if (!inputPressed(movementArray[5])){
             player.isSprinting = false;
         }
         

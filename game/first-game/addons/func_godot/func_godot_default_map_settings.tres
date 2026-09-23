@@ -8,3 +8,4 @@
 [resource]
 script = ExtResource("1_dlf23")
 inverse_scale_factor = 64.0
+base_texture_dir = "res://assets/textures"
