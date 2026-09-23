@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://d2xt7vev42exv"]
+
+[ext_resource type="PackedScene" uid="uid://cfxps25rnungb" path="res://assets/models/floor-ceiling/floor_ceiling_1.glb" id="1_tggh2"]
+[ext_resource type="PackedScene" uid="uid://cv1ybv8v3gvby" path="res://gameplay/entities/player.tscn" id="2_b2ntv"]
+[ext_resource type="PackedScene" uid="uid://bbdtne1g5u8vg" path="res://assets/models/walls/wall_2_1.glb" id="3_e00y8"]
+
+[node name="C0" type="Node3D" unique_id=480576403]
+
+[node name="GEO" type="Node" parent="." unique_id=672239570]
+
+[node name="floor" parent="GEO" unique_id=251657778 instance=ExtResource("1_tggh2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+
+[node name="floor2" parent="GEO" unique_id=565306820 instance=ExtResource("1_tggh2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 2)
+
+[node name="floor3" parent="GEO" unique_id=1424255289 instance=ExtResource("1_tggh2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 6)
+
+[node name="floor4" parent="GEO" unique_id=1560932372 instance=ExtResource("1_tggh2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 6)
+
+[node name="ceiling" parent="GEO" unique_id=110712826 instance=ExtResource("1_tggh2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, 2)
+
+[node name="ceiling2" parent="GEO" unique_id=1742076202 instance=ExtResource("1_tggh2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 3, 2)
+
+[node name="ceiling3" parent="GEO" unique_id=202522180 instance=ExtResource("1_tggh2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 3, 6)
+
+[node name="ceiling4" parent="GEO" unique_id=1732388010 instance=ExtResource("1_tggh2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, 6)
+
+[node name="wall" parent="GEO" unique_id=2096545311 instance=ExtResource("3_e00y8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="wall2" parent="GEO" unique_id=876101826 instance=ExtResource("3_e00y8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="wall3" parent="GEO" unique_id=1987072968 instance=ExtResource("3_e00y8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 2)
+
+[node name="wall4" parent="GEO" unique_id=1473432068 instance=ExtResource("3_e00y8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 6)
+
+[node name="wall5" parent="GEO" unique_id=1511613059 instance=ExtResource("3_e00y8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8, 0, 2)
+
+[node name="wall6" parent="GEO" unique_id=1440780584 instance=ExtResource("3_e00y8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8, 0, 6)
+
+[node name="wall7" parent="GEO" unique_id=607542365 instance=ExtResource("3_e00y8")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2, 0, 8)
+
+[node name="wall8" parent="GEO" unique_id=1795061218 instance=ExtResource("3_e00y8")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6, 0, 8)
+
+[node name="Player" parent="." unique_id=1666042754 instance=ExtResource("2_b2ntv")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.5, 1, 1.5)

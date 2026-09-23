@@ -24,6 +24,15 @@ window/stretch/aspect="expand"
 
 enabled=PackedStringArray("res://addons/func_godot/plugin.cfg", "res://addons/haxe_output/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://addons/assetpack/modular/doors/": "green",
+"res://addons/assetpack/modular/floors/": "green",
+"res://addons/assetpack/modular/walls/": "green",
+"res://addons/assetpack/modular/windows/": "green"
+}
+
 [input]
 
 MoveLeft={

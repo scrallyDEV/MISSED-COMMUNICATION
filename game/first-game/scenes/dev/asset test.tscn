@@ -1,0 +1,196 @@
+[gd_scene format=3 uid="uid://2tttfx1mslb1"]
+
+[ext_resource type="PackedScene" uid="uid://cfxps25rnungb" path="res://assets/models/floor-ceiling/floor_ceiling_1.glb" id="1_cg7w4"]
+[ext_resource type="PackedScene" uid="uid://bh2lmhdyrdcno" path="res://addons/assetpack/modular/floors/floor_ceiling_2.glb" id="2_dpw55"]
+[ext_resource type="PackedScene" uid="uid://bo6r4xf2i8f1r" path="res://addons/assetpack/modular/floors/floor_ceiling_3.glb" id="3_shqmp"]
+[ext_resource type="PackedScene" uid="uid://cp1h1oypbdh8b" path="res://addons/assetpack/modular/walls/arc_1_wall_1.glb" id="4_qdkps"]
+[ext_resource type="PackedScene" uid="uid://fya3h47d135m" path="res://addons/assetpack/modular/walls/arc_1_wall_1_plain.glb" id="5_ekyga"]
+[ext_resource type="PackedScene" uid="uid://ddxywb0gig0pk" path="res://addons/assetpack/modular/walls/arc_1_wall_2_1.glb" id="6_srkqi"]
+[ext_resource type="PackedScene" uid="uid://daj60xiwrelet" path="res://addons/assetpack/modular/walls/arc_1_wall_2_2.glb" id="7_8770b"]
+[ext_resource type="PackedScene" uid="uid://cu2wbr8r2bakw" path="res://addons/assetpack/modular/walls/arc_2_wall_1.glb" id="8_y0c3f"]
+[ext_resource type="PackedScene" uid="uid://k7kmpiibkly5" path="res://addons/assetpack/modular/walls/arc_2_wall_1_plain.glb" id="9_n7p7m"]
+[ext_resource type="PackedScene" uid="uid://bbgo7iosc52yi" path="res://addons/assetpack/modular/walls/arc_2_wall_2_1.glb" id="10_hel83"]
+[ext_resource type="PackedScene" uid="uid://dvurrqlalxlc4" path="res://addons/assetpack/modular/walls/arc_2_wall_2_2.glb" id="11_empy1"]
+[ext_resource type="PackedScene" uid="uid://0kuueoussgbe" path="res://addons/assetpack/modular/walls/half_arc_pillar_1_wall_1_plain.glb" id="12_trocb"]
+[ext_resource type="PackedScene" uid="uid://c6vcmbpc84krx" path="res://addons/assetpack/modular/walls/half_arc_pillar_2_tall_wall_1_plain.glb" id="13_n4hut"]
+[ext_resource type="PackedScene" uid="uid://cqvfk6w305pe3" path="res://addons/assetpack/modular/walls/half_arc_pillar_2_wall_1_plain.glb" id="14_03jme"]
+[ext_resource type="PackedScene" uid="uid://cd16mwqqmw50r" path="res://addons/assetpack/modular/walls/wall_1.glb" id="15_vwswu"]
+[ext_resource type="PackedScene" uid="uid://b8wderdcrmvwt" path="res://assets/models/walls/wall_1_1_half.glb" id="16_nx8aq"]
+[ext_resource type="PackedScene" uid="uid://c4dk1l0yhtav1" path="res://addons/assetpack/modular/walls/wall_1_1_rounded_corner_1.glb" id="17_g074b"]
+[ext_resource type="PackedScene" uid="uid://bfjgf2kgm3l5j" path="res://addons/assetpack/modular/walls/wall_1_2_half.glb" id="18_4p2ij"]
+[ext_resource type="PackedScene" uid="uid://d3011p3b4m5wp" path="res://addons/assetpack/modular/walls/wall_1_2_rounded_corner_1.glb" id="19_mvmk8"]
+[ext_resource type="PackedScene" uid="uid://cw7i5qc0u51qs" path="res://addons/assetpack/modular/walls/wall_1_3_half.glb" id="20_0h5h6"]
+[ext_resource type="PackedScene" uid="uid://dfj8dl6u5bm4e" path="res://addons/assetpack/modular/walls/wall_1_half.glb" id="21_mimkv"]
+[ext_resource type="PackedScene" uid="uid://b7hypku7bbxij" path="res://addons/assetpack/modular/walls/wall_1_plain.glb" id="22_bedu4"]
+[ext_resource type="PackedScene" uid="uid://br7051tqoxhw1" path="res://addons/assetpack/modular/walls/wall_1_rounded_corner.glb" id="23_657kl"]
+[ext_resource type="PackedScene" uid="uid://c0d6anew8co8j" path="res://addons/assetpack/modular/walls/wall_1_rounded_corner_1.glb" id="24_g0dxr"]
+[ext_resource type="PackedScene" uid="uid://bh7bxk64mbobi" path="res://addons/assetpack/modular/walls/wall_1_rounded_corner_1_1.glb" id="25_w47c4"]
+[ext_resource type="PackedScene" uid="uid://dr4fdc0v6bun8" path="res://addons/assetpack/modular/walls/wall_1_rounded_corner_1_2.glb" id="26_2dura"]
+[ext_resource type="PackedScene" uid="uid://37bxirqueafr" path="res://addons/assetpack/modular/walls/wall_1_tunnel_hole.glb" id="27_t0cg7"]
+[ext_resource type="PackedScene" uid="uid://d4ivrl7yef5c4" path="res://addons/assetpack/modular/walls/wall_1_tunnel_hole_1.glb" id="28_at3c7"]
+[ext_resource type="PackedScene" uid="uid://drp7qjnjub8qv" path="res://addons/assetpack/modular/walls/wall_1_tunnel_hole_2.glb" id="29_ji78r"]
+[ext_resource type="PackedScene" uid="uid://bbdtne1g5u8vg" path="res://assets/models/walls/wall_2_1.glb" id="30_h6kgl"]
+[ext_resource type="PackedScene" uid="uid://c24wxkkxcq3e1" path="res://addons/assetpack/modular/walls/wall_2_2.glb" id="31_fkvd3"]
+[ext_resource type="PackedScene" uid="uid://556rrx3jnfwi" path="res://addons/assetpack/modular/windows/window_1_single.glb" id="32_vs2ax"]
+[ext_resource type="PackedScene" uid="uid://cb533hxj66mhi" path="res://addons/assetpack/modular/windows/window_1_single_frame_only.glb" id="33_hrj44"]
+[ext_resource type="PackedScene" uid="uid://bq6b7j0hbf0qi" path="res://addons/assetpack/modular/windows/window_1_single_no_glass.glb" id="34_dc6nc"]
+[ext_resource type="PackedScene" uid="uid://b4o1nnj3bhfkg" path="res://addons/assetpack/modular/windows/window_2_1_double.glb" id="35_bj27o"]
+[ext_resource type="PackedScene" uid="uid://cstb05h8a7186" path="res://addons/assetpack/modular/windows/window_2_1_single.glb" id="36_urwba"]
+[ext_resource type="PackedScene" uid="uid://bx8pvjqycpg5e" path="res://addons/assetpack/modular/windows/window_2_1_single_frame_only.glb" id="37_p0yru"]
+[ext_resource type="PackedScene" uid="uid://cm6exo8igqb84" path="res://addons/assetpack/modular/windows/window_2_1_single_no_glass.glb" id="38_2q3kq"]
+[ext_resource type="PackedScene" uid="uid://rqdxmk1uhoyc" path="res://addons/assetpack/modular/windows/window_2_2_double.glb" id="39_1jsjn"]
+[ext_resource type="PackedScene" uid="uid://bij2e80riebhx" path="res://addons/assetpack/modular/windows/window_2_2_single.glb" id="40_ik7ob"]
+[ext_resource type="PackedScene" uid="uid://dqx2t6hxfm75f" path="res://addons/assetpack/modular/windows/window_2_2_single_frame_only.glb" id="41_femv0"]
+[ext_resource type="PackedScene" uid="uid://ckcwmsberikpi" path="res://addons/assetpack/modular/windows/window_2_2_single_no_glass.glb" id="42_sud4g"]
+[ext_resource type="PackedScene" uid="uid://bgrsfsyx4k1tj" path="res://addons/assetpack/modular/windows/window_2_double.glb" id="43_yv2lx"]
+[ext_resource type="PackedScene" uid="uid://dv2kxxhya18vm" path="res://addons/assetpack/modular/windows/window_2_single.glb" id="44_gf8yy"]
+[ext_resource type="PackedScene" uid="uid://co2d6q12qjkun" path="res://addons/assetpack/modular/windows/window_2_single_frame_only.glb" id="45_2fv38"]
+[ext_resource type="PackedScene" uid="uid://d0cbogsyak5ea" path="res://addons/assetpack/modular/windows/window_2_single_no_glass.glb" id="46_qiich"]
+[ext_resource type="PackedScene" uid="uid://cbekw3ok1m0ea" path="res://addons/assetpack/modular/windows/window_metal_bars_double.glb" id="47_bkrup"]
+[ext_resource type="PackedScene" uid="uid://chg72j2e8n7d1" path="res://addons/assetpack/modular/windows/window_metal_bars_single.glb" id="48_8qnct"]
+
+[node name="Node3D" type="Node3D" unique_id=1347643317]
+
+[node name="floor_ceiling_12" parent="." unique_id=1604564225 instance=ExtResource("1_cg7w4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+
+[node name="floor_ceiling_22" parent="." unique_id=808404707 instance=ExtResource("2_dpw55")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 2)
+
+[node name="floor_ceiling_32" parent="." unique_id=1256083299 instance=ExtResource("3_shqmp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 2)
+
+[node name="arc_1_wall_12" parent="." unique_id=690694488 instance=ExtResource("4_qdkps")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 0)
+
+[node name="arc_1_wall_1_plain2" parent="." unique_id=1633849556 instance=ExtResource("5_ekyga")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, 0)
+
+[node name="arc_1_wall_2_12" parent="." unique_id=233584242 instance=ExtResource("6_srkqi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5, 0, 0)
+
+[node name="arc_1_wall_2_22" parent="." unique_id=1619820760 instance=ExtResource("7_8770b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, 0)
+
+[node name="arc_2_wall_12" parent="." unique_id=1834589749 instance=ExtResource("8_y0c3f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, 0, 0)
+
+[node name="arc_2_wall_1_plain2" parent="." unique_id=804744238 instance=ExtResource("9_n7p7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.5, 0, 0)
+
+[node name="arc_2_wall_2_12" parent="." unique_id=1736176798 instance=ExtResource("10_hel83")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.5, 0, 0)
+
+[node name="arc_2_wall_2_22" parent="." unique_id=1221637807 instance=ExtResource("11_empy1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.5, 0, 0)
+
+[node name="half_arc_pillar_1_wall_1_plain2" parent="." unique_id=2090888354 instance=ExtResource("12_trocb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, 0, 0)
+
+[node name="half_arc_pillar_2_tall_wall_1_plain2" parent="." unique_id=464687158 instance=ExtResource("13_n4hut")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 3, 0)
+
+[node name="half_arc_pillar_2_wall_1_plain2" parent="." unique_id=202545310 instance=ExtResource("14_03jme")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41, 0, 0)
+
+[node name="wall_12" parent="." unique_id=25913701 instance=ExtResource("15_vwswu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="wall_1_1_half2" parent="." unique_id=1436474097 instance=ExtResource("16_nx8aq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+
+[node name="wall_1_1_rounded_corner_12" parent="." unique_id=1635823254 instance=ExtResource("17_g074b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -2)
+
+[node name="wall_1_2_half2" parent="." unique_id=1464302452 instance=ExtResource("18_4p2ij")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 0)
+
+[node name="wall_1_2_rounded_corner_12" parent="." unique_id=303760873 instance=ExtResource("19_mvmk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -2)
+
+[node name="wall_1_3_half2" parent="." unique_id=1706289163 instance=ExtResource("20_0h5h6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 0)
+
+[node name="wall_1_half2" parent="." unique_id=15461484 instance=ExtResource("21_mimkv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 0)
+
+[node name="wall_1_plain2" parent="." unique_id=1209280239 instance=ExtResource("22_bedu4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, 0)
+
+[node name="wall_1_rounded_corner2" parent="." unique_id=653943552 instance=ExtResource("23_657kl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, -2)
+
+[node name="wall_1_rounded_corner_12" parent="." unique_id=1977002514 instance=ExtResource("24_g0dxr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -2)
+
+[node name="wall_1_rounded_corner_1_12" parent="." unique_id=2011686675 instance=ExtResource("25_w47c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 0, -2)
+
+[node name="wall_1_rounded_corner_1_22" parent="." unique_id=757112697 instance=ExtResource("26_2dura")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, -2)
+
+[node name="wall_1_tunnel_hole2" parent="." unique_id=594223742 instance=ExtResource("27_t0cg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 0, 0)
+
+[node name="wall_1_tunnel_hole_12" parent="." unique_id=1815581083 instance=ExtResource("28_at3c7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 0, 0)
+
+[node name="wall_1_tunnel_hole_22" parent="." unique_id=1138972446 instance=ExtResource("29_ji78r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 0)
+
+[node name="wall_2_12" parent="." unique_id=169969117 instance=ExtResource("30_h6kgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54, 0, 0)
+
+[node name="wall_2_22" parent="." unique_id=178163089 instance=ExtResource("31_fkvd3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58, 0, 0)
+
+[node name="window_1_single2" parent="." unique_id=1775429754 instance=ExtResource("32_vs2ax")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -7.5)
+
+[node name="window_1_single_frame_only2" parent="." unique_id=154639531 instance=ExtResource("33_hrj44")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -7.5)
+
+[node name="window_1_single_no_glass2" parent="." unique_id=902373173 instance=ExtResource("34_dc6nc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -7.5)
+
+[node name="window_2_1_double2" parent="." unique_id=1361486995 instance=ExtResource("35_bj27o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, -7.5)
+
+[node name="window_2_1_single2" parent="." unique_id=453921141 instance=ExtResource("36_urwba")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, -7.5)
+
+[node name="window_2_1_single_frame_only2" parent="." unique_id=513217138 instance=ExtResource("37_p0yru")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -7.5)
+
+[node name="window_2_1_single_no_glass2" parent="." unique_id=502404934 instance=ExtResource("38_2q3kq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 0, -7.5)
+
+[node name="window_2_2_double2" parent="." unique_id=739079963 instance=ExtResource("39_1jsjn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 0, -7.5)
+
+[node name="window_2_2_single2" parent="." unique_id=1474600066 instance=ExtResource("40_ik7ob")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, -7.5)
+
+[node name="window_2_2_single_frame_only2" parent="." unique_id=886463881 instance=ExtResource("41_femv0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46, 0, -7.5)
+
+[node name="window_2_2_single_no_glass2" parent="." unique_id=955065629 instance=ExtResource("42_sud4g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, -7.5)
+
+[node name="window_2_double2" parent="." unique_id=518732206 instance=ExtResource("43_yv2lx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, -7.5)
+
+[node name="window_2_single2" parent="." unique_id=305917700 instance=ExtResource("44_gf8yy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 0, -7.5)
+
+[node name="window_2_single_frame_only2" parent="." unique_id=656847049 instance=ExtResource("45_2fv38")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62, 0, -7.5)
+
+[node name="window_2_single_no_glass2" parent="." unique_id=686259673 instance=ExtResource("46_qiich")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, -7.5)
+
+[node name="window_metal_bars_double2" parent="." unique_id=2042597451 instance=ExtResource("47_bkrup")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.5, 0, -7.5)
+
+[node name="window_metal_bars_single2" parent="." unique_id=1384825811 instance=ExtResource("48_8qnct")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.5, 0, -7.5)

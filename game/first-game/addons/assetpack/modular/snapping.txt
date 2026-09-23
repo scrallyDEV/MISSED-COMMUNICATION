@@ -1,0 +1,4 @@
+snapping for this modular pack appears to be 0.5
+
+mostly for use in walls floors and ceilings 
+pillars appear to be on a case by case snap basis

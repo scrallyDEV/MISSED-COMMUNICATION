@@ -5,6 +5,7 @@
 # Godot's local import/editor/cache directory.
 # The actual Godot project is still committed.
 game/first-game/.godot/
+debug-builds/
 
 
 # ==================================================
@@ -31,6 +32,7 @@ HaxeGD/
 
 # Portable TrenchBroom installation.
 mapping/
+mappingbackup/
 
 
 # ==================================================
