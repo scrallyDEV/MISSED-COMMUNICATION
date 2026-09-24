@@ -48,6 +48,36 @@
 [ext_resource type="PackedScene" uid="uid://d0cbogsyak5ea" path="res://addons/assetpack/modular/windows/window_2_single_no_glass.glb" id="46_qiich"]
 [ext_resource type="PackedScene" uid="uid://cbekw3ok1m0ea" path="res://addons/assetpack/modular/windows/window_metal_bars_double.glb" id="47_bkrup"]
 [ext_resource type="PackedScene" uid="uid://chg72j2e8n7d1" path="res://addons/assetpack/modular/windows/window_metal_bars_single.glb" id="48_8qnct"]
+[ext_resource type="PackedScene" uid="uid://k5g43d3n40n3" path="res://addons/assetpack/modular/doors/doorway_1.glb" id="49_fkvd3"]
+[ext_resource type="PackedScene" uid="uid://ubhx62i44we7" path="res://addons/assetpack/modular/doors/doorway_1_1.glb" id="50_vs2ax"]
+[ext_resource type="PackedScene" uid="uid://hsnsxwtb2oa4" path="res://addons/assetpack/modular/doors/doorway_1_half.glb" id="51_hrj44"]
+[ext_resource type="PackedScene" uid="uid://cbcypqk8ss5uc" path="res://addons/assetpack/modular/doors/doorway_1_plain.glb" id="52_dc6nc"]
+[ext_resource type="PackedScene" uid="uid://bkeqcxt73d8nq" path="res://assets/models/doors/doorway_2.glb" id="53_bj27o"]
+[ext_resource type="PackedScene" uid="uid://bksddqpt1lxvy" path="res://addons/assetpack/modular/doors/doorway_2_1.glb" id="54_urwba"]
+[ext_resource type="PackedScene" uid="uid://8v8vrwmkj5lc" path="res://addons/assetpack/modular/doors/doorway_2_1_half.glb" id="55_p0yru"]
+[ext_resource type="PackedScene" uid="uid://vxgxbslcb6dy" path="res://addons/assetpack/modular/doors/doorway_2_2_half.glb" id="56_2q3kq"]
+[ext_resource type="PackedScene" uid="uid://cdqwm7mw32gw" path="res://addons/assetpack/modular/doors/doorway_2_wide.glb" id="57_1jsjn"]
+[ext_resource type="PackedScene" uid="uid://bdp1q05dlxsuh" path="res://addons/assetpack/modular/doors/doorway_3_half.glb" id="58_ik7ob"]
+[ext_resource type="PackedScene" uid="uid://cher3dejxu055" path="res://addons/assetpack/modular/doors/doorway_3_wide.glb" id="59_femv0"]
+[ext_resource type="PackedScene" uid="uid://bn81no8cu08b6" path="res://addons/assetpack/modular/doors/doorway_door_mp_1.glb" id="60_sud4g"]
+[ext_resource type="PackedScene" uid="uid://s0o37fkkjscy" path="res://addons/assetpack/modular/doors/door_1_loose.glb" id="61_yv2lx"]
+[ext_resource type="PackedScene" uid="uid://ddvjcvg3h426e" path="res://addons/assetpack/modular/doors/door_2_loose.glb" id="62_gf8yy"]
+[ext_resource type="PackedScene" uid="uid://bagb2715m4cev" path="res://addons/assetpack/modular/doors/door_3_loose.glb" id="63_2fv38"]
+[ext_resource type="PackedScene" uid="uid://yll2llutbmaq" path="res://addons/assetpack/modular/doors/door_4_loose.glb" id="64_qiich"]
+[ext_resource type="PackedScene" uid="uid://qn52mywjtlox" path="res://addons/assetpack/modular/doors/door_mp_1_loose.glb" id="65_bkrup"]
+[ext_resource type="PackedScene" uid="uid://c4b6gys34nvds" path="res://addons/assetpack/modular/doors/door_mp_6_loose.glb" id="66_8qnct"]
+[ext_resource type="PackedScene" uid="uid://buxm8pvh6686q" path="res://addons/assetpack/modular/doors/double_single_doorway_1.glb" id="67_7t6xs"]
+[ext_resource type="PackedScene" uid="uid://dvy0ryuv0n5qy" path="res://addons/assetpack/modular/doors/double_single_doorway_2.glb" id="68_cqcqm"]
+[ext_resource type="PackedScene" uid="uid://dxjockdv0tkxd" path="res://addons/assetpack/modular/doors/double_single_doorway_2_1.glb" id="69_8e7dm"]
+[ext_resource type="PackedScene" uid="uid://cs0gg6of3aeb7" path="res://addons/assetpack/modular/doors/double_single_doorway_3.glb" id="70_o76iy"]
+[ext_resource type="PackedScene" uid="uid://bupd163qkacfa" path="res://addons/assetpack/modular/doors/elevator_doorway_1.glb" id="71_hqpxe"]
+[ext_resource type="PackedScene" uid="uid://cq368fbwmuqmc" path="res://addons/assetpack/modular/doors/elevator_doorway_2.glb" id="72_tb704"]
+[ext_resource type="PackedScene" uid="uid://cyu26c1l2mmc4" path="res://addons/assetpack/modular/doors/elevator_doorway_2_1.glb" id="73_tjmqk"]
+[ext_resource type="PackedScene" uid="uid://cbmrtwxpthmqq" path="res://addons/assetpack/modular/doors/elevator_doorway_3.glb" id="74_h8cej"]
+[ext_resource type="PackedScene" uid="uid://b71eytcwlyy2l" path="res://addons/assetpack/modular/doors/side_doorway_1.glb" id="75_wdwwt"]
+[ext_resource type="PackedScene" uid="uid://bcyoywhxek841" path="res://addons/assetpack/modular/doors/side_doorway_2.glb" id="76_t5l23"]
+[ext_resource type="PackedScene" uid="uid://ccnb7pqaayqd3" path="res://addons/assetpack/modular/doors/side_doorway_2_1.glb" id="77_2u5s1"]
+[ext_resource type="PackedScene" uid="uid://7glc6mahvspc" path="res://addons/assetpack/modular/doors/side_doorway_3.glb" id="78_sview"]
 
 [node name="Node3D" type="Node3D" unique_id=1347643317]
 
@@ -194,3 +224,93 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.5, 0, -7.5)
 
 [node name="window_metal_bars_single2" parent="." unique_id=1384825811 instance=ExtResource("48_8qnct")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.5, 0, -7.5)
+
+[node name="doorway_12" parent="." unique_id=1740731092 instance=ExtResource("49_fkvd3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5, 0, 7.5)
+
+[node name="doorway_1_12" parent="." unique_id=2125474763 instance=ExtResource("50_vs2ax")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5, 0, 7.5)
+
+[node name="doorway_1_half2" parent="." unique_id=1826091284 instance=ExtResource("51_hrj44")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, 7.5)
+
+[node name="doorway_1_plain2" parent="." unique_id=1895830007 instance=ExtResource("52_dc6nc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, 0, 7.5)
+
+[node name="doorway_22" parent="." unique_id=1578080099 instance=ExtResource("53_bj27o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5, 0, 7.5)
+
+[node name="doorway_2_12" parent="." unique_id=1035801067 instance=ExtResource("54_urwba")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, 0, 7.5)
+
+[node name="doorway_2_1_half2" parent="." unique_id=1338696408 instance=ExtResource("55_p0yru")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5, 0, 7.5)
+
+[node name="doorway_2_2_half2" parent="." unique_id=2020702199 instance=ExtResource("56_2q3kq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.5, 0, 7.5)
+
+[node name="doorway_2_wide2" parent="." unique_id=107223 instance=ExtResource("57_1jsjn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, 0, 7.5)
+
+[node name="doorway_3_half2" parent="." unique_id=1174775491 instance=ExtResource("58_ik7ob")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.5, 0, 7.5)
+
+[node name="doorway_3_wide2" parent="." unique_id=67185002 instance=ExtResource("59_femv0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.5, 0, 7.5)
+
+[node name="doorway_door_mp_12" parent="." unique_id=1336978578 instance=ExtResource("60_sud4g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.5, 0, 7.5)
+
+[node name="door_1_loose2" parent="." unique_id=2081217615 instance=ExtResource("61_yv2lx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.5, 0, 7.5)
+
+[node name="door_2_loose2" parent="." unique_id=154831613 instance=ExtResource("62_gf8yy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.5, 0, 7.5)
+
+[node name="door_3_loose2" parent="." unique_id=2037226719 instance=ExtResource("63_2fv38")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.5, 0, 7.5)
+
+[node name="door_4_loose2" parent="." unique_id=2090866880 instance=ExtResource("64_qiich")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.5, 0, 7.5)
+
+[node name="door_mp_1_loose2" parent="." unique_id=913836074 instance=ExtResource("65_bkrup")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.5, 0, 7.5)
+
+[node name="door_mp_6_loose2" parent="." unique_id=1749291771 instance=ExtResource("66_8qnct")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.5, 0, 7.5)
+
+[node name="double_single_doorway_12" parent="." unique_id=1143702625 instance=ExtResource("67_7t6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.5, 0, 7.5)
+
+[node name="double_single_doorway_22" parent="." unique_id=1556118903 instance=ExtResource("68_cqcqm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.5, 0, 7.5)
+
+[node name="double_single_doorway_2_12" parent="." unique_id=998724887 instance=ExtResource("69_8e7dm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.5, 0, 7.5)
+
+[node name="double_single_doorway_32" parent="." unique_id=988946179 instance=ExtResource("70_o76iy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.5, 0, 7.5)
+
+[node name="elevator_doorway_12" parent="." unique_id=519466096 instance=ExtResource("71_hqpxe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.5, 0, 7.5)
+
+[node name="elevator_doorway_22" parent="." unique_id=1403877515 instance=ExtResource("72_tb704")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81.5, 0, 7.5)
+
+[node name="elevator_doorway_2_12" parent="." unique_id=677297439 instance=ExtResource("73_tjmqk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.5, 0, 7.5)
+
+[node name="elevator_doorway_32" parent="." unique_id=1086251266 instance=ExtResource("74_h8cej")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 89.5, 0, 7.5)
+
+[node name="side_doorway_12" parent="." unique_id=1187756435 instance=ExtResource("75_wdwwt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.5, 0, 7.5)
+
+[node name="side_doorway_22" parent="." unique_id=1982784631 instance=ExtResource("76_t5l23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 97.5, 0, 7.5)
+
+[node name="side_doorway_2_12" parent="." unique_id=315119215 instance=ExtResource("77_2u5s1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.5, 0, 7.5)
+
+[node name="side_doorway_32" parent="." unique_id=1167967691 instance=ExtResource("78_sview")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 105.5, 0, 7.5)

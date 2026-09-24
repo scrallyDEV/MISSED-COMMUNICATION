@@ -3,6 +3,7 @@ package entities.player;
 import godot.Vector3;
 import godot.InputEvent;
 import godot.AudioStream;
+import godot.Input;
 
 import haxegd.Char3DHelpers.*;
 import haxegd.Controls.*;
@@ -86,12 +87,7 @@ class Movement
             direction += -player.transform.basis.z;
         }
 
-        if (inputPressed(movementArray[5]) && player.stamina > 0 && player.isMoving()) {
-            player.isSprinting = true;
-        }
-        else if (!inputPressed(movementArray[5])){
-            player.isSprinting = false;
-        }
+        player.isSprinting = physicalKeyPressed(KEY_SHIFT) && player.stamina > 0 && player.isMoving();
         
         direction = MathExtension.normalizeVector3(direction);
 

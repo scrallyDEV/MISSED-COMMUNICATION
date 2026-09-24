@@ -24,11 +24,11 @@ class Player extends CharacterBody3D
     public var generalAudio:AudioStreamPlayer = new AudioStreamPlayer();
 
     @:meta(export)
-    public var footstepIntervals:Float = 0.8;
+    public var footstepIntervals:Float = 0.8; 
     @:meta(export)
-    public var speed:Float = 3;
+    public var speed:Float = 2;
     @:meta(export)
-    public var sprintSpeed:Float = 6;
+    public var sprintSpeed:Float = 5; 
     @:meta(export)
     public var stamina:Float = 100;
     @:meta(export)
