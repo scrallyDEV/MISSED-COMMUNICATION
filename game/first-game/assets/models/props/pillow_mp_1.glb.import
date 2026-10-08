@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cd16mwqqmw50r"
-path="res://.godot/imported/wall_1.glb-09f9ea2371534f139f53b7ae257d9c77.scn"
+uid="uid://pfx7pkjifnvh"
+path="res://.godot/imported/pillow_mp_1.glb-791ac56ead532dc2081e792819a83061.scn"
 
 [deps]
 
-source_file="res://addons/assetpack/modular/walls/wall_1.glb"
-dest_files=["res://.godot/imported/wall_1.glb-09f9ea2371534f139f53b7ae257d9c77.scn"]
+source_file="res://assets/models/props/pillow_mp_1.glb"
+dest_files=["res://.godot/imported/pillow_mp_1.glb-791ac56ead532dc2081e792819a83061.scn"]
 
 [params]
 

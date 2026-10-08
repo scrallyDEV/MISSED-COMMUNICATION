@@ -1,4 +1,4 @@
-package interactables;
+package interactables.doors;
 
 import godot.AudioStream;
 import godot.AudioStreamPlayer3D;
@@ -17,31 +17,49 @@ import entities.player.Player;
 class Door extends StaticBody3D implements Interactable
 {
     @:meta(export_enum("left", "right"))
-    private var swingDirection:String = "left"; // technically a bool would suffice but a string is at a glance
+    public var swingDirection:String = "left"; // technically a bool would suffice but a string is at a glance
     @:meta(export)
-    private var openSpeed:Float = 3;
+    public var openSpeed:Float = 3;
     @:meta(export)
-    private var closeSpeed:Float = 2;
+    public var closeSpeed:Float = 2;
     @:meta(export)
-    private var openSound:AudioStream;
+    public var openSound:AudioStream;
     @:meta(export)
-    private var closeSound:AudioStream;
+    public var closeSound:AudioStream;
+    @:meta(export)
+    public var playAudio:Bool = true;
+    @:meta(export)
+    public var isLocked:Bool = false;
     
     private var isOpen:Bool = false; // door always begins closed
+    public var single:Bool = true;
     private var swingDegrees:Float;
-    private var swingTween:Tween;
+    public var swingTween:Tween;
     private var doorAudio:AudioStreamPlayer3D = new AudioStreamPlayer3D();
 
     public function onReady():Void
     {
-        swingDegrees = (swingDirection == "left") ? 90 : -90;
-        swingDegrees = MathExtension.degreesToRadians(swingDegrees);
-
         createChild(this, doorAudio);
     }
 
     public function activate(?player:Player):Void // can be called by any script (public function, not static so unique to each door instance)
-    {   
+    {
+        if (!isLocked && single) {
+            swingDegrees = (swingDirection == "left") ? 90 : -90;
+            swingDegrees = MathExtension.degreesToRadians(swingDegrees);
+
+            swingDoor();
+        }
+        else if (isLocked) {
+            trace("MEOW");
+        } 
+    }
+
+    public function externalActivate(?player:Player):Void // forceful activation externally
+    {
+        swingDegrees = (swingDirection == "left") ? 90 : -90;
+        swingDegrees = MathExtension.degreesToRadians(swingDegrees);
+        
         swingDoor();
     }
 
@@ -52,12 +70,16 @@ class Door extends StaticBody3D implements Interactable
 
             if (!isOpen) { // if closed
                 Tweening.doTween(this, swingTween, "rotation", new Vector3(rotation.x, rotation.y + swingDegrees, rotation.z), TweenStyle.QuartOut, openSpeed);
-                Audio3D.doOneShot(doorAudio, openSound);
+                if (playAudio) {
+                    Audio3D.doOneShot(doorAudio, openSound);
+                }
                 isOpen = !isOpen; // isOpen is whatever isOpen currently is NOT (basically a switch)
             }
             else if (isOpen) { // ditto but if open
                 Tweening.doTween(this, swingTween, "rotation", new Vector3(rotation.x, rotation.y - swingDegrees, rotation.z), TweenStyle.QuadOut, closeSpeed);
-                Audio3D.doOneShot(doorAudio, closeSound);
+                if (playAudio) {
+                    Audio3D.doOneShot(doorAudio, closeSound);
+                }
                 isOpen = !isOpen; // isOpen is whatever isOpen currently is NOT (basically a switch)
             }
         }

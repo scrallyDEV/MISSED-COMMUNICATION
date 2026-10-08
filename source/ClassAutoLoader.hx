@@ -4,13 +4,18 @@ package;
 // References every Haxe module under source/ so Reflaxe compiles it.
 // Do not edit manually.
 import cutscenes.Chapter0Intro as HaxeGD_Auto_0;
-import entities.player.Flashlight as HaxeGD_Auto_1;
-import entities.player.Movement as HaxeGD_Auto_2;
-import entities.player.Player as HaxeGD_Auto_3;
-import entities.player.Variables as HaxeGD_Auto_4;
-import interactables.Door as HaxeGD_Auto_5;
-import interactables.FlashlightCharger as HaxeGD_Auto_6;
-import interactables.Interactable as HaxeGD_Auto_7;
+import cutscenes.Chapter0LightReset as HaxeGD_Auto_1;
+import cutscenes.Chapter0Outro as HaxeGD_Auto_2;
+import cutscenes.CutsceneBase as HaxeGD_Auto_3;
+import cutscenes.CutsceneTrigger as HaxeGD_Auto_4;
+import entities.player.Flashlight as HaxeGD_Auto_5;
+import entities.player.Movement as HaxeGD_Auto_6;
+import entities.player.Player as HaxeGD_Auto_7;
+import entities.player.Variables as HaxeGD_Auto_8;
+import interactables.doors.Door as HaxeGD_Auto_9;
+import interactables.doors.DoubleDoor as HaxeGD_Auto_10;
+import interactables.FlashlightCharger as HaxeGD_Auto_11;
+import interactables.Interactable as HaxeGD_Auto_12;
 
 class ClassAutoLoader
 {
@@ -24,5 +29,10 @@ class ClassAutoLoader
         HaxeGD_Auto_5;
         HaxeGD_Auto_6;
         HaxeGD_Auto_7;
+        HaxeGD_Auto_8;
+        HaxeGD_Auto_9;
+        HaxeGD_Auto_10;
+        HaxeGD_Auto_11;
+        HaxeGD_Auto_12;
     }
 }

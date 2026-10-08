@@ -1,11 +1,13 @@
 package entities.player;
 
+import godot.Nil;
 import godot.AudioStream;
 import godot.CharacterBody3D;
 import godot.Camera3D;
 import godot.RayCast3D;
 import godot.InputEvent;
 import godot.AudioStreamPlayer;
+import godot.Node;
 
 import interactables.Interactable;
 
@@ -18,6 +20,7 @@ class Player extends CharacterBody3D
 {
     public var camera:Camera3D;
     public var raycast:RayCast3D;
+    public var groundCast:RayCast3D;
     public var flashlight:Flashlight;
     public var flashlightAudio:AudioStreamPlayer = new AudioStreamPlayer();
     public var footstepAudio:AudioStreamPlayer = new AudioStreamPlayer();
@@ -43,44 +46,28 @@ class Player extends CharacterBody3D
     public var jumpSound:AudioStream = preload("res://assets/audio/footsteps/Footstep Concrete 1.ogg");
     @:meta(export)
     public var landSound:AudioStream = preload("res://assets/audio/footsteps/Footstep Concrete 2.ogg");
-    @:meta(export)
-    public var footstepArray:Array<AudioStream> = [
-        preload("res://assets/audio/footsteps/Footstep Concrete 1.ogg"),
-        preload("res://assets/audio/footsteps/Footstep Concrete 2.ogg"),
-        preload("res://assets/audio/footsteps/Footstep Concrete 3.ogg"),
-        preload("res://assets/audio/footsteps/Footstep Concrete 4.ogg"),
-        preload("res://assets/audio/footsteps/Footstep Concrete 5.ogg")
-    ];
-    /* 
-        self note
-        each of the audio variables will be populated with standard audio once that audio set
-        has been finalized to prevent the need to constantly attach audio every time the player is moved
-        into a new scene
-
-
-        new self note
-        remove "bullshit" from the states when general player framework is finished :>
-    */
 
     // RUNTIME
     // States
     public var isSprinting:Bool = false;
     public var isRegenStamina:Bool = false;
     public var inputEnabled:Bool = true;
+    public var mouseEnabled:Bool = true;
     public var canInteract:Bool = true;
 
-    // Stamina bullshit
+    // Stamina
     public var maxStamina:Float;
     public var staminaRegenDelay:Float = 1.5;
     public var staminaExhaustionDelay:Float = 3;
     public var staminaDrain:Float = 14;
     public var staminaGain:Float = 13;
 
-    // Footstep bullshit
+    // Footsteps
     public var walkStepInterval:Float;
     public var runStepInterval:Float;
+    public var footstepVariation:Array<AudioStream>;
 
-    // Debug bullshit
+    // Debug
     public var isDebugging:Bool = false;
 
 
@@ -89,15 +76,20 @@ class Player extends CharacterBody3D
         camera = cast getChildNode(this, "Camera3D");
         raycast = cast getChildNode(camera, "RayCast3D");
         flashlight = cast getChildNode(camera, "Flashlight");
+        groundCast = cast getChildNode(this, "RayCast3D");
         createChild(this, flashlightAudio);
         createChild(this, footstepAudio);
         createChild(this, generalAudio);
 
         walkStepInterval = footstepIntervals;
         runStepInterval = footstepIntervals - footstepIntervals * 0.4;
+        footstepVariation = Variables.concreteFootstepArray;
         
         camera.fov = Variables.fov;
         raycast.target_position.y = -2; // force raycast a specific target position in case a player instance does not match
+        raycast.set_collision_mask_value(2, true);
+        raycast.set_collision_mask_value(1, true);
+        groundCast.target_position.y = -1.5; // ditto of above
         maxStamina = stamina; // yoink 
         
 
@@ -106,7 +98,7 @@ class Player extends CharacterBody3D
 
     public function onInput(event:InputEvent):Void
     {
-        if (inputEnabled) {
+        if (mouseEnabled) {
             Movement.mouse(event, this);
         }
 
@@ -122,11 +114,6 @@ class Player extends CharacterBody3D
         {
             Variables.mouseHidden = !Variables.mouseHidden;
             mouseCapture(Variables.mouseHidden);
-        }
-
-        if (event.is_action_pressed("DebugTrace") && !event.is_echo()) // its raw because its gonna vanish when i add a pause menu
-        {
-            trace(footstepArray);
         }
     }
 
@@ -144,13 +131,34 @@ class Player extends CharacterBody3D
         if (inputEnabled) {
             Movement.movement(delta, this);
         }
+
+        var groundMat:Node = getRaycastCollider(groundCast, false).node;
+
+        if (isMoving() && isChar3DGrounded(this) && groundMat != null) {
+            groundMat = groundMat.get_parent(); 
+
+            if (groundMat != null) {
+                var groundMatName:String = cast groundMat.get_name();
+                groundMatName = groundMatName.toLowerCase();
+
+                if (StringTools.contains(groundMatName, "concrete")) {
+                    footstepVariation = Variables.concreteFootstepArray;
+                }
+                else if (StringTools.contains(groundMatName, "wood")) {
+                    footstepVariation = Variables.woodFootstepArray;
+                }
+                else {
+                    footstepVariation = Variables.concreteFootstepArray;
+                }
+            }
+        }
     }
 
     private function interact()
     {
         var object = getRaycastCollider(raycast);
         if (canInteract) {
-            if (object.node != null && Std.isOfType(object.node, Interactable)) { // less simple :/
+            if (object.node != null && nodeHasMethod(object.node, "activate")) { // less simple :/
                 var target:Interactable;
                 target = cast object.node;
                 target.activate(this);

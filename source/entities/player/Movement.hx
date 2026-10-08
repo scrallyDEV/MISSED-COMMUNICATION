@@ -173,11 +173,11 @@ class Movement
             footstepElapsed += delta;
 
             if (!player.isSprinting && footstepElapsed >= player.walkStepInterval) {
-                Audio.doOneShot(player.footstepAudio, pickNextFootstep(player.footstepArray));
+                Audio.doOneShot(player.footstepAudio, pickNextFootstep(player.footstepVariation));
                 footstepElapsed -= player.walkStepInterval;
             }
             else if (player.isSprinting && footstepElapsed >= player.runStepInterval) {
-                Audio.doOneShot(player.footstepAudio, pickNextFootstep(player.footstepArray));
+                Audio.doOneShot(player.footstepAudio, pickNextFootstep(player.footstepVariation));
                 footstepElapsed -= player.runStepInterval;
             }
         }

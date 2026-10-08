@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bh2lmhdyrdcno"
-path="res://.godot/imported/floor_ceiling_2.glb-325153658ac175e267f7b29b392aabc1.scn"
+uid="uid://pnymrhdivejn"
+path="res://.godot/imported/light_switch_1.glb-02deec3f128842aba3d4479679d15fbe.scn"
 
 [deps]
 
-source_file="res://addons/assetpack/modular/floors/floor_ceiling_2.glb"
-dest_files=["res://.godot/imported/floor_ceiling_2.glb-325153658ac175e267f7b29b392aabc1.scn"]
+source_file="res://assets/models/props/light_switch_1.glb"
+dest_files=["res://.godot/imported/light_switch_1.glb-02deec3f128842aba3d4479679d15fbe.scn"]
 
 [params]
 

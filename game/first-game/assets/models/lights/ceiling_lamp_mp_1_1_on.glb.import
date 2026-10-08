@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cdqwm7mw32gw"
-path="res://.godot/imported/doorway_2_wide.glb-67a7189b03d1c604ea12102b55cab095.scn"
+uid="uid://dp128ss5f1rkx"
+path="res://.godot/imported/ceiling_lamp_mp_1_1_on.glb-1db6d0f3a3fbe3cae36884c726c8a91b.scn"
 
 [deps]
 
-source_file="res://addons/assetpack/modular/doors/doorway_2_wide.glb"
-dest_files=["res://.godot/imported/doorway_2_wide.glb-67a7189b03d1c604ea12102b55cab095.scn"]
+source_file="res://assets/models/lights/ceiling_lamp_mp_1_1_on.glb"
+dest_files=["res://.godot/imported/ceiling_lamp_mp_1_1_on.glb-1db6d0f3a3fbe3cae36884c726c8a91b.scn"]
 
 [params]
 
