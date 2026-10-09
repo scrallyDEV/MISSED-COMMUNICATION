@@ -35,6 +35,10 @@ class Player extends CharacterBody3D
     @:meta(export)
     public var stamina:Float = 100;
     @:meta(export)
+    public var doStaminaDrain:Bool = true;
+    @:meta(export)
+    public var doBatteryDrain:Bool = true;
+    @:meta(export)
     public var jumpHeight:Float = 3;
     @:meta(export)
     public var hasFlashlight:Bool = true;
@@ -92,6 +96,8 @@ class Player extends CharacterBody3D
         groundCast.target_position.y = -1.5; // ditto of above
         maxStamina = stamina; // yoink 
         
+        Movement.setupViewBob(this);
+        
 
         mouseCapture(true);
     }
@@ -128,6 +134,8 @@ class Player extends CharacterBody3D
 
     public function onPhysicsUpdate(delta:Float):Void
     {
+        Movement.viewBob(delta, this);
+        
         if (inputEnabled) {
             Movement.movement(delta, this);
         }

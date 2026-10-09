@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ddcpcmff6mc8b"]
+
+[ext_resource type="Texture2D" uid="uid://b0yk5fi85mq7h" path="res://assets/models/doors/doorway_2_wide_door_handle_2.png" id="1_cvaem"]
+
+[resource]
+resource_name = "door_handle_2"
+cull_mode = 2
+albedo_texture = ExtResource("1_cvaem")
+texture_filter = 2
+metadata/_gltf_primary_texture_coord = 0

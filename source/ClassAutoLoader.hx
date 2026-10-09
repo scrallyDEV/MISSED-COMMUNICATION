@@ -16,6 +16,7 @@ import interactables.doors.Door as HaxeGD_Auto_9;
 import interactables.doors.DoubleDoor as HaxeGD_Auto_10;
 import interactables.FlashlightCharger as HaxeGD_Auto_11;
 import interactables.Interactable as HaxeGD_Auto_12;
+import interactables.items.FlashlightPickup as HaxeGD_Auto_13;
 
 class ClassAutoLoader
 {
@@ -34,5 +35,6 @@ class ClassAutoLoader
         HaxeGD_Auto_10;
         HaxeGD_Auto_11;
         HaxeGD_Auto_12;
+        HaxeGD_Auto_13;
     }
 }

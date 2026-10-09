@@ -4,6 +4,9 @@ extends EditorPlugin
 var _flatten_button: Button
 var _promote_button: Button
 var _selection: EditorSelection
+var _replace_button: Button
+var _replacement_dialog: FileDialog
+var _pending_replacements: Array[Node] = []
 
 
 func _enter_tree() -> void:
@@ -22,6 +25,19 @@ func _enter_tree() -> void:
 	add_control_to_container(EditorPlugin.CONTAINER_SPATIAL_EDITOR_MENU, _promote_button)
 
 	_selection.selection_changed.connect(_update_buttons)
+
+	_replace_button = Button.new()
+	_replace_button.text = "Replace GLB Instances"
+	_replace_button.tooltip_text = "Replace selected raw GLB instances with an inherited scene while preserving placement."
+	_replace_button.pressed.connect(_replace_selected_glbs)
+	add_control_to_container(EditorPlugin.CONTAINER_SPATIAL_EDITOR_MENU, _replace_button)
+
+	_replacement_dialog = FileDialog.new()
+	_replacement_dialog.file_mode = FileDialog.FILE_MODE_OPEN_FILE
+	_replacement_dialog.access = FileDialog.ACCESS_RESOURCES
+	_replacement_dialog.filters = ["*.tscn ; Godot Scene"]
+	_replacement_dialog.file_selected.connect(_replacement_scene_selected)
+	add_child(_replacement_dialog)
 	_update_buttons()
 
 
@@ -37,6 +53,13 @@ func _exit_tree() -> void:
 		remove_control_from_container(EditorPlugin.CONTAINER_SPATIAL_EDITOR_MENU, _promote_button)
 		_promote_button.queue_free()
 
+	if is_instance_valid(_replace_button):
+		remove_control_from_container(EditorPlugin.CONTAINER_SPATIAL_EDITOR_MENU, _replace_button)
+		_replace_button.queue_free()
+
+	if is_instance_valid(_replacement_dialog):
+		_replacement_dialog.queue_free()
+
 
 func _update_buttons() -> void:
 	if is_instance_valid(_flatten_button):
@@ -51,6 +74,14 @@ func _update_buttons() -> void:
 
 		if is_instance_valid(_promote_button) and _can_promote(node):
 			_promote_button.disabled = false
+
+	if is_instance_valid(_replace_button):
+		_replace_button.disabled = true
+
+	for node in _selection.get_selected_nodes():
+		if is_instance_valid(_replace_button):
+			if not node.scene_file_path.is_empty() and node.scene_file_path.ends_with(".glb"):
+				_replace_button.disabled = false
 
 
 func _is_instanced_scene_root(node: Node) -> bool:
@@ -350,3 +381,141 @@ func _restore_owners(owner_data: Array[Dictionary]) -> void:
 
 		if is_instance_valid(node):
 			node.owner = old_owner
+
+func _replace_selected_glbs() -> void:
+	var selected := _selection.get_selected_nodes()
+
+	if selected.is_empty():
+		return
+
+	var source_path := ""
+
+	_pending_replacements.clear()
+
+	for node in selected:
+		if node.scene_file_path.is_empty():
+			continue
+
+		if not node.scene_file_path.ends_with(".glb"):
+			continue
+
+		if source_path.is_empty():
+			source_path = node.scene_file_path
+		elif node.scene_file_path != source_path:
+			push_warning("All selected GLB instances must come from the same source GLB.")
+			_pending_replacements.clear()
+			return
+
+		_pending_replacements.append(node)
+
+	if _pending_replacements.is_empty():
+		return
+
+	_replacement_dialog.popup_centered_ratio(0.6)
+
+func _replacement_scene_selected(path: String) -> void:
+	var packed_scene := load(path) as PackedScene
+
+	if packed_scene == null:
+		push_warning("Selected replacement is not a valid PackedScene.")
+		return
+
+	var scene_root := get_editor_interface().get_edited_scene_root()
+
+	if scene_root == null:
+		return
+
+	var action_data: Array[Dictionary] = []
+
+	for old_node in _pending_replacements:
+		if not is_instance_valid(old_node):
+			continue
+
+		var parent := old_node.get_parent()
+
+		if parent == null:
+			continue
+
+		var new_node := packed_scene.instantiate()
+
+		if new_node == null:
+			continue
+
+		var data := {
+			"old_node": old_node,
+			"new_node": new_node,
+			"parent": parent,
+			"index": old_node.get_index(),
+			"name": old_node.name,
+			"old_owner": old_node.owner,
+			"scene_root": scene_root
+		}
+
+		if old_node is Node3D and new_node is Node3D:
+			data["transform"] = old_node.transform
+
+		action_data.append(data)
+
+	if action_data.is_empty():
+		return
+
+	var undo_redo := get_undo_redo()
+
+	undo_redo.create_action("Replace GLB Instances")
+
+	undo_redo.add_do_method(self, "_do_replace_glbs", action_data)
+	undo_redo.add_undo_method(self, "_undo_replace_glbs", action_data)
+
+	for data in action_data:
+		undo_redo.add_undo_reference(data["old_node"])
+		undo_redo.add_do_reference(data["new_node"])
+
+	undo_redo.commit_action()
+
+	_pending_replacements.clear()
+	_selection.clear()
+
+func _do_replace_glbs(action_data: Array[Dictionary]) -> void:
+	for data in action_data:
+		var old_node: Node = data["old_node"]
+		var new_node: Node = data["new_node"]
+		var parent: Node = data["parent"]
+		var scene_root: Node = data["scene_root"]
+		var index: int = data["index"]
+
+		if old_node.get_parent() == parent:
+			parent.remove_child(old_node)
+
+		new_node.name = data["name"]
+
+		if new_node.get_parent() == null:
+			parent.add_child(new_node)
+
+		new_node.owner = scene_root
+
+		parent.move_child(
+			new_node,
+			mini(index, parent.get_child_count() - 1)
+		)
+
+		if data.has("transform") and new_node is Node3D:
+			new_node.transform = data["transform"]
+func _undo_replace_glbs(action_data: Array[Dictionary]) -> void:
+	for data in action_data:
+		var old_node: Node = data["old_node"]
+		var new_node: Node = data["new_node"]
+		var parent: Node = data["parent"]
+		var index: int = data["index"]
+
+		if new_node.get_parent() == parent:
+			parent.remove_child(new_node)
+
+		if old_node.get_parent() == null:
+			parent.add_child(old_node)
+
+		old_node.owner = data["old_owner"]
+
+		parent.move_child(
+			old_node,
+			mini(index, parent.get_child_count() - 1)
+		)

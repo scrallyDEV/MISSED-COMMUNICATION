@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cv4pjxwfnauka"]
+
+[ext_resource type="PackedScene" uid="uid://cd16mwqqmw50r" path="res://assets/models/walls/wall_1.glb" id="1_h570h"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vag6m"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="wall_12" unique_id=661015133 instance=ExtResource("1_h570h")]
+
+[node name="lightblock" type="CSGBox3D" parent="." index="1" unique_id=796896493]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004272461, 1.5040588, -0.0017852783)
+cast_shadow = 3
+size = Vector3(4.0080566, 2.9751587, 0.10202026)
+material = SubResource("StandardMaterial3D_vag6m")

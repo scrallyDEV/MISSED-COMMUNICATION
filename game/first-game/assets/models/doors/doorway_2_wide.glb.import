@@ -40,6 +40,33 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={
+"materials": {
+"door_4_double": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/models/doors/door_4_double.tres",
+"use_external/path": "uid://cdvrq44fjrun7"
+},
+"door_frame_wood_1": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/models/doors/door_frame_wood_1.tres",
+"use_external/path": "uid://c43hmifqkjmbu"
+},
+"door_handle_2": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/models/doors/door_handle_2.tres",
+"use_external/path": "uid://ddcpcmff6mc8b"
+},
+"wall_3": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/models/doors/wall_3.tres",
+"use_external/path": "uid://ve703hcld7wb"
+},
+"wall_3_rear": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/models/doors/wall_3_rear.tres",
+"use_external/path": "uid://bfpbbwtruxsff"
+}
+},
 "nodes": {
 "PATH:doorway_2_wide": {
 "generate/physics": true

@@ -24,6 +24,10 @@ class Movement
     private static var isFalling:Bool = false;
     private static var realJumpHeight:Float;
 
+    private static var bobPhase:Float = 0;
+    private static var idlePhase:Float = 0;
+    private static var cameraRestPosition:Vector3;  
+
     public static var movementArray:Array<String> = [
         "MoveForward", // 0
         "MoveBackward", // 1
@@ -101,6 +105,11 @@ class Movement
 
     public static function stamina(delta:Float, player:Player):Void
     {
+        if (!player.doStaminaDrain) {
+            return;
+        }
+
+
         if (player.isRegenStamina) {
             player.stamina += player.staminaGain * delta;
             player.stamina = MathExtension.clamp(player.stamina, 0, player.maxStamina);
@@ -206,6 +215,39 @@ class Movement
                 heightStored = true;
                 trace(storedHeight);
             }
+        }
+    }
+
+    public static function setupViewBob(player:Player):Void
+    {
+        cameraRestPosition = player.camera.position;
+    }
+    
+    public static function viewBob(delta:Float, player:Player):Void
+    {
+        if (player.isMoving() && isChar3DGrounded(player)) {
+            bobPhase += delta * 6.0;
+        
+            var horizontalBob = Math.cos(bobPhase) * 0.012;
+            var verticalBob = Math.sin(bobPhase * 2) * 0.02;
+        
+            player.camera.position = new Vector3(
+                cameraRestPosition.x + horizontalBob,
+                cameraRestPosition.y + verticalBob,
+                cameraRestPosition.z
+            );
+        }
+        else {
+            idlePhase += delta * 1.0;
+
+            var horizontalSway = Math.cos(idlePhase) * 0.01;
+            var verticalSway = Math.sin(idlePhase * 0.7) * 0.01;
+
+            player.camera.position = new Vector3(
+                cameraRestPosition.x + horizontalSway,
+                cameraRestPosition.y + verticalSway,
+                cameraRestPosition.z
+            );
         }
     }
 }
