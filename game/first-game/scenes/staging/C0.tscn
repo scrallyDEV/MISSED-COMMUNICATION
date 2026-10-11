@@ -59,7 +59,9 @@
 [ext_resource type="Script" uid="uid://bq64u87y61t0e" path="res://addons/haxe_output/interactables_FlashlightPickup.gd" id="58_dsl4l"]
 [ext_resource type="PackedScene" uid="uid://cdm68cnuul6or" path="res://assets/models/props/sofa_5_3.glb" id="58_kour4"]
 [ext_resource type="Texture2D" uid="uid://tjec2354rfll" path="res://assets/models/props/flashlight_1_flashlight_1.png" id="59_16fd3"]
+[ext_resource type="Texture2D" uid="uid://dlw0inexvi5fk" path="res://assets/ui/crosshair.png" id="60_16fd3"]
 [ext_resource type="Texture2D" uid="uid://05koox7r2fow" path="res://assets/models/props/flashlight_1_flashlight_1_emission.png" id="60_jya0t"]
+[ext_resource type="Script" uid="uid://dmqwngdehwv31" path="res://addons/haxe_output/Crosshair.gd" id="60_kour4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u4jbi"]
 resource_name = "floor_1"
@@ -1660,15 +1662,6 @@ mesh = SubResource("ArrayMesh_i2tkt")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GEO/Floors/concrete17/StaticBody3D" unique_id=263967505]
 shape = SubResource("ConcavePolygonShape3D_j4scd")
 
-[node name="concrete18" type="MeshInstance3D" parent="GEO/Floors" unique_id=44977191]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, -22, -2)
-mesh = SubResource("ArrayMesh_i2tkt")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="GEO/Floors/concrete18" unique_id=608300443]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="GEO/Floors/concrete18/StaticBody3D" unique_id=662164316]
-shape = SubResource("ConcavePolygonShape3D_j4scd")
-
 [node name="concrete19" type="MeshInstance3D" parent="GEO/Floors" unique_id=2124351832]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, -22, -6)
 mesh = SubResource("ArrayMesh_i2tkt")
@@ -1712,15 +1705,6 @@ mesh = SubResource("ArrayMesh_i2tkt")
 [node name="StaticBody3D" type="StaticBody3D" parent="GEO/Floors/concrete24" unique_id=1432946651]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GEO/Floors/concrete24/StaticBody3D" unique_id=2073595185]
-shape = SubResource("ConcavePolygonShape3D_j4scd")
-
-[node name="concrete20" type="MeshInstance3D" parent="GEO/Floors" unique_id=470571481]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, -22, -2)
-mesh = SubResource("ArrayMesh_i2tkt")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="GEO/Floors/concrete20" unique_id=333778418]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="GEO/Floors/concrete20/StaticBody3D" unique_id=1003704044]
 shape = SubResource("ConcavePolygonShape3D_j4scd")
 
 [node name="concrete11" type="MeshInstance3D" parent="GEO/Floors" unique_id=986221029]
@@ -1786,15 +1770,6 @@ mesh = SubResource("ArrayMesh_i2tkt")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GEO/Floors/concrete27/StaticBody3D" unique_id=30732060]
 shape = SubResource("ConcavePolygonShape3D_j4scd")
 
-[node name="concrete28" type="MeshInstance3D" parent="GEO/Floors" unique_id=1953626892]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, -19, -2)
-mesh = SubResource("ArrayMesh_i2tkt")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="GEO/Floors/concrete28" unique_id=1602510137]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="GEO/Floors/concrete28/StaticBody3D" unique_id=897674426]
-shape = SubResource("ConcavePolygonShape3D_j4scd")
-
 [node name="concrete29" type="MeshInstance3D" parent="GEO/Floors" unique_id=1424722065]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, -19, -6)
 mesh = SubResource("ArrayMesh_i2tkt")
@@ -1802,15 +1777,6 @@ mesh = SubResource("ArrayMesh_i2tkt")
 [node name="StaticBody3D" type="StaticBody3D" parent="GEO/Floors/concrete29" unique_id=1398776264]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GEO/Floors/concrete29/StaticBody3D" unique_id=261914166]
-shape = SubResource("ConcavePolygonShape3D_j4scd")
-
-[node name="concrete30" type="MeshInstance3D" parent="GEO/Floors" unique_id=171093946]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, -19, -2)
-mesh = SubResource("ArrayMesh_i2tkt")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="GEO/Floors/concrete30" unique_id=617710289]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="GEO/Floors/concrete30/StaticBody3D" unique_id=1765666930]
 shape = SubResource("ConcavePolygonShape3D_j4scd")
 
 [node name="concrete31" type="MeshInstance3D" parent="GEO/Floors" unique_id=1692991716]
@@ -1955,12 +1921,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, -22, -8)
 [node name="wall_25" parent="GEO/Walls" unique_id=791753267 instance=ExtResource("12_0yn0x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, -22, 0)
 
-[node name="wall_27" parent="GEO/Walls" unique_id=255423791 instance=ExtResource("12_0yn0x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, -22, 0)
-
-[node name="wall_28" parent="GEO/Walls" unique_id=1005935475 instance=ExtResource("12_0yn0x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, -22, 0)
-
 [node name="wall_26" parent="GEO/Walls" unique_id=717935403 instance=ExtResource("12_0yn0x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, -22, -8)
 
@@ -1979,11 +1939,14 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4, -
 [node name="wall_35" parent="GEO/Walls" unique_id=1873873264 instance=ExtResource("12_0yn0x")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 28, -22, -1.999999)
 
-[node name="wall_29" parent="GEO/Walls" unique_id=1956822078 instance=ExtResource("12_0yn0x")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 36, -22, -1.9999987)
-
 [node name="wall_30" parent="GEO/Walls" unique_id=460289481 instance=ExtResource("12_0yn0x")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 36, -22, -5.9999986)
+
+[node name="wall_37" parent="GEO/Walls" unique_id=745431275 instance=ExtResource("12_0yn0x")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 34, -22, -3.9999988)
+
+[node name="wall_38" parent="GEO/Walls" unique_id=448086749 instance=ExtResource("12_0yn0x")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 30, -22, -3.999999)
 
 [node name="wall_31" parent="GEO/Walls" unique_id=1012990729 instance=ExtResource("12_0yn0x")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 36, -22, -9.999999)
@@ -2953,6 +2916,55 @@ shape = SubResource("CapsuleShape3D_0dmtw")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3540789, 0)
 target_position = Vector3(0, -1.5, 0)
 hit_from_inside = true
+
+[node name="ui" type="Control" parent="Player" unique_id=804918970]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Crosshair" type="TextureRect" parent="Player/ui" unique_id=1688635448]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.5, 0.5)
+texture = ExtResource("60_16fd3")
+script = ExtResource("60_kour4")
+crosshairTexture = ExtResource("60_16fd3")
+metadata/_custom_type_script = "uid://dmqwngdehwv31"
+
+[node name="InteractText" type="RichTextLabel" parent="Player/ui" unique_id=1672656322]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.56200004
+anchor_right = 0.5
+anchor_bottom = 0.56200004
+offset_left = -20.0
+offset_top = -20.176025
+offset_right = 20.0
+offset_bottom = 19.823975
+grow_horizontal = 2
+grow_vertical = 2
+text = "(KEY) (ACTION)"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="env" type="WorldEnvironment" parent="." unique_id=1025970921]
 environment = ExtResource("28_vjqne")

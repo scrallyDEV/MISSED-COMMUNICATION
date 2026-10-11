@@ -1,5 +1,7 @@
 package entities.player;
 
+import godot.RichTextLabel;
+import godot.Control;
 import godot.Nil;
 import godot.AudioStream;
 import godot.CharacterBody3D;
@@ -10,6 +12,7 @@ import godot.AudioStreamPlayer;
 import godot.Node;
 
 import interactables.Interactable;
+import ui.Crosshair;
 
 import haxegd.Nodes.*;
 import haxegd.Char3DHelpers.*;
@@ -22,6 +25,9 @@ class Player extends CharacterBody3D
     public var raycast:RayCast3D;
     public var groundCast:RayCast3D;
     public var flashlight:Flashlight;
+    public var ui:Control;
+    public var crosshair:Crosshair;
+    public var interactionText:RichTextLabel;
     public var flashlightAudio:AudioStreamPlayer = new AudioStreamPlayer();
     public var footstepAudio:AudioStreamPlayer = new AudioStreamPlayer();
     public var generalAudio:AudioStreamPlayer = new AudioStreamPlayer();
@@ -81,6 +87,9 @@ class Player extends CharacterBody3D
         raycast = cast getChildNode(camera, "RayCast3D");
         flashlight = cast getChildNode(camera, "Flashlight");
         groundCast = cast getChildNode(this, "RayCast3D");
+        ui = cast getChildNode(this, "ui");
+        crosshair = cast getChildNode(ui, "Crosshair");
+        interactionText = cast getChildNode(ui, "InteractText");
         createChild(this, flashlightAudio);
         createChild(this, footstepAudio);
         createChild(this, generalAudio);
@@ -93,6 +102,7 @@ class Player extends CharacterBody3D
         raycast.target_position.y = -2; // force raycast a specific target position in case a player instance does not match
         raycast.set_collision_mask_value(2, true);
         raycast.set_collision_mask_value(1, true);
+        interactionText.bbcode_enabled = true;
         groundCast.target_position.y = -1.5; // ditto of above
         maxStamina = stamina; // yoink 
         
@@ -134,6 +144,8 @@ class Player extends CharacterBody3D
 
     public function onPhysicsUpdate(delta:Float):Void
     {
+        Hud.checkCrosshair(crosshair, raycast, this);
+        Hud.interaction(raycast, this, interactionText);
         Movement.viewBob(delta, this);
         
         if (inputEnabled) {

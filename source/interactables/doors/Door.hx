@@ -36,10 +36,18 @@ class Door extends StaticBody3D implements Interactable
     private var swingDegrees:Float;
     public var swingTween:Tween;
     private var doorAudio:AudioStreamPlayer3D = new AudioStreamPlayer3D();
+    public var prompt:String;
 
     public function onReady():Void
     {
         createChild(this, doorAudio);
+
+        if (!isLocked) { 
+            prompt = "Open Door"; 
+        }
+        else { 
+            prompt = "Locked"; 
+        }
     }
 
     public function activate(?player:Player):Void // can be called by any script (public function, not static so unique to each door instance)
@@ -72,6 +80,7 @@ class Door extends StaticBody3D implements Interactable
                 Tweening.doTween(this, swingTween, "rotation", new Vector3(rotation.x, rotation.y + swingDegrees, rotation.z), TweenStyle.QuartOut, openSpeed);
                 if (playAudio) {
                     Audio3D.doOneShot(doorAudio, openSound);
+                    prompt = "Close Door";
                 }
                 isOpen = !isOpen; // isOpen is whatever isOpen currently is NOT (basically a switch)
             }
@@ -79,6 +88,7 @@ class Door extends StaticBody3D implements Interactable
                 Tweening.doTween(this, swingTween, "rotation", new Vector3(rotation.x, rotation.y - swingDegrees, rotation.z), TweenStyle.QuadOut, closeSpeed);
                 if (playAudio) {
                     Audio3D.doOneShot(doorAudio, closeSound);
+                    prompt = "Open Door";
                 }
                 isOpen = !isOpen; // isOpen is whatever isOpen currently is NOT (basically a switch)
             }

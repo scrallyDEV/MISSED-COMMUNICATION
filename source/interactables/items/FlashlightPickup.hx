@@ -15,6 +15,8 @@ class FlashlightPickup extends StaticBody3D implements Interactable
     @:meta(export)
     public var doNotify:Bool = true;
 
+    public var prompt:String = "Pick up Flashlight";
+
 
     public function onReady():Void
     {

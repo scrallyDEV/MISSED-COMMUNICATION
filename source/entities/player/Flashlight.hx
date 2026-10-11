@@ -17,10 +17,12 @@ class Flashlight extends SpotLight3D
 
     private var swayPhase:Float = 0;
     private var restRotation:Vector3;
+    public var isOn:Bool;
 
     public function onReady():Void
     {
         visible = false;
+        isOn = false;
         restRotation = rotation;
     }
 
@@ -28,7 +30,7 @@ class Flashlight extends SpotLight3D
     public function toggleFlashlight(player:Player)
     {
         if (battery > 0) {
-            visible = !visible;
+            isOn = !isOn;
 
             if (visible) {
                 Audio.doOneShot(player.flashlightAudio, player.flashlightOff);
@@ -43,6 +45,7 @@ class Flashlight extends SpotLight3D
 
     public function onUpdate(delta:Float):Void
     {
+        visible = isOn;
         if (visible && doDrain) {
             battery -= drainRate * delta;
             battery = MathExtension.clamp(battery, 0, 100);

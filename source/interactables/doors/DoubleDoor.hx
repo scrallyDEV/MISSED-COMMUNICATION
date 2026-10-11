@@ -31,6 +31,7 @@ class DoubleDoor extends StaticBody3D implements Interactable
     private var doorAudio:AudioStreamPlayer3D = new AudioStreamPlayer3D();
     private var leftDoor:Door;
     private var rightDoor:Door;
+    public var prompt:String;
 
     public function onReady():Void
     {
@@ -54,6 +55,13 @@ class DoubleDoor extends StaticBody3D implements Interactable
         rightDoor.playAudio = false;
         rightDoor.openSpeed = openSpeed;
         rightDoor.closeSpeed = closeSpeed;
+
+        if (!isLocked) { 
+            prompt = "Open Doors"; 
+        }
+        else { 
+            prompt = "Locked"; 
+        }
     }
 
     public function activate(?player:Player):Void // can be called by any script (public function, not static so unique to each door instance)
@@ -69,9 +77,11 @@ class DoubleDoor extends StaticBody3D implements Interactable
 
             if (isOpen) {
                 Audio3D.doOneShot(doorAudio, openSound);
+                prompt = "Close Doors";
             }
             else if (!isOpen) {
                 Audio3D.doOneShot(doorAudio, closeSound);
+                prompt = "Open Doors";
             }
         }
         else if (isLocked) {
