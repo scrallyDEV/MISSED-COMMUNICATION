@@ -2,53 +2,33 @@ package interactables.items;
 
 import godot.Node;
 import godot.MeshInstance3D;
-import godot.StaticBody3D;
 
 import entities.player.Player;
 
 import haxegd.Nodes.*;
 
-class FlashlightPickup extends StaticBody3D implements Pickup
+class FlashlightPickup extends Pickup
 {
-    private var flashlightMesh:MeshInstance3D;
-
-    @:meta(export)
-    public var doNotify:Bool = true;
-
-    public var prompt:String = "Pick up Flashlight";
-
-
-    public function onReady():Void
+    override public function onReady():Void
     {
-        flashlightMesh = cast getChildNode(this, "Mesh");
+        super.onReady();
+        prompt = "Pick Up Flashlight";
     }
-
-    public function activate(?player:Player):Void
-    {
-        pickup(player);
-
-        if (doNotify) {
-            notifyWall();
-        }
-    }
-
-    public function pickup(?player:Player):Void
+    override public function pickup(?player:Player):Void
     {
         if (!player.hasFlashlight) {
             player.hasFlashlight = true;
-            removeNode(flashlightMesh);
+            super.pickup(player);
         }
         else {
             return;
         }
     }
 
-    public function notifyWall():Void
+    override public function notify(?player:Player)
     {
         var gameplay:Node = cast getNodeFromRoot("gameplay");
         var wall:MeshInstance3D = cast getChildNode(gameplay, "wallvanish");
-
         removeNode(wall);
-        removeNode(this);
     }
 }

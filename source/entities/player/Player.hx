@@ -15,6 +15,7 @@ import interactables.Interactable;
 import ui.Crosshair;
 
 import haxegd.Nodes.*;
+import haxegd.Nodes.ControlNodes.*;
 import haxegd.Char3DHelpers.*;
 import haxegd.Controls.*;
 import haxegd.Resources.*;
@@ -29,6 +30,8 @@ class Player extends CharacterBody3D
     public var ui:Control;
     public var crosshair:Crosshair;
     public var interactionText:RichTextLabel;
+    public var chapterText:RichTextLabel;
+    public var subChapterText:RichTextLabel;
     public var flashlightAudio:AudioStreamPlayer = new AudioStreamPlayer();
     public var footstepAudio:AudioStreamPlayer = new AudioStreamPlayer();
     public var generalAudio:AudioStreamPlayer = new AudioStreamPlayer();
@@ -91,6 +94,8 @@ class Player extends CharacterBody3D
         ui = cast getChildNode(this, "ui");
         crosshair = cast getChildNode(ui, "Crosshair");
         interactionText = cast getChildNode(ui, "InteractText");
+        chapterText = cast getChildNode(ui, "ChapterSplash");
+        subChapterText = cast getChildNode(ui, "SubChapterSplash");
         createChild(this, flashlightAudio);
         createChild(this, footstepAudio);
         createChild(this, generalAudio);
@@ -105,6 +110,8 @@ class Player extends CharacterBody3D
         raycast.set_collision_mask_value(2, true);
         raycast.set_collision_mask_value(1, true);
         interactionText.bbcode_enabled = true;
+        setAlpha(chapterText, 0);
+        setAlpha(subChapterText, 0);
         maxStamina = stamina; // yoink 
         
         Movement.setupViewBob(this);

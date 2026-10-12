@@ -1,16 +1,12 @@
-package cutscenes;
+package triggers;
 
-import godot.Area3D;
-import godot.Callable;
-import godot.Node3D;
 import godot.Node;
-
-import cutscenes.CutsceneBase;
+import godot.Node3D;
+import triggers.cutscenes.CutsceneBase;
 import entities.player.Player;
-
 import haxegd.Nodes.*;
 
-class CutsceneTrigger extends Area3D 
+class CutsceneTrigger extends TriggerBase
 {
     @:meta(export)
     public var cutsceneToTrigger:Node = null;
@@ -18,20 +14,15 @@ class CutsceneTrigger extends Area3D
     @:meta(export)
     public var needPlayer:Bool = true;
 
-    public function onReady():Void
-    {
-        body_entered.connect(new Callable(this, "onBodyEntered"));
-    }
-
-    function onBodyEntered(body:Node3D):Void
+    override public function onBodyEntered(body:Node3D):Void
     {
         if (Std.isOfType(body, Player) && cutsceneToTrigger != null && nodeHasMethod(cutsceneToTrigger, "trigger")) {
             var cutscene:CutsceneBase = cast cutsceneToTrigger;
-            var player = cast body;
+            var player:Player = cast body;
+
             if (needPlayer) {
                 cutscene.trigger(player);
-            }
-            else {
+            } else {
                 cutscene.trigger();
             }
         }

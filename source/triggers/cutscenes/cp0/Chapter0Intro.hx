@@ -1,4 +1,4 @@
-package cutscenes;
+package triggers.cutscenes.cp0;
 
 import godot.Node;
 import godot.Vector3;

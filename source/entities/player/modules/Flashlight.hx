@@ -34,10 +34,10 @@ class Flashlight extends SpotLight3D
             isOn = !isOn;
 
             if (visible) {
-                Audio.doOneShot(player.flashlightAudio, player.flashlightOff);
+                Audio.doOneShot(player.flashlightAudio, player.flashlightOn);
             }
             else {
-                Audio.doOneShot(player.flashlightAudio, player.flashlightOn);
+                Audio.doOneShot(player.flashlightAudio, player.flashlightOff);
             }
 
             doDrain = player.doBatteryDrain;

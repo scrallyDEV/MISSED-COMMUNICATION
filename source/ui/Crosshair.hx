@@ -6,6 +6,7 @@ import godot.TextureRect;
 import haxegd.Nodes.ControlNodes.*;
 import haxegd.Resources.*;
 
+@:icon("res://assets/ui/crosshair.png")
 class Crosshair extends TextureRect
 {
     @:meta(export)

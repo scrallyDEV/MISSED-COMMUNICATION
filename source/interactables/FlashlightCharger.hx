@@ -11,7 +11,10 @@ import haxegd.Audio3D;
 import haxegd.MathExtension;
 import haxegd.Nodes.*;
 
-@:icon("res://assets/ui/crosshair.png")
+
+// TO BE REPURPOSED
+
+
 class FlashlightCharger extends StaticBody3D implements Interactable
 {
     private var flashlightInserted:Bool = false;

@@ -1,8 +1,9 @@
 [gd_scene format=4 uid="uid://d2xt7vev42exv"]
 
 [ext_resource type="Texture2D" uid="uid://dw4vg8ufxnh2a" path="res://assets/models/floor-ceiling/floor_ceiling_1_floor_1.png" id="1_3vin3"]
-[ext_resource type="Script" uid="uid://bofptojdd3ej2" path="res://addons/haxe_output/Chapter0LightReset.gd" id="1_kroeo"]
+[ext_resource type="Script" uid="uid://fjutnphwotku" path="res://addons/haxe_output/triggers_cutscenes_Chapter0Outro.gd" id="1_kour4"]
 [ext_resource type="PackedScene" uid="uid://cfxps25rnungb" path="res://assets/models/floor-ceiling/floor_ceiling_1.glb" id="1_tggh2"]
+[ext_resource type="Script" uid="uid://bka4gsjfvsbj6" path="res://addons/haxe_output/triggers_cutscenes_Chapter0LightReset.gd" id="2_ggbah"]
 [ext_resource type="Texture2D" uid="uid://djm1oia228bs2" path="res://assets/models/floor-ceiling/floor_ceiling_1_concrete_1.png" id="2_wuh06"]
 [ext_resource type="Texture2D" uid="uid://0063kgwik2sj" path="res://assets/models/floor-ceiling/floor_ceiling_2_tiles_floor_1.png" id="3_mdnon"]
 [ext_resource type="Texture2D" uid="uid://cof7ky167wjvr" path="res://assets/models/floor-ceiling/floor_ceiling_2_concrete_1.png" id="4_7lrxe"]
@@ -41,7 +42,6 @@
 [ext_resource type="Texture2D" uid="uid://cue7htbpog78q" path="res://assets/models/props/pc_monitor_mp_1_display_mp_1_emission.png" id="29_pk5dq"]
 [ext_resource type="Texture2D" uid="uid://cljy0gprkq5" path="res://assets/models/lights/ceiling_lamp_mp_1_1_fake_light_1_fake_light_mp_1.png" id="30_k841c"]
 [ext_resource type="Script" uid="uid://cfkjapkesveqc" path="res://addons/haxe_output/CutsceneTrigger.gd" id="39_cth5m"]
-[ext_resource type="Script" uid="uid://duxcrpmylhf2t" path="res://addons/haxe_output/Chapter0Outro.gd" id="40_kx8cr"]
 [ext_resource type="Texture2D" uid="uid://g7svdtdij3x8" path="res://assets/models/lights/ceiling_lamp_2_on_metal_mp_1.png" id="43_vcxqb"]
 [ext_resource type="Texture2D" uid="uid://0w6vh4f4c1b3" path="res://assets/models/lights/ceiling_lamp_2_on_metal_mp_4.png" id="44_hs5j4"]
 [ext_resource type="Texture2D" uid="uid://dehlqgixcnafk" path="res://assets/models/lights/ceiling_lamp_2_on_ceiling_lamp_1_on.png" id="45_vh5k8"]
@@ -57,6 +57,7 @@
 [ext_resource type="PackedScene" uid="uid://bcfyex1i1q7lr" path="res://assets/models/props/vent_3.glb" id="56_16fd3"]
 [ext_resource type="Script" uid="uid://bq64u87y61t0e" path="res://addons/haxe_output/interactables_FlashlightPickup.gd" id="58_dsl4l"]
 [ext_resource type="PackedScene" uid="uid://cdm68cnuul6or" path="res://assets/models/props/sofa_5_3.glb" id="58_kour4"]
+[ext_resource type="Script" uid="uid://curi5xccgphh6" path="res://addons/haxe_output/ChapterDisplayTrigger.gd" id="58_qbvws"]
 [ext_resource type="Texture2D" uid="uid://tjec2354rfll" path="res://assets/models/props/flashlight_1_flashlight_1.png" id="59_16fd3"]
 [ext_resource type="Script" uid="uid://cuxkrqq22ofoa" path="res://addons/haxe_output/entities_player_Flashlight.gd" id="59_jya0t"]
 [ext_resource type="Texture2D" uid="uid://dlw0inexvi5fk" path="res://assets/ui/crosshair.png" id="60_16fd3"]
@@ -1467,6 +1468,9 @@ shadow_mesh = SubResource("ArrayMesh_m1ayl")
 [sub_resource type="BoxShape3D" id="BoxShape3D_fsnst"]
 size = Vector3(0.4848938, 0.31578064, 0.12036133)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_f5l4j"]
+size = Vector3(4, 1, 4)
+
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_mstrr"]
 radius = 0.38085938
 height = 1.875
@@ -1479,13 +1483,12 @@ height = 1.875
 
 [node name="Cutscenes" type="Node" parent="." unique_id=1128178774]
 
-[node name="Chapter0LightReset" type="Node" parent="Cutscenes" unique_id=2044185290]
-script = ExtResource("1_kroeo")
-
-[node name="Chapter0Outro" type="Node" parent="Cutscenes" unique_id=641364400]
-script = ExtResource("40_kx8cr")
+[node name="Chapter0Outro" type="Node" parent="Cutscenes" unique_id=948375571]
+script = ExtResource("1_kour4")
 skip = true
-metadata/_custom_type_script = "uid://duxcrpmylhf2t"
+
+[node name="Chapter0LightReset" type="Node" parent="Cutscenes" unique_id=2019347940]
+script = ExtResource("2_ggbah")
 
 [node name="GEO" type="Node" parent="." unique_id=672239570]
 
@@ -2881,9 +2884,21 @@ mesh = SubResource("ArrayMesh_xcbn8")
 transform = Transform3D(0.997121, -0.07582888, 0, 0.07582888, 0.997121, 0, 0, 3.5527137e-15, 1, 0.031412125, 0.10418892, 0.0058517456)
 shape = SubResource("BoxShape3D_fsnst")
 
+[node name="ChapterDisplayTrigger" type="Area3D" parent="gameplay" unique_id=1439531238]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -19.5, -2.5)
+script = ExtResource("58_qbvws")
+chapter = "Chapter 1"
+subChapter = "Glass House"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="gameplay/ChapterDisplayTrigger" unique_id=1993040037]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5)
+shape = SubResource("BoxShape3D_f5l4j")
+debug_color = Color(0.99313027, 0, 0.24880138, 0.41960785)
+
 [node name="Player" type="CharacterBody3D" parent="." unique_id=1666042754]
 transform = Transform3D(0.99999994, 0, 7.4505806e-08, 0, 1, 0, -7.4505806e-08, 0, 0.99999994, 2.0000002, 0.9278313, 4.9999995)
 script = ExtResource("5_vle10")
+hasFlashlight = false
 metadata/_edit_group_ = true
 
 [node name="Camera3D" type="Camera3D" parent="Player" unique_id=658333295]
@@ -2966,13 +2981,13 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MainSplashText" type="RichTextLabel" parent="Player/ui" unique_id=156834304]
+[node name="ChapterSplash" type="RichTextLabel" parent="Player/ui" unique_id=156834304]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -174.0
-offset_right = 175.0
+offset_left = -162.5
+offset_right = 163.0
 offset_bottom = 72.0
 grow_horizontal = 2
 theme_override_font_sizes/normal_font_size = 52
@@ -2982,18 +2997,19 @@ theme_override_font_sizes/italics_font_size = 52
 theme_override_font_sizes/mono_font_size = 52
 bbcode_enabled = true
 text = "SPLASH TEXT"
-fit_content = true
 scroll_active = false
 autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="SubSplashText" type="RichTextLabel" parent="Player/ui" unique_id=1267717608]
+[node name="SubChapterSplash" type="RichTextLabel" parent="Player/ui" unique_id=1267717608]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -103.0
+offset_left = -99.0
 offset_top = 72.0
-offset_right = 103.0
+offset_right = 100.0
 offset_bottom = 117.0
 grow_horizontal = 2
 theme_override_font_sizes/normal_font_size = 32
@@ -3006,27 +3022,8 @@ text = "SPLASH TEXT"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
-
-[node name="MiniSplashText" type="RichTextLabel" parent="Player/ui" unique_id=652986441]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -103.0
-offset_top = 117.0
-offset_right = 103.0
-offset_bottom = 162.0
-grow_horizontal = 2
-theme_override_font_sizes/normal_font_size = 32
-theme_override_font_sizes/bold_font_size = 32
-theme_override_font_sizes/bold_italics_font_size = 32
-theme_override_font_sizes/italics_font_size = 32
-theme_override_font_sizes/mono_font_size = 32
-bbcode_enabled = true
-text = "SPLASH TEXT"
-fit_content = true
-scroll_active = false
-autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="env" type="WorldEnvironment" parent="." unique_id=1025970921]
 environment = ExtResource("28_vjqne")

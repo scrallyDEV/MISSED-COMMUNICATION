@@ -1,4 +1,4 @@
-package cutscenes;
+package triggers.cutscenes;
 
 import entities.player.Player;
 
