@@ -8,7 +8,7 @@ import entities.player.Player;
 
 import haxegd.Nodes.*;
 
-class FlashlightPickup extends StaticBody3D implements Interactable
+class FlashlightPickup extends StaticBody3D implements Pickup
 {
     private var flashlightMesh:MeshInstance3D;
 
@@ -32,7 +32,7 @@ class FlashlightPickup extends StaticBody3D implements Interactable
         }
     }
 
-    public function pickup(player:Player):Void
+    public function pickup(?player:Player):Void
     {
         if (!player.hasFlashlight) {
             player.hasFlashlight = true;

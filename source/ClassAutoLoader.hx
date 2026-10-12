@@ -8,17 +8,20 @@ import cutscenes.Chapter0LightReset as HaxeGD_Auto_1;
 import cutscenes.Chapter0Outro as HaxeGD_Auto_2;
 import cutscenes.CutsceneBase as HaxeGD_Auto_3;
 import cutscenes.CutsceneTrigger as HaxeGD_Auto_4;
-import entities.player.Flashlight as HaxeGD_Auto_5;
-import entities.player.Hud as HaxeGD_Auto_6;
-import entities.player.Movement as HaxeGD_Auto_7;
-import entities.player.Player as HaxeGD_Auto_8;
-import entities.player.Variables as HaxeGD_Auto_9;
-import interactables.doors.Door as HaxeGD_Auto_10;
-import interactables.doors.DoubleDoor as HaxeGD_Auto_11;
-import interactables.FlashlightCharger as HaxeGD_Auto_12;
-import interactables.Interactable as HaxeGD_Auto_13;
-import interactables.items.FlashlightPickup as HaxeGD_Auto_14;
-import ui.Crosshair as HaxeGD_Auto_15;
+import entities.player.modules.Flashlight as HaxeGD_Auto_5;
+import entities.player.modules.Hud as HaxeGD_Auto_6;
+import entities.player.modules.Movement as HaxeGD_Auto_7;
+import entities.player.modules.Sound as HaxeGD_Auto_8;
+import entities.player.modules.Stamina as HaxeGD_Auto_9;
+import entities.player.modules.Variables as HaxeGD_Auto_10;
+import entities.player.Player as HaxeGD_Auto_11;
+import interactables.doors.Door as HaxeGD_Auto_12;
+import interactables.doors.DoubleDoor as HaxeGD_Auto_13;
+import interactables.FlashlightCharger as HaxeGD_Auto_14;
+import interactables.Interactable as HaxeGD_Auto_15;
+import interactables.items.FlashlightPickup as HaxeGD_Auto_16;
+import interactables.Pickup as HaxeGD_Auto_17;
+import ui.Crosshair as HaxeGD_Auto_18;
 
 class ClassAutoLoader
 {
@@ -40,5 +43,8 @@ class ClassAutoLoader
         HaxeGD_Auto_13;
         HaxeGD_Auto_14;
         HaxeGD_Auto_15;
+        HaxeGD_Auto_16;
+        HaxeGD_Auto_17;
+        HaxeGD_Auto_18;
     }
 }

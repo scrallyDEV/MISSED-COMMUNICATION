@@ -14,6 +14,7 @@ import haxegd.Audio3D;
 
 import entities.player.Player;
 
+@:icon("res://assets/editor/door.png")
 class Door extends StaticBody3D implements Interactable
 {
     @:meta(export_enum("left", "right"))

@@ -1,9 +1,7 @@
-package entities.player;
+package entities.player.modules;
 
 import godot.Vector3;
 import godot.InputEvent;
-import godot.AudioStream;
-import godot.Input;
 
 import haxegd.Char3DHelpers.*;
 import haxegd.Controls.*;
@@ -15,9 +13,6 @@ class Movement
     private static var gravityVector:Vector3 = Vector3.ZERO; 
     private static var direction:Vector3 = Vector3.ZERO;
     private static var mousePitch:Float = 0;
-    private static var staminaElapsed:Float = 0;
-    private static var footstepElapsed:Float = 0;
-    private static var lastFootstep:Int = -1;
 
     private static var storedHeight:Float = 0;
     private static var heightStored:Bool = false;
@@ -35,7 +30,7 @@ class Movement
         "MoveRight", // 3
         "MoveJump", // 4
         "MoveSprint" // 5
-    ]; // we are vertical now, it is nicer this way
+    ];
 
     public static function movement(delta:Float, player:Player):Void
     {
@@ -48,13 +43,13 @@ class Movement
             heightStored = false;
 
             if (isFalling) {
-                Audio.doOneShot(player.generalAudio, player.landSound);
+                Sound.jump(player, true);
                 isFalling = false;
             }
 
             if (inputJustPressed(movementArray[4])) {
                 gravityVector.y = player.jumpHeight;
-                Audio.doOneShot(player.generalAudio, player.jumpSound);
+                Sound.jump(player, false);
             }
         }
         else {
@@ -99,43 +94,8 @@ class Movement
         player.velocity.x = applyVelocity(player, direction.x);
         player.velocity.z = applyVelocity(player, direction.z);
         moveChar3D(player);
-        footstep(delta, player);
+        Sound.footstep(delta, player);
         fallHeightGrabber(player);
-    }
-
-    public static function stamina(delta:Float, player:Player):Void
-    {
-        if (!player.doStaminaDrain) {
-            return;
-        }
-
-
-        if (player.isRegenStamina) {
-            player.stamina += player.staminaGain * delta;
-            player.stamina = MathExtension.clamp(player.stamina, 0, player.maxStamina);
-
-            if (player.stamina == player.maxStamina) {
-                player.isRegenStamina = false;
-            }
-        }
-
-        if (player.isSprinting) {
-            staminaElapsed = 0;
-            player.stamina -= player.staminaDrain * delta;
-            player.stamina = MathExtension.clamp(player.stamina, 0, player.maxStamina);
-            player.isRegenStamina = false;
-        }
-        else if (!player.isSprinting && player.stamina < player.maxStamina) {
-            staminaElapsed += delta;
-            if (player.stamina > 0 && staminaElapsed >= player.staminaRegenDelay) {
-                staminaElapsed = 0;
-                player.isRegenStamina = true;
-            }
-            else if (player.stamina == 0 && staminaElapsed >= player.staminaExhaustionDelay) {
-                staminaElapsed = 0;
-                player.isRegenStamina = true;
-            }
-        }
     }
 
     public static function mouse(event:InputEvent, player:Player):Void
@@ -174,37 +134,6 @@ class Movement
         else {
             trace("invalid resetVelocity, velocity was " + Vector + "" + "Expected 'x' or 'z'");
         }
-    }
-
-    private static function footstep(delta:Float, player:Player):Void
-    {
-        if (player.isMoving() && isChar3DGrounded(player)) {
-            footstepElapsed += delta;
-
-            if (!player.isSprinting && footstepElapsed >= player.walkStepInterval) {
-                Audio.doOneShot(player.footstepAudio, pickNextFootstep(player.footstepVariation));
-                footstepElapsed -= player.walkStepInterval;
-            }
-            else if (player.isSprinting && footstepElapsed >= player.runStepInterval) {
-                Audio.doOneShot(player.footstepAudio, pickNextFootstep(player.footstepVariation));
-                footstepElapsed -= player.runStepInterval;
-            }
-        }
-        else if (!player.isMoving() || !isChar3DGrounded(player)) {
-            footstepElapsed = 0;
-        }
-    }
-
-    private static function pickNextFootstep(list:Array<AudioStream>):AudioStream // looks like nested function pasta which it is but its a separation of tasks in case something misbehaves
-    {
-        var index = Std.random(list.length);
-
-        while (index == lastFootstep && list.length > 1) {
-            index = Std.random(list.length);
-        }
-
-        lastFootstep = index;
-        return list[index];
     }
 
     private static function fallHeightGrabber(player:Player):Void

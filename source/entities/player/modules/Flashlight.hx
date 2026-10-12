@@ -1,4 +1,4 @@
-package entities.player;
+package entities.player.modules;
 
 import godot.SpotLight3D;
 import godot.Vector3;
@@ -6,6 +6,7 @@ import godot.Vector3;
 import haxegd.MathExtension;
 import haxegd.Audio;
 
+@:icon("res://assets/editor/flashlight.png")
 class Flashlight extends SpotLight3D
 {
     @:meta(export)
@@ -41,6 +42,8 @@ class Flashlight extends SpotLight3D
 
             doDrain = player.doBatteryDrain;
         }
+        trace("toggling");
+        trace(isOn);
     }
 
     public function onUpdate(delta:Float):Void

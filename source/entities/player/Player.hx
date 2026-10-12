@@ -2,7 +2,6 @@ package entities.player;
 
 import godot.RichTextLabel;
 import godot.Control;
-import godot.Nil;
 import godot.AudioStream;
 import godot.CharacterBody3D;
 import godot.Camera3D;
@@ -11,6 +10,7 @@ import godot.InputEvent;
 import godot.AudioStreamPlayer;
 import godot.Node;
 
+import entities.player.modules.*;
 import interactables.Interactable;
 import ui.Crosshair;
 
@@ -19,6 +19,7 @@ import haxegd.Char3DHelpers.*;
 import haxegd.Controls.*;
 import haxegd.Resources.*;
 
+@:icon("res://assets/editor/humanoid.png")
 class Player extends CharacterBody3D
 {
     public var camera:Camera3D;
@@ -108,21 +109,21 @@ class Player extends CharacterBody3D
         
         Movement.setupViewBob(this);
         
-
+ 
         mouseCapture(true);
     }
 
-    public function onInput(event:InputEvent):Void
+    public function onInput(event:InputEvent):Void 
     {
-        if (mouseEnabled) {
-            Movement.mouse(event, this);
+        if (mouseEnabled && Variables.mouseHidden) {
+            Movement.mouse(event, this); 
         }
 
         if (inputJustPressed("Interact")) {
             interact();
         }
 
-        if (inputJustPressed("Flashlight") && hasFlashlight) {
+        if (physicalKeyPressed(KEY_F) || isMouseInput(event, "right") && hasFlashlight) {
             flashlight.toggleFlashlight(this);
         }
 
@@ -139,7 +140,7 @@ class Player extends CharacterBody3D
             flashlight.visible = false;
         }
 
-        Movement.stamina(delta, this);
+        Stamina.logic(delta, this);
     }
 
     public function onPhysicsUpdate(delta:Float):Void

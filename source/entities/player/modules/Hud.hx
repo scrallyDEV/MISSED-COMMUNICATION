@@ -1,4 +1,4 @@
-package entities.player;
+package entities.player.modules;
 
 import godot.RichTextLabel;
 import godot.Tween;

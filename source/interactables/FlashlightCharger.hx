@@ -4,13 +4,14 @@ import godot.AudioStream;
 import godot.StaticBody3D;
 import godot.AudioStreamPlayer3D;
 
-import entities.player.Flashlight;
+import entities.player.modules.Flashlight;
 import entities.player.Player;
 
 import haxegd.Audio3D;
 import haxegd.MathExtension;
 import haxegd.Nodes.*;
 
+@:icon("res://assets/ui/crosshair.png")
 class FlashlightCharger extends StaticBody3D implements Interactable
 {
     private var flashlightInserted:Bool = false;
