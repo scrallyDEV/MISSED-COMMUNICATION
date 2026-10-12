@@ -1,15 +1,15 @@
 package ui;
 
 import godot.Texture2D;
-import godot.Vector2;
 import godot.TextureRect;
 
 import haxegd.Nodes.ControlNodes.*;
+import haxegd.Resources.*;
 
 class Crosshair extends TextureRect
 {
     @:meta(export)
-    private var crosshairTexture:Texture2D;
+    private var crosshairTexture:Texture2D = preload("res://assets/ui/crosshair.png");
 
     public function onReady():Void
     {

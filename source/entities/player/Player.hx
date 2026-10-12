@@ -100,10 +100,10 @@ class Player extends CharacterBody3D
         
         camera.fov = Variables.fov;
         raycast.target_position.y = -2; // force raycast a specific target position in case a player instance does not match
+        groundCast.target_position.y = -1.5; // ditto of above
         raycast.set_collision_mask_value(2, true);
         raycast.set_collision_mask_value(1, true);
         interactionText.bbcode_enabled = true;
-        groundCast.target_position.y = -1.5; // ditto of above
         maxStamina = stamina; // yoink 
         
         Movement.setupViewBob(this);
