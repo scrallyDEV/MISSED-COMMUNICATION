@@ -5,6 +5,8 @@ import godot.Tween;
 import godot.RayCast3D;
 import godot.Vector2;
 import godot.Callable;
+import godot.GodotArray;
+import godot.Node;
 
 import ui.Crosshair;
 
@@ -129,13 +131,20 @@ class Hud
     public static function interaction(raycat:RayCast3D, player:Player, interactionText:RichTextLabel):Void
     {
         var object = getRaycastCollider(raycat);
+        var target = getInteractionTarget(object.node);
 
-        if (player.canInteract && object.node != null && nodeHasMethod(object.node, "activate")) {
+        if (player.canInteract && target != null && nodeHasMethod(target, "activate")) {
             var prompt:String = "";
 
-            for (property in object.node.get_property_list()) {
+            if (nodeHasMethod(target, "updatePrompt")) {
+                var args = new GodotArray();
+                args.push_back(player);
+                target.callv("updatePrompt", args);
+            }
+
+            for (property in target.get_property_list()) {
                 if (property.get("name") == "prompt") {
-                    var value:Dynamic = object.node.get("prompt");
+                    var value:Dynamic = target.get("prompt");
 
                     if (Std.isOfType(value, String)) {
                         prompt = value;
@@ -151,6 +160,15 @@ class Hud
         else {
             interactionText.hide();
         }
+    }
+
+    public static function getInteractionTarget(target:Node):Node
+    {
+        if (target != null && nodeHasMethod(target, "getInteractionTarget")) {
+            return cast target.call("getInteractionTarget");
+        }
+
+        return target;
     }
 
     public static function showChapterDisplay(chapterText:RichTextLabel, subChapterText:RichTextLabel):Void

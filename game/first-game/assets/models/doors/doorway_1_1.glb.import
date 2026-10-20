@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ubhx62i44we7"
-path="res://.godot/imported/doorway_1_1.glb-54e371dde5b9900c9ef6db58e39ac860.scn"
+path="res://.godot/imported/doorway_1_1.glb-36ad9fd55556a2ed8e709a5675c6216f.scn"
 
 [deps]
 
-source_file="res://addons/assetpack/modular/doors/doorway_1_1.glb"
-dest_files=["res://.godot/imported/doorway_1_1.glb-54e371dde5b9900c9ef6db58e39ac860.scn"]
+source_file="res://assets/models/doors/doorway_1_1.glb"
+dest_files=["res://.godot/imported/doorway_1_1.glb-36ad9fd55556a2ed8e709a5675c6216f.scn"]
 
 [params]
 
@@ -39,7 +39,13 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:doorway_1_1": {
+"generate/physics": true
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
 gltf/texture_map_mode=1

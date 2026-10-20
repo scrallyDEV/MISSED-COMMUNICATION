@@ -13,6 +13,7 @@ class FlashlightPickup extends Pickup
     {
         super.onReady();
         prompt = "Pick Up Flashlight";
+        itemID = "Flashlight";
     }
     override public function pickup(?player:Player):Void
     {
@@ -28,7 +29,8 @@ class FlashlightPickup extends Pickup
     override public function notify(?player:Player)
     {
         var gameplay:Node = cast getNodeFromRoot("gameplay");
-        var wall:MeshInstance3D = cast getChildNode(gameplay, "wallvanish");
+        var reactives:Node = cast getChildNode(gameplay, "Reactives");
+        var wall:MeshInstance3D = cast getChildNode(reactives, "wallvanish");
         removeNode(wall);
     }
 }

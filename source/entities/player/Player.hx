@@ -9,6 +9,7 @@ import godot.RayCast3D;
 import godot.InputEvent;
 import godot.AudioStreamPlayer;
 import godot.Node;
+import godot.GodotArray;
 
 import entities.player.modules.*;
 import interactables.Interactable;
@@ -81,6 +82,9 @@ class Player extends CharacterBody3D
     public var runStepInterval:Float;
     public var footstepVariation:Array<AudioStream>;
 
+    // Inventory
+    public var heldItems:Array<{id:String, amount:Float, isKey:Bool}>;
+
     // Debug
     public var isDebugging:Bool = false;
 
@@ -115,6 +119,10 @@ class Player extends CharacterBody3D
         maxStamina = stamina; // yoink 
         
         Movement.setupViewBob(this);
+
+        if (hasFlashlight) {
+            heldItems.push({id: "Flashlight", amount: 1, isKey: true});
+        }
         
  
         mouseCapture(true);
@@ -130,9 +138,12 @@ class Player extends CharacterBody3D
             interact();
         }
 
-        if (physicalKeyPressed(KEY_F) || isMouseInput(event, "right") && hasFlashlight) {
-            flashlight.toggleFlashlight(this);
+        if (hasFlashlight) {
+            if (physicalKeyJustPressed(event, KEY_F) || isMouseInput(event, "right")) {
+                flashlight.toggleFlashlight(this);
+            }
         }
+        
 
         if (event.is_action_pressed("DebugShowMouse") && !event.is_echo()) // its raw because its gonna vanish when i add a pause menu
         {
@@ -185,10 +196,18 @@ class Player extends CharacterBody3D
     private function interact()
     {
         var object = getRaycastCollider(raycast);
+        var targetNode = Hud.getInteractionTarget(object.node);
+
         if (canInteract) {
-            if (object.node != null && nodeHasMethod(object.node, "activate")) { // less simple :/
+            if (targetNode != null && nodeHasMethod(targetNode, "activate")) { 
+                if (nodeHasMethod(targetNode, "updatePrompt")) {
+                    var args = new GodotArray();
+                    args.push_back(this);
+                    targetNode.callv("updatePrompt", args);
+                }
+
                 var target:Interactable;
-                target = cast object.node;
+                target = cast targetNode;
                 target.activate(this);
             }
             else {
@@ -207,4 +226,3 @@ class Player extends CharacterBody3D
         }
     }
 }
-

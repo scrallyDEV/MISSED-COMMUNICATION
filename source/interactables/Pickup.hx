@@ -4,6 +4,7 @@ import godot.MeshInstance3D;
 import godot.StaticBody3D;
 
 import entities.player.Player;
+import entities.player.modules.Inventory;
 
 import haxegd.Nodes.*;
 
@@ -13,6 +14,9 @@ class Pickup extends StaticBody3D implements Interactable
     public var doNotify:Bool = true;
 
     public var prompt:String = "Pick up";
+    public var itemID:String = "Generic Item";
+    public var giveAmount:Float = 1;
+    public var isKeyItem:Bool = false;
     public var mesh:MeshInstance3D;
 
     public function onReady():Void
@@ -31,6 +35,7 @@ class Pickup extends StaticBody3D implements Interactable
             notify(player);
         }
 
+        Inventory.addItem(player, itemID, giveAmount, isKeyItem);
         removeNode(this);
     }
 

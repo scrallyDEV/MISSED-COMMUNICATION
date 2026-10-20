@@ -9,8 +9,10 @@ import godot.Node3D;
 import haxegd.Nodes.*;
 import haxegd.Tweening;
 import haxegd.Audio3D;
+import haxegd.Resources.*;
 
 import entities.player.Player;
+import entities.player.modules.Inventory;
 
 @:icon("res://assets/editor/doubledoor.png")
 class DoubleDoor extends StaticBody3D implements Interactable
@@ -18,13 +20,19 @@ class DoubleDoor extends StaticBody3D implements Interactable
     @:meta(export)
     private var openSpeed:Float = 3;
     @:meta(export)
-    private var closeSpeed:Float = 2;
+    private var closeSpeed:Float = 3.3;
     @:meta(export)
-    private var openSound:AudioStream;
+    public var openSound:AudioStream = preload("res://assets/audio/doors/open.mp3");
     @:meta(export)
-    private var closeSound:AudioStream;
+    public var closeSound:AudioStream = preload("res://assets/audio/doors/close.mp3");
+    @:meta(export)
+    public var lockedSound:AudioStream = preload("res://assets/audio/doors/locked.mp3");
+    @:meta(export)
+    public var unlockSound:AudioStream = preload("res://assets/audio/doors/unlock.mp3");
     @:meta(export)
     public var isLocked:Bool = false;
+    @:meta(export)
+    public var requiredKeyID:String = "";
     
     private var isOpen:Bool = false;
     private var swingDegrees:Float;
@@ -50,23 +58,48 @@ class DoubleDoor extends StaticBody3D implements Interactable
         leftDoor.playAudio = false;
         leftDoor.openSpeed = openSpeed;
         leftDoor.closeSpeed = closeSpeed;
+        leftDoor.input_ray_pickable = false;
 
         rightDoor.single = false;
         rightDoor.swingDirection = "right";
         rightDoor.playAudio = false;
         rightDoor.openSpeed = openSpeed;
         rightDoor.closeSpeed = closeSpeed;
+        rightDoor.input_ray_pickable = false;
 
         if (!isLocked) { 
             prompt = "Open Doors"; 
         }
-        else { 
+        else if (requiredKeyID == "") {
             prompt = "Locked"; 
+        }
+        else {
+            prompt = "Locked (Requires Key)";
+        }
+    }
+
+    public function updatePrompt(?player:Player):Void
+    {
+        if (!isLocked) {
+            prompt = isOpen ? "Close Doors" : "Open Doors";
+        }
+        else if (requiredKeyID == "") {
+            prompt = "Locked";
+        }
+        else if (player != null && Inventory.hasItem(player, requiredKeyID)) {
+            prompt = "Unlock Doors";
+        }
+        else {
+            prompt = "Locked (Requires Key)";
         }
     }
 
     public function activate(?player:Player):Void // can be called by any script (public function, not static so unique to each door instance)
     {
+        rightDoor.openSpeed = openSpeed;
+        rightDoor.closeSpeed = closeSpeed;
+        leftDoor.openSpeed = openSpeed;
+        leftDoor.closeSpeed = closeSpeed;
         if (!isLocked) {
             if (leftDoor.swingTween != null && Tweening.isTweening(leftDoor.swingTween)) { // Only check one door since we force both to move at the same speed
                 return;
@@ -78,15 +111,19 @@ class DoubleDoor extends StaticBody3D implements Interactable
 
             if (isOpen) {
                 Audio3D.doOneShot(doorAudio, openSound);
-                prompt = "Close Doors";
             }
             else if (!isOpen) {
                 Audio3D.doOneShot(doorAudio, closeSound);
-                prompt = "Open Doors";
             }
         }
         else if (isLocked) {
-            trace("MEOW");
+            if (requiredKeyID != "" && player != null && Inventory.hasItem(player, requiredKeyID)) {
+                isLocked = false;
+                Audio3D.doOneShot(doorAudio, unlockSound);
+            }
+            else {
+                Audio3D.doOneShot(doorAudio, lockedSound);
+            }
         } 
     }
 }

@@ -49,7 +49,7 @@
 [ext_resource type="PackedScene" uid="uid://cbekw3ok1m0ea" path="res://addons/assetpack/modular/windows/window_metal_bars_double.glb" id="47_bkrup"]
 [ext_resource type="PackedScene" uid="uid://chg72j2e8n7d1" path="res://addons/assetpack/modular/windows/window_metal_bars_single.glb" id="48_8qnct"]
 [ext_resource type="PackedScene" uid="uid://k5g43d3n40n3" path="res://addons/assetpack/modular/doors/doorway_1.glb" id="49_fkvd3"]
-[ext_resource type="PackedScene" uid="uid://ubhx62i44we7" path="res://addons/assetpack/modular/doors/doorway_1_1.glb" id="50_vs2ax"]
+[ext_resource type="PackedScene" uid="uid://ubhx62i44we7" path="res://assets/models/doors/doorway_1_1.glb" id="50_vs2ax"]
 [ext_resource type="PackedScene" uid="uid://hsnsxwtb2oa4" path="res://addons/assetpack/modular/doors/doorway_1_half.glb" id="51_hrj44"]
 [ext_resource type="PackedScene" uid="uid://cbcypqk8ss5uc" path="res://addons/assetpack/modular/doors/doorway_1_plain.glb" id="52_dc6nc"]
 [ext_resource type="PackedScene" uid="uid://bkeqcxt73d8nq" path="res://assets/models/doors/doorway_2.glb" id="53_bj27o"]
