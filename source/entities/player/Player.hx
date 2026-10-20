@@ -83,7 +83,7 @@ class Player extends CharacterBody3D
     public var footstepVariation:Array<AudioStream>;
 
     // Inventory
-    public var heldItems:Array<{id:String, amount:Float, isKey:Bool}>;
+    public var heldItems:Array<{id:String, amount:Float, isKeyItem:Bool}> = [];
 
     // Debug
     public var isDebugging:Bool = false;
@@ -109,19 +109,19 @@ class Player extends CharacterBody3D
         footstepVariation = Variables.concreteFootstepArray;
         
         camera.fov = Variables.fov;
-        raycast.target_position.y = -2; // force raycast a specific target position in case a player instance does not match
-        groundCast.target_position.y = -1.5; // ditto of above
+        raycast.target_position.y = -2;
+        groundCast.target_position.y = -1.5;
         raycast.set_collision_mask_value(2, true);
         raycast.set_collision_mask_value(1, true);
         interactionText.bbcode_enabled = true;
         setAlpha(chapterText, 0);
         setAlpha(subChapterText, 0);
-        maxStamina = stamina; // yoink 
+        maxStamina = stamina;
         
         Movement.setupViewBob(this);
 
         if (hasFlashlight) {
-            heldItems.push({id: "Flashlight", amount: 1, isKey: true});
+            heldItems.push({id: "Flashlight", amount: 1, isKeyItem: true});
         }
         
  

@@ -5,7 +5,7 @@ import entities.player.Player;
 
 class Inventory 
 {
-    public static function addItem(player:Player, id:String, amount:Float = 1, isKey:Bool = false):Void
+    public static function addItem(player:Player, id:String, amount:Float = 1, isKeyItem:Bool = false):Void
     {
         amount = MathExtension.clamp(amount, 1, 99);
         for (item in player.heldItems) {
@@ -15,7 +15,7 @@ class Inventory
             }
         }
 
-        player.heldItems.push({id: id, amount: amount, isKey: isKey});
+        player.heldItems.push({id: id, amount: amount, isKeyItem: isKeyItem});
     }
 
     public static function hasItem(player:Player, id:String, ?amount:Float = 0):Bool
