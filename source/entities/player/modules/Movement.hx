@@ -34,7 +34,7 @@ class Movement
 
     public static function movement(delta:Float, player:Player):Void
     {
-        realJumpHeight = (player.jumpHeight * player.jumpHeight) / (2 * Math.abs(Variables.gravity)); // in the event gravity changes, yoink it again
+        realJumpHeight = (player.jumpHeight * player.jumpHeight) / (2 * Math.abs(Variables.gravity)); // in the event gravity changes
         resetVelocity("xz");
 
         if (isChar3DGrounded(player)) {
@@ -71,10 +71,6 @@ class Movement
             direction += -player.transform.basis.x;
         }
 
-        // forward and back on z axis are swapped 
-        // typically forward is negative
-        // and backward is positive
-        // like Flixel Y coordinates
         if (inputPressed(movementArray[1]) && inputPressed(movementArray[0])) { //stop player when pressing 2 keys simultaneously
             resetVelocity("z");
         }

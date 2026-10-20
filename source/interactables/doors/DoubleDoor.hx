@@ -94,14 +94,14 @@ class DoubleDoor extends StaticBody3D implements Interactable
         }
     }
 
-    public function activate(?player:Player):Void // can be called by any script (public function, not static so unique to each door instance)
+    public function activate(?player:Player):Void 
     {
         rightDoor.openSpeed = openSpeed;
         rightDoor.closeSpeed = closeSpeed;
         leftDoor.openSpeed = openSpeed;
         leftDoor.closeSpeed = closeSpeed;
         if (!isLocked) {
-            if (leftDoor.swingTween != null && Tweening.isTweening(leftDoor.swingTween)) { // Only check one door since we force both to move at the same speed
+            if (leftDoor.swingTween != null && Tweening.isTweening(leftDoor.swingTween)) {
                 return;
             }
             
