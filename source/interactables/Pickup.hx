@@ -19,6 +19,9 @@ class Pickup extends StaticBody3D implements Interactable
     public var doNotify:Bool = true;
 
     @:meta(export)
+    public var doClear:Bool = true;
+
+    @:meta(export)
     public var doSound:Bool = true;
 
     public var prompt:String = "Pick up";
@@ -29,6 +32,9 @@ class Pickup extends StaticBody3D implements Interactable
     public var collision:CollisionShape3D;
     public var audio:AudioStream = preload("res://assets/audio/click.mp3");
     public var itemSound:AudioStreamPlayer3D = new AudioStreamPlayer3D(); 
+    public var clearTimer:Float = 10;
+    public var elapsed:Float = 0;
+    public var activated:Bool = false;
 
     public function onReady():Void
     {
@@ -43,6 +49,17 @@ class Pickup extends StaticBody3D implements Interactable
         pickup(player);
     }
 
+    public function onUpdate(delta:Float):Void
+    {
+        if (activated) {
+            elapsed += delta;
+
+            if (elapsed >= clearTimer) {
+                removeNode(this);
+            }
+        }
+    }
+
     public function pickup(?player:Player):Void
     {
         if (doNotify) {
@@ -51,6 +68,10 @@ class Pickup extends StaticBody3D implements Interactable
 
         if (doSound) {
             Audio3D.doOneShot(itemSound, audio);
+        }
+
+        if (doClear) {
+            activated = true;
         }
 
         Inventory.addItem(player, itemID, giveAmount, isKeyItem);
