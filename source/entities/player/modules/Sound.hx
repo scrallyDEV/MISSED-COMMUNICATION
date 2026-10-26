@@ -3,7 +3,7 @@ package entities.player.modules;
 import godot.AudioStream;
 
 import haxegd.Char3DHelpers.*;
-import haxegd.Audio;
+import haxegd.Audio3D;
 
 class Sound 
 {
@@ -17,11 +17,11 @@ class Sound
             footstepElapsed += delta;
 
             if (!player.isSprinting && footstepElapsed >= player.walkStepInterval) {
-                Audio.doOneShot(player.footstepAudio, pickNextFootstep(player.footstepVariation));
+                Audio3D.doOneShot(player.footstepAudio, pickNextFootstep(player.footstepVariation));
                 footstepElapsed -= player.walkStepInterval;
             }
             else if (player.isSprinting && footstepElapsed >= player.runStepInterval) {
-                Audio.doOneShot(player.footstepAudio, pickNextFootstep(player.footstepVariation));
+                Audio3D.doOneShot(player.footstepAudio, pickNextFootstep(player.footstepVariation));
                 footstepElapsed -= player.runStepInterval;
             }
         }
@@ -45,10 +45,10 @@ class Sound
     public static function jump(player:Player, land:Bool):Void
     {
         if (land) {
-            Audio.doOneShot(player.generalAudio, player.landSound);
+            Audio3D.doOneShot(player.generalAudio, player.landSound);
         }
         else {
-            Audio.doOneShot(player.generalAudio, player.jumpSound);
+            Audio3D.doOneShot(player.generalAudio, player.jumpSound);
         }
     }
 }

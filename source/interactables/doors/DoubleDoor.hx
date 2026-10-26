@@ -49,6 +49,7 @@ class DoubleDoor extends StaticBody3D implements Interactable
         // Prevent Double Door from producing Collision when the Doors themselves produce it already
         this.collision_layer = 2;
         this.collision_mask = 2;
+        doorAudio.area_mask = 1;
 
         leftDoor = cast getChildNode(this, "Left Door");
         rightDoor = cast getChildNode(this, "Right Door");

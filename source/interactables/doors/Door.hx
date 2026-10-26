@@ -50,6 +50,7 @@ class Door extends StaticBody3D implements Interactable
     public function onReady():Void
     {
         createChild(this, doorAudio);
+        doorAudio.area_mask = 1;
 
         if (!isLocked) { 
             prompt = "Open Door"; 

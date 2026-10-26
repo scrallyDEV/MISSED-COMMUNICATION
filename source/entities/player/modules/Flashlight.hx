@@ -4,7 +4,7 @@ import godot.SpotLight3D;
 import godot.Vector3;
 
 import haxegd.MathExtension;
-import haxegd.Audio;
+import haxegd.Audio3D;
 
 @:icon("res://assets/editor/flashlight.png")
 class Flashlight extends SpotLight3D
@@ -34,10 +34,10 @@ class Flashlight extends SpotLight3D
             isOn = !isOn;
 
             if (visible) {
-                Audio.doOneShot(player.flashlightAudio, player.flashlightOn);
+                Audio3D.doOneShot(player.flashlightAudio, player.flashlightOn);
             }
             else {
-                Audio.doOneShot(player.flashlightAudio, player.flashlightOff);
+                Audio3D.doOneShot(player.flashlightAudio, player.flashlightOff);
             }
 
             doDrain = player.doBatteryDrain;

@@ -7,7 +7,7 @@ import godot.CharacterBody3D;
 import godot.Camera3D;
 import godot.RayCast3D;
 import godot.InputEvent;
-import godot.AudioStreamPlayer;
+import godot.AudioStreamPlayer3D;
 import godot.Node;
 import godot.GodotArray;
 
@@ -33,9 +33,9 @@ class Player extends CharacterBody3D
     public var interactionText:RichTextLabel;
     public var chapterText:RichTextLabel;
     public var subChapterText:RichTextLabel;
-    public var flashlightAudio:AudioStreamPlayer = new AudioStreamPlayer();
-    public var footstepAudio:AudioStreamPlayer = new AudioStreamPlayer();
-    public var generalAudio:AudioStreamPlayer = new AudioStreamPlayer();
+    public var flashlightAudio:AudioStreamPlayer3D = new AudioStreamPlayer3D();
+    public var footstepAudio:AudioStreamPlayer3D = new AudioStreamPlayer3D();
+    public var generalAudio:AudioStreamPlayer3D = new AudioStreamPlayer3D();
 
     @:meta(export)
     public var footstepIntervals:Float = 0.8; 
@@ -116,6 +116,9 @@ class Player extends CharacterBody3D
         interactionText.bbcode_enabled = true;
         setAlpha(chapterText, 0);
         setAlpha(subChapterText, 0);
+        flashlightAudio.area_mask = 1;
+        footstepAudio.area_mask = 1;
+        generalAudio.area_mask = 1;
         maxStamina = stamina;
         
         Movement.setupViewBob(this);
