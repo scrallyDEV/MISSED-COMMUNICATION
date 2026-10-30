@@ -1,6 +1,8 @@
 package entities.player.modules;
 
 import godot.RichTextLabel;
+import godot.Texture2D;
+import godot.TextureRect;
 import godot.Tween;
 import godot.RayCast3D;
 import godot.Vector2;
@@ -29,6 +31,18 @@ class Hud
     public static var subChapterDisplayTween:Tween;
     public static var hideChapterDisplayTween:Tween;
     public static var hideSubChapterDisplayTween:Tween;
+
+    public static var hintDisplay:RichTextLabel;
+    public static var subHintDisplay:RichTextLabel;
+    public static var hintIconDisplay:TextureRect;
+    public static var hintDisplayTween:Tween;
+    public static var subHintDisplayTween:Tween;
+    public static var hintIconTween:Tween;
+    public static var hideHintDisplayTween:Tween;
+    public static var hideSubHintDisplayTween:Tween;
+    public static var hideHintIconTween:Tween;
+    public static var showSubHintText:Bool = true;
+    public static var hintDisplayDuration:Float = 3;
 
     public static function checkCrosshair(crosshair:Crosshair, raycast:RayCast3D, player:Player):Void
     {
@@ -195,5 +209,47 @@ class Hud
 
         doTween(chapterDisplay, hideChapterDisplayTween, "modulate:a", 0, TweenStyle.ExpoOut, 3);
         doTween(subChapterDisplay, hideSubChapterDisplayTween, "modulate:a", 0, TweenStyle.ExpoOut, 2.5);
+    }
+
+    public static function showHintDisplay(hintText:RichTextLabel, subHintText:RichTextLabel, hintIcon:TextureRect, image:Texture2D, showSubText:Bool = true, showImage:Bool = true, duration:Float = 3):Void
+    {
+        hintDisplay = hintText;
+        subHintDisplay = subHintText;
+        hintIconDisplay = hintIcon;
+        hintIconDisplay.texture = image;
+        showSubHintText = showSubText;
+        hintDisplayDuration = duration;
+
+        hintDisplayTween = makeTween(hintDisplay);
+        doTween(hintDisplay, hintDisplayTween, "modulate:a", 1, TweenStyle.ExpoOut, hintDisplayDuration);
+        hintDisplayTween.tween_callback(Callable.create(Hud, "showSubHintDisplay"));
+
+        if (showImage) {
+            hintIconTween = makeTween(hintIconDisplay);
+            doTween(hintIconDisplay, hintIconTween, "modulate:a", 1, TweenStyle.ExpoOut, hintDisplayDuration);
+        }
+    }
+
+    public static function showSubHintDisplay():Void
+    {
+        if (!showSubHintText) {
+            hideHintDisplays();
+            return;
+        }
+
+        subHintDisplayTween = makeTween(subHintDisplay);
+        doTween(subHintDisplay, subHintDisplayTween, "modulate:a", 1, TweenStyle.ExpoOut, hintDisplayDuration);
+        subHintDisplayTween.tween_callback(Callable.create(Hud, "hideHintDisplays"));
+    }
+
+    public static function hideHintDisplays():Void
+    {
+        hideHintDisplayTween = makeTween(hintDisplay);
+        hideSubHintDisplayTween = makeTween(subHintDisplay);
+        hideHintIconTween = makeTween(hintIconDisplay);
+
+        doTween(hintDisplay, hideHintDisplayTween, "modulate:a", 0, TweenStyle.ExpoOut, hintDisplayDuration);
+        doTween(subHintDisplay, hideSubHintDisplayTween, "modulate:a", 0, TweenStyle.ExpoOut, hintDisplayDuration);
+        doTween(hintIconDisplay, hideHintIconTween, "modulate:a", 0, TweenStyle.ExpoOut, hintDisplayDuration);
     }
 }

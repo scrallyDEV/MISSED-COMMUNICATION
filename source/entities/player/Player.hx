@@ -2,12 +2,14 @@ package entities.player;
 
 import godot.RichTextLabel;
 import godot.Control;
+import godot.TextureRect;
 import godot.AudioStream;
 import godot.CharacterBody3D;
 import godot.Camera3D;
 import godot.RayCast3D;
 import godot.InputEvent;
 import godot.AudioStreamPlayer3D;
+import godot.AudioStreamPlayer;
 import godot.Node;
 import godot.GodotArray;
 
@@ -33,9 +35,14 @@ class Player extends CharacterBody3D
     public var interactionText:RichTextLabel;
     public var chapterText:RichTextLabel;
     public var subChapterText:RichTextLabel;
+    public var hintText:RichTextLabel;
+    public var hintSubtext:RichTextLabel;
+    public var hintIcon:TextureRect;
     public var flashlightAudio:AudioStreamPlayer3D = new AudioStreamPlayer3D();
     public var footstepAudio:AudioStreamPlayer3D = new AudioStreamPlayer3D();
     public var generalAudio:AudioStreamPlayer3D = new AudioStreamPlayer3D();
+    public var objectiveAudio:AudioStreamPlayer = new AudioStreamPlayer();
+    public var globalAudio:AudioStreamPlayer = new AudioStreamPlayer();
 
     @:meta(export)
     public var footstepIntervals:Float = 0.8; 
@@ -100,9 +107,14 @@ class Player extends CharacterBody3D
         interactionText = cast getChildNode(ui, "InteractText");
         chapterText = cast getChildNode(ui, "ChapterSplash");
         subChapterText = cast getChildNode(ui, "SubChapterSplash");
+        hintText = cast getChildNode(ui, "HintText");
+        hintSubtext = cast getChildNode(ui, "HintSubtext");
+        hintIcon = cast getChildNode(ui, "HintIcon");
         createChild(this, flashlightAudio);
         createChild(this, footstepAudio);
         createChild(this, generalAudio);
+        createChild(this, objectiveAudio);
+        createChild(this, globalAudio);
 
         walkStepInterval = footstepIntervals;
         runStepInterval = footstepIntervals - footstepIntervals * 0.4;
@@ -116,6 +128,9 @@ class Player extends CharacterBody3D
         interactionText.bbcode_enabled = true;
         setAlpha(chapterText, 0);
         setAlpha(subChapterText, 0);
+        setAlpha(hintText, 0);
+        setAlpha(hintSubtext, 0);
+        setAlpha(hintIcon, 0);
         flashlightAudio.area_mask = 1;
         footstepAudio.area_mask = 1;
         generalAudio.area_mask = 1;

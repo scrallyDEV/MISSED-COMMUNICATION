@@ -29,7 +29,8 @@ class Movement
         "MoveLeft", // 2
         "MoveRight", // 3
         "MoveJump", // 4
-        "MoveSprint" // 5
+        "MoveSprint", // 5
+        "MoveCrouch" // 6
     ];
 
     public static function movement(delta:Float, player:Player):Void

@@ -19,11 +19,13 @@ import interactables.items.FlashlightPickup as HaxeGD_Auto_12;
 import interactables.items.KeyPickup as HaxeGD_Auto_13;
 import interactables.Pickup as HaxeGD_Auto_14;
 import triggers.ChapterDisplayTrigger as HaxeGD_Auto_15;
-import triggers.cutscenes.cp0.Chapter0Intro as HaxeGD_Auto_16;
-import triggers.cutscenes.CutsceneBase as HaxeGD_Auto_17;
-import triggers.CutsceneTrigger as HaxeGD_Auto_18;
-import triggers.TriggerBase as HaxeGD_Auto_19;
-import ui.Crosshair as HaxeGD_Auto_20;
+import triggers.cutscenes.cp0.Chapter0EntityEncounter as HaxeGD_Auto_16;
+import triggers.cutscenes.cp0.Chapter0Intro as HaxeGD_Auto_17;
+import triggers.cutscenes.CutsceneBase as HaxeGD_Auto_18;
+import triggers.CutsceneTrigger as HaxeGD_Auto_19;
+import triggers.GlobalAudioTrigger as HaxeGD_Auto_20;
+import triggers.TriggerBase as HaxeGD_Auto_21;
+import ui.Crosshair as HaxeGD_Auto_22;
 
 class ClassAutoLoader
 {
@@ -50,5 +52,7 @@ class ClassAutoLoader
         HaxeGD_Auto_18;
         HaxeGD_Auto_19;
         HaxeGD_Auto_20;
+        HaxeGD_Auto_21;
+        HaxeGD_Auto_22;
     }
 }
